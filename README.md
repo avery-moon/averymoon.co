@@ -1,23 +1,23 @@
-# averymoon.co — v2
+# averymoon.co — v3
 
-GitHub Pages site for Avery Moon.
+V3 is the editorial-design pass.
 
-## What's new
-- richer forest green + terracotta palette
-- subtle paper texture
-- AM circle monogram
-- abstract river delta + contour + botanical hero
-- Built Systems navigation
-- visual four-step Approach page
-- 12 rotating theory statements
-- Writing placeholder page
-- three starter built-system pages
+## Major changes
+- Custom editorial homepage composition
+- Richer organic systems illustration and section graphics
+- Real optimized About-page headshot
+- Redesigned About layout
+- Redesigned Approach page with four bespoke system illustrations
+- More sophisticated Built Systems preview cards
+- Research & Writing page with four JSTOR publications
+- Stronger terracotta/forest balance
+- Paper texture retained
+- Responsive layouts retained
 
 ## Upload
-Upload everything inside this folder to the root of your `averymoon.co` GitHub repository, replacing the current files. Commit the changes; GitHub Pages should redeploy automatically.
+Upload all files/folders inside this directory to the root of the GitHub repository and overwrite matching files.
 
-## Theory statements
-Edit the `theories` array in `assets/js/main.js`.
+Delete the old `writing.html` file from the repository if it remains after upload.
 
-## About photo
-The About page currently has a placeholder. Put your image in `assets/images/`, then replace the placeholder div in `about.html` with an image tag.
+## Headshot
+Optimized web copy: `assets/images/avery-moon-headshot.jpg`
