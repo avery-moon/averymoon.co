@@ -1,23 +1,18 @@
-# averymoon.co — v3
+# averymoon.co — V4
 
-V3 is the editorial-design pass.
+Focused refinement based on the approved visual direction.
 
-## Major changes
-- Custom editorial homepage composition
-- Richer organic systems illustration and section graphics
-- Real optimized About-page headshot
-- Redesigned About layout
-- Redesigned Approach page with four bespoke system illustrations
-- More sophisticated Built Systems preview cards
-- Research & Writing page with four JSTOR publications
-- Stronger terracotta/forest balance
-- Paper texture retained
-- Responsive layouts retained
+## V4 changes
+- Cleaner homepage and broader brand language: Systems Thinking · Knowledge · Process Design
+- Selected organic river/topography/botanical hero asset
+- Random theory automatically changes on each new page load; no controls
+- Simplified About page
+- About headshot cropped approximately 20% from the bottom
+- V2-inspired Approach layout restored
+- Seed → Sprout → Young Tree → Mature Tree visual progression
+- Research & Writing retained with four JSTOR papers
+- Built Systems retained
 
-## Upload
-Upload all files/folders inside this directory to the root of the GitHub repository and overwrite matching files.
-
-Delete the old `writing.html` file from the repository if it remains after upload.
-
-## Headshot
-Optimized web copy: `assets/images/avery-moon-headshot.jpg`
+## GitHub upload
+Upload everything inside this folder to the repository root and overwrite matching files.
+If `writing.html` still exists in the GitHub repository from an older version, delete it.

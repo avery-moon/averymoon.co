@@ -6,3 +6,26 @@ document.querySelectorAll('.system-feature').forEach(card=>{
     card.style.setProperty('--my',`${e.clientY-r.top}px`);
   });
 });
+
+const v4Theory = document.querySelector('[data-v4-theory]');
+if (v4Theory) {
+  const v4Theories = [
+    "Documentation is organizational memory.",
+    "Complexity is inevitable. Confusion isn't.",
+    "Good systems reduce decisions, not flexibility.",
+    "Knowledge loses value when people can't find it.",
+    "Every workflow teaches people something.",
+    "The best documentation answers tomorrow's questions.",
+    "Process should support people, not constrain them.",
+    "The strongest systems become almost invisible.",
+    "Better questions build better systems.",
+    "Clarity is a form of leverage.",
+    "A useful system makes the next decision easier.",
+    "Structure should create clarity without eliminating judgment."
+  ];
+  const previous = sessionStorage.getItem('averyTheory');
+  let options = v4Theories.filter(t => t !== previous);
+  const chosen = options[Math.floor(Math.random() * options.length)];
+  v4Theory.textContent = chosen;
+  sessionStorage.setItem('averyTheory', chosen);
+}
