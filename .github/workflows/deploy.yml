@@ -23,7 +23,8 @@ jobs:
 
       - name: Build with Astro
         uses: withastro/action@v3
-        with: package-manager: npm
+        with:
+        package-manager: npm
 
   deploy:
     needs: build
