@@ -2,26 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GrowthStage from '../components/GrowthStage.astro';
 const stages = [
-  {number:'01', stage:'Understand', label:'Seed', image:'approach-understand.jpg', text:'Listen, observe, map the current state, and define the problem worth solving.'},
-  {number:'02', stage:'Design', label:'Sprout', image:'approach-design.jpg', text:'Connect insights, build structure, and test what a useful solution could look like.'},
-  {number:'03', stage:'Implement', label:'Young tree', image:'approach-implement.jpg', text:'Embed the system through collaboration, documentation, enablement, and ownership.'},
-  {number:'04', stage:'Improve', label:'Mature tree', image:'approach-improve.jpg', text:'Measure, learn, refine, and strengthen the system so it continues creating value.'},
+  {number:'01',stage:'Understand',image:'approach-understand.png',text:'Listen, observe, map the current state, and define the problem worth solving.'},
+  {number:'02',stage:'Design',image:'approach-design.png',text:'Connect insights, build structure, and shape a practical system around what the work actually needs.'},
+  {number:'03',stage:'Implement',image:'approach-implement.png',text:'Bring the system into practice through collaboration, documentation, enablement, and clear ownership.'},
+  {number:'04',stage:'Improve',image:'approach-improve.png',text:'Measure what changed, learn from use, and refine the system so it continues creating value.'}
 ];
 ---
 <BaseLayout title="Approach">
-<section class="section"><div class="container">
-  <div class="page-hero"><div class="eyebrow">Approach</div><h1>Thoughtful systems grow from understanding.</h1></div>
-  <div class="approach-layout">
-    <div class="approach-copy">
-      <div class="eyebrow">Growth over time</div>
-      <h2>From seed to something that lasts.</h2>
-      <p>I don't start with a tool or a predetermined answer. I start by understanding the environment around the problem—then build enough structure for a useful system to take root, grow, and evolve.</p>
-    </div>
-    <div class="growth-list">{stages.map(stage => <GrowthStage {...stage} />)}</div>
-  </div>
-  <div class="manifesto reveal">
-    <div><div class="eyebrow" style="color:#d9b08d">Design principle</div><h2>Structure should make good judgment easier.</h2></div>
-    <div><p>I don't believe the answer to complexity is more bureaucracy. Good systems create enough clarity, visibility, and shared language that people spend less energy reconstructing information and more energy making useful decisions.</p><p>Documentation has to be findable. Metrics have to lead somewhere. Processes have to reflect reality. And the people doing the work have to be part of the design.</p></div>
-  </div>
-</div></section>
-</BaseLayout>
+<section class="approach-v52"><div class="container">
+  <div class="approach-v52-header"><div class="eyebrow">Approach</div><h1>From understanding the problem to building something that lasts.</h1><p>I use a simple four-part approach to move from ambiguity toward a system that is clear, usable, and capable of improving over time.</p></div>
+  <div class="approach-flow">{stages.map(stage => <GrowthStage {...stage} />)}</div>
+  <div class="approach-principle reveal"><div><div class="eyebrow">Design principle</div><p class="statement">Structure should make good judgment easier.</p></div><div><p>I don't believe the answer to complexity is more bureaucracy. Good systems create enough clarity, visibility, and shared language that people spend less energy reconstructing information and more energy making useful decisions.</p><p>Documentation has to be findable. Metrics have to lead somewhere. Processes have to reflect reality. And the people doing the work have to be part of the design.</p></div></div>
+</div></section></BaseLayout>

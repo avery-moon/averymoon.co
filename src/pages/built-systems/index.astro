@@ -3,9 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SystemCard from '../../components/SystemCard.astro';
 import { systems } from '../../data/site';
 ---
-<BaseLayout title="Built Systems">
-<section class="section"><div class="container">
-  <div class="page-hero"><div class="eyebrow">Built Systems</div><h1>Systems designed to make complex work easier to see, use, and improve.</h1><p>Selected examples from real operating environments, presented without proprietary details.</p></div>
-  <div class="system-grid">{systems.map(system => <SystemCard system={system} />)}</div>
-</div></section>
-</BaseLayout>
+<BaseLayout title="Built Systems"><section><div class="container">
+<div class="systems-hero"><div><div class="eyebrow">Built Systems</div><h1>Selected systems I've built.</h1></div><div><p class="statement">Practical structures that make complex work easier to see, use, and improve.</p><div class="systems-hero-rule"></div><p class="support">These examples come from real operating environments and focus on the problem, design logic, and impact without exposing proprietary details.</p></div></div>
+<div class="systems-grid-wrap"><div class="system-grid">{systems.map(system => <SystemCard system={system} />)}</div></div>
+</div></section></BaseLayout>
