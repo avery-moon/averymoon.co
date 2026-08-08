@@ -1,0 +1,49 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import { theories } from '../data/site';
+const { title, description='Avery Moon designs systems that help organizations work smarter.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#f5efe6" />
+  <title>{title} | Avery Moon</title>
+</head>
+<body>
+  <Header />
+  <main><slot /></main>
+  <Footer />
+  <script define:vars={{ theories }}>
+    const theory = document.querySelector('[data-theory]');
+    if (theory) {
+      let index = Math.floor(Math.random() * theories.length);
+      theory.textContent = theories[index];
+    }
+
+    const menu = document.querySelector('.menu');
+    const nav = document.querySelector('.navlinks');
+    if (menu && nav) {
+      menu.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        menu.setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

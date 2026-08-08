@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GrowthStage from '../components/GrowthStage.astro';
+const stages = [
+  {number:'01', stage:'Understand', label:'Seed', image:'approach-understand.jpg', text:'Listen, observe, map the current state, and define the problem worth solving.'},
+  {number:'02', stage:'Design', label:'Sprout', image:'approach-design.jpg', text:'Connect insights, build structure, and test what a useful solution could look like.'},
+  {number:'03', stage:'Implement', label:'Young tree', image:'approach-implement.jpg', text:'Embed the system through collaboration, documentation, enablement, and ownership.'},
+  {number:'04', stage:'Improve', label:'Mature tree', image:'approach-improve.jpg', text:'Measure, learn, refine, and strengthen the system so it continues creating value.'},
+];
+---
+<BaseLayout title="Approach">
+<section class="section"><div class="container">
+  <div class="page-hero"><div class="eyebrow">Approach</div><h1>Thoughtful systems grow from understanding.</h1></div>
+  <div class="approach-layout">
+    <div class="approach-copy">
+      <div class="eyebrow">Growth over time</div>
+      <h2>From seed to something that lasts.</h2>
+      <p>I don't start with a tool or a predetermined answer. I start by understanding the environment around the problem—then build enough structure for a useful system to take root, grow, and evolve.</p>
+    </div>
+    <div class="growth-list">{stages.map(stage => <GrowthStage {...stage} />)}</div>
+  </div>
+  <div class="manifesto reveal">
+    <div><div class="eyebrow" style="color:#d9b08d">Design principle</div><h2>Structure should make good judgment easier.</h2></div>
+    <div><p>I don't believe the answer to complexity is more bureaucracy. Good systems create enough clarity, visibility, and shared language that people spend less energy reconstructing information and more energy making useful decisions.</p><p>Documentation has to be findable. Metrics have to lead somewhere. Processes have to reflect reality. And the people doing the work have to be part of the design.</p></div>
+  </div>
+</div></section>
+</BaseLayout>
