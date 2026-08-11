@@ -1,23 +1,26 @@
-# averymoon.co — V5.4
+# averymoon.co — V5.5
 
-Cohesion pass built on V5.3.
+Professional finish / dimension pass built on V5.4.
 
-## Added
-- Six Built Systems in a complete 3×2 grid.
-- Automated Workforce Scheduling System.
-- Onboarding & Certification Framework.
-- Unique abstract signature glyph for every system card.
-- Hover reveal state on system cards.
-- Currently Exploring section on About.
-- Numbered Field Note treatment for the rotating theory line.
-- Restrained desktop pointer response on the homepage hero.
-- More deliberate section-transition rules.
+## Content
+- Replaced the "connective tissue" line with: "I turn complexity into systems people can understand, use, and improve."
+- Currently Exploring is now Title Case and includes GIS + AI/ML Engineering.
 
-## Refined
-- Terracotta is demoted to a small accent; removed entirely from the headshot frame.
-- Homepage "How I work" is now a single-column editorial transition rather than a split header.
-- Existing Approach design is preserved.
-- Existing palette and abstract hero are preserved.
+## Composition
+- Preserved the homepage two-column hero, but lowered the artwork for intentional asymmetry.
+- Applied the same offset logic to the About portrait.
+- Enforced single-column editorial page openings.
+- Added a 12-column editorial grid beneath the surface for cleaner alignment.
+- Added subtle oversized background typography and structural lines.
 
-## Intentionally NOT added yet
-The more noticeable scroll/motion experiment is not included in V5.4. The existing gentle reveal remains, so we can evaluate the new interaction layer before adding more movement.
+## Professional finish
+- Refined six system cards with restrained depth and consistent 3px hover behavior.
+- Standardized link interactions and active navigation.
+- Added a tiny desktop page/progress indicator.
+- Added selection and keyboard focus styling.
+- Added reduced-motion support.
+- Rebuilt the footer as an intentional closing composition.
+- Kept terracotta as a small accent rather than a large surface.
+
+## Motion
+No additional scroll-animation experiment yet. Existing reveal behavior and the subtle hero pointer response remain.
