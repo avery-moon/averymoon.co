@@ -66,7 +66,29 @@ export const systems = [
     problem: 'Material information was fragmented across roughly 65 line items, making purchasing decisions and production planning harder to coordinate.',
     approach: 'Built a centralized tracking system covering approximately $300K in material value and designed around the recurring information needs of production planning.',
     outcome: 'Improved inventory purchasing visibility, accountability, and production planning.'
-  }
+  },
+  {
+    slug: 'workforce-scheduling',
+    number: '05',
+    category: 'Workforce Planning',
+    title: 'Automated Workforce Scheduling System',
+    metric: 'Allocation · Scheduling · Coverage',
+    summary: 'A scheduling system designed to reduce manual coordination and make workforce allocation clearer across changing operational needs.',
+    problem: 'Staffing decisions required repeated manual coordination across roles, coverage needs, and changing priorities, creating unnecessary administrative work and inconsistent visibility.',
+    approach: 'Built a structured scheduling workflow that organized workforce requirements, available capability, and allocation decisions into a more repeatable planning process.',
+    outcome: 'Reduced manual scheduling effort, improved visibility into coverage, and supported faster workforce allocation decisions.'
+  },
+  {
+    slug: 'onboarding-certification',
+    number: '06',
+    category: 'Learning Systems',
+    title: 'Onboarding & Certification Framework',
+    metric: '8 fastest certifications in 4 years',
+    summary: 'A structured onboarding and qualification framework designed to make training expectations, progress, and readiness easier to understand.',
+    problem: 'New-hire qualification depended on consistent training, clear expectations, and visibility into progress across specialized work.',
+    approach: 'Created a more structured onboarding and certification framework connecting training steps, qualification requirements, coaching, and progress visibility.',
+    outcome: 'Supported eight of the fastest employee certifications achieved in the organization over a four-year period while creating a clearer path from onboarding to independent work.'
+  },
 ];
 
 export const papers = [

@@ -23,6 +23,8 @@ const { title, description='Avery Moon designs systems that help organizations w
     if (theory) {
       let index = Math.floor(Math.random() * theories.length);
       theory.textContent = theories[index];
+      const theoryNumber = document.querySelector('[data-theory-number]');
+      if (theoryNumber) theoryNumber.textContent = `${String(index + 1).padStart(2,'0')} / ${String(theories.length).padStart(2,'0')}`;
     }
 
     const menu = document.querySelector('.menu');
@@ -44,6 +46,22 @@ const { title, description='Avery Moon designs systems that help organizations w
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Restrained desktop-only pointer response on the homepage artwork.
+    const heroArt = document.querySelector('.hero-art');
+    if (heroArt && window.matchMedia('(pointer:fine)').matches) {
+      heroArt.addEventListener('pointermove', (event) => {
+        const r = heroArt.getBoundingClientRect();
+        const x = ((event.clientX - r.left) / r.width - .5);
+        const y = ((event.clientY - r.top) / r.height - .5);
+        heroArt.style.setProperty('--pointer-x', `${x * 8}px`);
+        heroArt.style.setProperty('--pointer-y', `${y * 8}px`);
+      });
+      heroArt.addEventListener('pointerleave', () => {
+        heroArt.style.setProperty('--pointer-x', '0px');
+        heroArt.style.setProperty('--pointer-y', '0px');
+      });
+    }
   </script>
 </body>
 </html>

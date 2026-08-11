@@ -1,11 +1,26 @@
 ---
 const { system } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const glyphs = {
+  'alloy-procurement': 'M8 45C35 45 35 16 64 16s29 29 57 29 29-18 57-18',
+  'cross-training-matrix': 'M18 18h36v36H18zm54 0h36v36H72zM18 72h36v36H18zm54 0h36v36H72z',
+  'equipment-downtime-dashboard': 'M8 82h25V42h22v40h23V22h22v60h25',
+  'foundry-inventory': 'M18 26h92v68H18zM34 42h60v36H34zM49 56h30v8H49z',
+  'workforce-scheduling': 'M15 25h100v76H15zM15 48h100M40 25v76M66 25v76M91 25v76',
+  'onboarding-certification': 'M18 94V35h28l13 15 14-26 15 26 13-15h17v59M38 72h61'
+};
+const glyph = glyphs[system.slug];
 ---
 <a class="system-card reveal" href={`${base}/built-systems/${system.slug}/`}>
+  <div class="system-signature" aria-hidden="true">
+    <svg viewBox="0 0 130 120"><path d={glyph}/></svg>
+  </div>
   <div class="meta">{system.number} · {system.category}</div>
   <h3>{system.title}</h3>
-  <p class="muted">{system.summary}</p>
+  <p class="muted card-summary">{system.summary}</p>
+  <div class="card-reveal">
+    <span>{system.category}</span><span>View system</span>
+  </div>
   <div class="metric">{system.metric}</div>
   <span class="arrow">↗</span>
 </a>
