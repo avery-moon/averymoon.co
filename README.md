@@ -1,12 +1,17 @@
-# averymoon.co — V5.7
+# averymoon.co — V5.8
 
-Nitpick / confidence pass.
+Crisp-canvas / final content polish pass.
 
-- Removed duplicate Systems Thinking · Knowledge · Process Design line above homepage hero.
-- Reduced homepage headline size.
-- Moved the deep-green proof/results band directly beneath the hero.
-- Replaced ambiguous/open-ended metrics with 257→299 Throughput Improved and 8 Fastest Certifications in 4 Years.
-- About now shows Currently Exploring before What I Optimize For.
-- Approach replaces the Design Principle with a concrete How I Work With People section.
-- Built Systems label is now Built Systems / Projects.
-- Contact page completely redesigned as a single editorial flow with three full-width contact rows.
+## Locked changes
+- Main canvas lightened to a crisp warm white (#FAF9F6).
+- Paper texture substantially reduced; secondary surfaces retain subtle warmth.
+- Homepage proof band:
+  - $3M Inventory Forecasted
+  - 200+ Employees Led
+  - $1.25M+ Annual Savings
+  - 14 Employees Promoted
+- Approach: collaborative/coaching-oriented "How I Work With People" language.
+- Built Systems header: "Built Systems / Projects".
+- Equipment Downtime Dashboard metric: "Equipment Downtime Visibility".
+- About page opening compressed substantially; its eyebrow now uses the tighter Research & Writing scale/spacing.
+- Research & Writing left unchanged.

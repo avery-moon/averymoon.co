@@ -554,3 +554,53 @@ h1,h2,.big-thought{letter-spacing:-.025em}
  .contact-row strong{font-size:1rem;overflow-wrap:anywhere}
  .contact-close{flex-direction:column}
 }
+
+/* ===== V5.8 — crisp canvas + final content polish ===== */
+
+/* Cleaner canvas: warm, but no longer parchment-like */
+:root{
+  --paper:#FAF9F6!important;
+}
+html,body{background:#FAF9F6!important}
+body:before{
+  opacity:.16!important;
+  mix-blend-mode:multiply;
+}
+.system-card,.paper,.capability-card,.pillar{
+  background-color:rgba(245,242,235,.38)!important;
+}
+
+/* About page starts sooner; eyebrow behaves like the compact R&W treatment */
+body:has(.about-grid) .page-hero{
+  padding-top:18px!important;
+  padding-bottom:12px!important;
+}
+body:has(.about-grid) .page-hero .eyebrow{
+  font-size:.62rem!important;
+  line-height:1!important;
+  margin-bottom:8px!important;
+}
+body:has(.about-grid) .page-hero h1{
+  margin-top:6px!important;
+  margin-bottom:12px!important;
+}
+body:has(.about-grid) .about-grid{
+  padding-top:0!important;
+}
+body:has(.about-grid) .about-grid .photo-frame,
+body:has(.about-grid) .about-grid .photo-frame-v54{
+  margin-top:22px!important;
+}
+
+/* Keep the green proof band crisp against the lighter canvas */
+.results-band{
+  box-shadow:0 1px 0 rgba(32,59,49,.06),0 18px 44px rgba(32,59,49,.055);
+}
+
+/* Secondary surfaces retain a whisper of the original warmth */
+.system-signature-field{
+  background:rgba(245,242,235,.46)!important;
+}
+.footer-v55{
+  background:rgba(245,242,235,.42)!important;
+}
