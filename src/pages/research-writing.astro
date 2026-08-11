@@ -4,7 +4,7 @@ import { papers } from '../data/site';
 ---
 <BaseLayout title="Research & Writing">
 <section class="research-v53"><div class="container">
-<div class="eyebrow research-label">Research & Writing</div>
+<div class="compact-page-label"><span class="eyebrow research-label">Research & Writing / Selected Work</span><span class="research-meta">International Relations · Sociology / Anthropology · Published Research</span></div>
 <div class="paper-grid">{papers.map((paper,i)=><article class="paper reveal"><div class="meta">0{i+1} · {paper.meta}</div><h3>{paper.title}</h3><p>{paper.description}</p><a href={paper.url} target="_blank" rel="noopener">Read on JSTOR ↗</a></article>)}</div>
 </div></section>
 </BaseLayout>

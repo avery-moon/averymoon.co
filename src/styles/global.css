@@ -355,3 +355,127 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--terracotta);outline
   .exploring-list span{white-space:normal}
   .exploring-list span:after{display:none!important}
 }
+
+/* ===== V5.6 — editorial authority ===== */
+
+/* Less ceremony before the work begins */
+.page-hero,.simple-page-head,.systems-hero{
+  padding-top:28px!important;
+  padding-bottom:24px!important;
+  margin-bottom:0!important;
+}
+.simple-page-head h1,.systems-hero h1{margin-bottom:8px!important}
+.research-v53{padding-top:30px!important}
+.research-v53 .research-label{margin-bottom:0!important}
+.about-grid{padding-top:4px!important}
+.about-grid .photo-frame,.about-grid .photo-frame-v54{margin-top:34px!important}
+
+/* Research: minimal, but intentional */
+.compact-page-label{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding-bottom:18px;margin-bottom:26px;border-bottom:1px solid var(--line)
+}
+.research-meta{
+  font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  text-align:right
+}
+
+/* About: concrete design criteria instead of another soft philosophy block */
+.optimize-strip{
+  margin-top:52px;padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+}
+.optimize-values{
+  display:grid;grid-template-columns:repeat(4,1fr);margin:17px 0 14px
+}
+.optimize-values span{
+  font-family:Georgia,serif;font-size:1.35rem;color:var(--forest);
+  padding-right:18px
+}
+.optimize-values span+span{border-left:1px solid var(--line);padding-left:22px}
+.optimize-strip p{margin:0;color:var(--muted);font-size:.92rem}
+.exploring{margin-top:42px!important}
+
+/* High-contrast proof point: the professional counterweight */
+.results-band{
+  background:var(--forest);color:var(--paper);
+  padding:44px 0;margin:8px 0 0;position:relative;overflow:hidden
+}
+.results-band:after{
+  content:"";position:absolute;width:280px;height:280px;border:1px solid rgba(255,255,255,.07);
+  border-radius:50%;right:-80px;top:-150px
+}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.result-item{padding:2px 30px;min-height:88px;display:flex;flex-direction:column;justify-content:center}
+.result-item:first-child{padding-left:0}
+.result-item+.result-item{border-left:1px solid rgba(255,255,255,.16)}
+.result-item strong{
+  font-family:Georgia,serif;font-size:clamp(2.25rem,4vw,3.5rem);
+  line-height:1;color:var(--paper);font-weight:400
+}
+.result-item span{
+  margin-top:9px;font-size:.67rem;letter-spacing:.11em;text-transform:uppercase;
+  color:rgba(247,243,235,.72)
+}
+
+/* Built Systems: denser, harder-hitting catalog */
+.systems-v53{padding-top:0!important}
+.systems-equal-grid{margin-top:8px}
+.system-card{
+  min-height:345px!important;
+  display:flex!important;flex-direction:column!important;
+  padding:25px!important
+}
+.system-signature-field{
+  width:100%;height:82px;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(32,59,49,.09);background:rgba(32,59,49,.018);
+  margin-bottom:22px;overflow:hidden
+}
+.system-signature{
+  width:76px!important;height:60px!important;margin:0!important;
+  display:flex;align-items:center;justify-content:center
+}
+.system-signature:before{display:none!important}
+.system-signature svg{width:68px!important;height:58px!important;display:block}
+.system-card:hover .system-signature{transform:translateY(-2px)!important}
+.system-card .card-summary{
+  font-size:.82rem;line-height:1.55;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden
+}
+.metric-v56{
+  font-family:Georgia,serif!important;font-size:1.08rem!important;
+  color:var(--forest)!important;letter-spacing:0!important;text-transform:none!important
+}
+.system-card .meta{font-size:.63rem!important}
+.system-card h3{line-height:1.12!important;margin-bottom:10px!important}
+
+/* Homepage: the results band now supplies the dramatic transition */
+.results-band + .section:before{display:none!important}
+.results-band + .section{padding-top:70px!important}
+
+/* Slightly stronger typographic contrast */
+h1,h2,.big-thought{letter-spacing:-.025em}
+.eyebrow{letter-spacing:.14em!important}
+
+/* Keep terracotta disciplined */
+.metric-v56{border-color:rgba(32,59,49,.12)!important}
+.card-reveal span{border-color:rgba(32,59,49,.18)!important}
+
+/* Footer follows the stronger rhythm */
+.footer-v55{margin-top:42px!important}
+
+@media(max-width:900px){
+  .results-grid{grid-template-columns:1fr 1fr}
+  .result-item:nth-child(3){border-left:0;border-top:1px solid rgba(255,255,255,.16);padding-top:22px;margin-top:20px}
+  .result-item:nth-child(4){border-top:1px solid rgba(255,255,255,.16);padding-top:22px;margin-top:20px}
+  .optimize-values{grid-template-columns:1fr 1fr;gap:18px 0}
+  .optimize-values span:nth-child(3){border-left:0!important;padding-left:0!important}
+}
+@media(max-width:620px){
+  .compact-page-label{display:block}
+  .research-meta{display:block;text-align:left;margin-top:10px;line-height:1.6}
+  .results-grid{grid-template-columns:1fr}
+  .result-item{padding:20px 0!important;border-left:0!important;border-top:1px solid rgba(255,255,255,.16)!important;margin:0!important}
+  .result-item:first-child{border-top:0!important}
+  .optimize-values{grid-template-columns:1fr}
+  .optimize-values span{border-left:0!important;padding:8px 0!important}
+}

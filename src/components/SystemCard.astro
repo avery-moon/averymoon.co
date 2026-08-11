@@ -12,15 +12,15 @@ const glyphs = {
 const glyph = glyphs[system.slug];
 ---
 <a class="system-card reveal" href={`${base}/built-systems/${system.slug}/`}>
-  <div class="system-signature" aria-hidden="true">
+  <div class="system-signature-field" aria-hidden="true"><div class="system-signature">
     <svg viewBox="0 0 130 120"><path d={glyph}/></svg>
-  </div>
+  </div></div>
   <div class="meta">{system.number} · {system.category}</div>
   <h3>{system.title}</h3>
   <p class="muted card-summary">{system.summary}</p>
   <div class="card-reveal">
     <span>{system.category}</span><span>View system</span>
   </div>
-  <div class="metric">{system.metric}</div>
+  <div class="metric metric-v56">{system.metric}</div>
   <span class="arrow">↗</span>
 </a>
