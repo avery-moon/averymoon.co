@@ -604,3 +604,21 @@ body:has(.about-grid) .about-grid .photo-frame-v54{
 .footer-v55{
   background:rgba(245,242,235,.42)!important;
 }
+
+/* ===== V5.9 — candidate release polish ===== */
+.result-item strong{display:flex;align-items:baseline;gap:.02em}
+.metric-main{font:inherit}.metric-unit{font-family:Georgia,serif;font-size:.56em;line-height:1;letter-spacing:-.02em;margin-left:.05em}
+body:has(.about-grid) .page-hero{padding:8px 0 6px!important;min-height:0!important}
+body:has(.about-grid) .page-hero>.container{padding-top:0!important;padding-bottom:0!important}
+.about-inline-label{margin:0 0 7px!important;font-size:.6rem!important}
+body:has(.about-grid) .page-hero h1{margin:0 0 9px!important}
+body:has(.about-grid) .about-grid{margin-top:0!important;padding-top:0!important}
+.hero-art:before,.hero-art:after{display:none!important}.hero-art{overflow:visible!important}.hero-art img{border:0!important;box-shadow:none!important}
+.eyebrow,.meta,.theory-label,.contact-type{font-size:.62rem!important;letter-spacing:.14em!important;line-height:1.2!important;text-transform:uppercase}
+.eyebrow{margin-bottom:10px}.compact-page-label .eyebrow{margin-bottom:0}
+.system-card .card-summary{-webkit-line-clamp:2!important;line-height:1.5!important;margin-bottom:10px!important}
+.system-card{min-height:330px!important}.system-card .metric{margin-top:auto!important}
+.pillar h3,.capability h3,.card h3{line-height:1.15}.pillar p,.capability p{font-size:.86rem;line-height:1.55}
+@media(max-width:960px){.result-item strong{font-size:clamp(2rem,6vw,3rem)}.system-card{min-height:320px!important}}
+@media(max-width:800px){.hero{display:block!important}.hero-copy{max-width:720px}.hero-art{margin-top:34px!important}.hero-art img{max-height:520px;object-fit:cover}body:has(.about-grid) .about-grid{display:block!important}body:has(.about-grid) .photo-frame-v54{max-width:520px;margin:28px auto 0!important}.working-style-grid p{max-width:68ch}}
+@media(max-width:620px){.hero-copy h1{line-height:1.02!important}.results-band{padding:26px 0!important}.result-item{min-height:74px!important}.system-card{min-height:0!important}.system-signature-field{height:72px}.approach-unit{padding-left:8px!important;padding-right:8px!important}.contact-v57{padding-top:18px!important}.footer-v55{padding-top:44px!important}}
