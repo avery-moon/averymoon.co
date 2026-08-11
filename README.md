@@ -1,8 +1,8 @@
-# averymoon.co — V5.2
-
-- Built Systems strengthened as a dedicated destination.
-- Research & Writing header simplified.
-- Approach now uses only Understand → Design → Implement → Improve.
-- Garden/growth wording removed.
-- Approach art floats as transparent illustrations rather than rectangular tiles.
-- Node 22 explicitly configured.
+# averymoon.co — V5.3
+Simplification pass:
+- Original palette and abstract hero retained.
+- Research intro removed.
+- Approach rebuilt from scratch with abstract systems SVGs.
+- Built Systems uses a simple header and equal-size grid.
+- About spacing reduced and portrait framing cooled toward green.
+- System cards normalized across the site.

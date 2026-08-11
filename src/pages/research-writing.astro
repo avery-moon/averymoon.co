@@ -2,7 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { papers } from '../data/site';
 ---
-<BaseLayout title="Research & Writing"><section><div class="container">
-<header class="research-header"><div class="eyebrow">Research & Writing</div><h1>Research across culture, identity, economics, and society.</h1><p>Selected academic work from my undergraduate research, reflecting an earlier thread of the same curiosity that now shapes how I think about organizations and systems.</p><div class="research-rule"></div></header>
-<div class="paper-grid" style="padding-bottom:92px">{papers.map((paper,i)=><article class="paper reveal"><div class="meta">0{i+1} · {paper.meta}</div><h3>{paper.title}</h3><p>{paper.description}</p><a href={paper.url} target="_blank" rel="noopener">Read on JSTOR ↗</a></article>)}</div>
-</div></section></BaseLayout>
+<BaseLayout title="Research & Writing">
+<section class="research-v53"><div class="container">
+<div class="eyebrow research-label">Research & Writing</div>
+<div class="paper-grid">{papers.map((paper,i)=><article class="paper reveal"><div class="meta">0{i+1} · {paper.meta}</div><h3>{paper.title}</h3><p>{paper.description}</p><a href={paper.url} target="_blank" rel="noopener">Read on JSTOR ↗</a></article>)}</div>
+</div></section>
+</BaseLayout>
