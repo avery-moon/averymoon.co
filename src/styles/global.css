@@ -622,3 +622,59 @@ body:has(.about-grid) .about-grid{margin-top:0!important;padding-top:0!important
 @media(max-width:960px){.result-item strong{font-size:clamp(2rem,6vw,3rem)}.system-card{min-height:320px!important}}
 @media(max-width:800px){.hero{display:block!important}.hero-copy{max-width:720px}.hero-art{margin-top:34px!important}.hero-art img{max-height:520px;object-fit:cover}body:has(.about-grid) .about-grid{display:block!important}body:has(.about-grid) .photo-frame-v54{max-width:520px;margin:28px auto 0!important}.working-style-grid p{max-width:68ch}}
 @media(max-width:620px){.hero-copy h1{line-height:1.02!important}.results-band{padding:26px 0!important}.result-item{min-height:74px!important}.system-card{min-height:0!important}.system-signature-field{height:72px}.approach-unit{padding-left:8px!important;padding-right:8px!important}.contact-v57{padding-top:18px!important}.footer-v55{padding-top:44px!important}}
+
+/* ===== V5.9.1 hotfix ===== */
+
+/* Proof metrics: units should read as part of the number, just slightly quieter */
+.metric-unit{
+  font-size:.76em!important;
+  margin-left:.035em!important;
+  letter-spacing:-.025em!important;
+  line-height:1!important;
+  transform:translateY(-.02em);
+}
+.metric-main{line-height:1!important}
+
+/* Hero overlay caption is gone from markup; ensure no legacy version can appear */
+.hero-orbit-note{display:none!important}
+
+/* About has NO separate header zone now.
+   Page identity lives inside the text column beside the portrait. */
+body:has(.about-grid) .page-hero{display:none!important}
+body:has(.about-grid) .section{
+  padding-top:34px!important;
+}
+body:has(.about-grid) .about-grid{
+  margin-top:0!important;
+  padding-top:0!important;
+  align-items:start!important;
+}
+body:has(.about-grid) .photo-frame-v54{
+  margin-top:0!important;
+}
+.about-title-block{
+  margin:0 0 20px!important;
+  padding:0!important;
+}
+.about-title-block .eyebrow{
+  margin:0 0 7px!important;
+  font-size:.62rem!important;
+}
+.about-title-block h1{
+  margin:0!important;
+  font-size:clamp(2.75rem,4.8vw,4.8rem)!important;
+  line-height:.98!important;
+}
+.about-copy .lead{
+  margin-top:24px!important;
+}
+
+@media(max-width:800px){
+  body:has(.about-grid) .section{padding-top:24px!important}
+  body:has(.about-grid) .photo-frame-v54{
+    margin:0 auto 28px!important;
+  }
+  .about-title-block h1{
+    font-size:clamp(2.7rem,11vw,4rem)!important;
+  }
+}
