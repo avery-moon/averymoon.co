@@ -1720,3 +1720,79 @@ body:has(.about-grid) .photo-frame-v54{
 .selected-card{min-height:405px}
 .selected-mark{height:56px;margin:19px 0 7px}
 .selected-future{padding:82px 0}
+
+/* ===== V6.4.3 SELECTED PROJECTS — VISIBLE VISUAL FIX =====
+   Stronger override: smaller hero + break up the large green field.
+*/
+body .selected-hero{
+  padding:64px 0 54px;
+}
+body .selected-hero h1{
+  font-size:clamp(2.5rem,4.8vw,4.55rem);
+  line-height:.96;
+  max-width:820px;
+  margin:12px 0 32px;
+}
+body .selected-intro{
+  max-width:940px;
+  gap:56px;
+}
+
+/* Move the project gallery back onto the site's cream ground.
+   Cards become light editorial tiles with green type instead of a green wall. */
+body .selected-index{
+  padding:68px 0 82px;
+  background:
+    radial-gradient(circle at 86% 8%,rgba(189,89,61,.045),transparent 28%),
+    var(--paper);
+  color:var(--forest);
+}
+body .selected-index-head{
+  border-bottom-color:var(--line);
+  color:var(--muted);
+}
+body .selected-grid{
+  border-left-color:var(--line);
+}
+body .selected-card{
+  min-height:390px;
+  border-right-color:var(--line);
+  border-bottom-color:var(--line);
+  background:rgba(255,255,255,.14);
+}
+body .selected-card:nth-child(-n+2){
+  border-top-color:var(--line);
+}
+body .selected-area{
+  color:var(--muted);
+}
+body .selected-card h2{
+  color:var(--forest);
+}
+body .selected-card p{
+  color:var(--muted);
+}
+body .selected-tags span{
+  border-color:var(--line);
+  color:var(--muted);
+}
+body .selected-mark span+span:before{
+  background:rgba(189,89,61,.32);
+}
+
+/* Keep one dark green closing section so the page still belongs to the site. */
+body .selected-future{
+  background:var(--forest);
+  color:var(--paper);
+  padding:74px 0;
+}
+body .selected-future h2{
+  color:var(--paper);
+}
+body .selected-future-grid>div:last-child>p{
+  color:rgba(250,249,246,.78);
+}
+body .future-tracks span{
+  border-color:rgba(250,249,246,.2);
+  color:rgba(250,249,246,.7);
+}

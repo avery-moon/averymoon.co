@@ -1,21 +1,12 @@
-# averymoon.co — V6.4.2 Human Copy Pass
+# averymoon.co — V6.4.3 Selected Projects Visual Fix
 
-A restrained site-wide copy edit built on V6.4.1.
+Built on V6.4.2.
 
-Goals:
-- Prefer concrete, plainspoken language over portfolio/consulting phrasing.
-- Remove obvious AI/LinkedIn-style constructions where they added no value.
-- Keep strong existing copy intact rather than rewriting for the sake of rewriting.
-- Preserve specific metrics, claims, project structure, and visual design.
+This is the visual correction that should have been included clearly in the prior polish:
+- Makes the Selected Projects hero visibly smaller and shorter.
+- Removes the large uninterrupted dark-green project-gallery field.
+- Places the six evidence cards on the site's cream background with forest typography and terracotta details.
+- Keeps a single dark-green closing/future section so the page remains visually connected to the rest of averymoon.co.
+- Preserves all V6.4.2 human-copy edits.
 
-Key edits include:
-- Homepage: removes “sits at the intersection of.”
-- About: simplifies the systems/knowledge framing and makes sustainability of ownership more direct.
-- Approach: replaces “enablement” with training and clear ownership.
-- Selected Projects: simpler intro, cleaner Amazon project descriptions, corrected wiki ownership language, and a more natural future-project sentence.
-- Consumables: “inventory and replenishment system” rather than “operating system.”
-- Reliability: replaces “low-context” phrasing.
-- Alloy: replaces “tribal knowledge” with person-dependent working knowledge.
-- Training: replaces “operating system” and abstract capability language with concrete training language.
-
-No intentional visual/layout changes beyond those already present in V6.4.1.
+No other pages changed.
