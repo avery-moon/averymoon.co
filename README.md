@@ -1,20 +1,18 @@
-# averymoon.co — V6.2 Home Hero V1
+# averymoon.co — V6.2.1 Home Hero Refined
 
-Built from V6.1.5.
+Correction pass on V6.2.
 
-This is intentionally a homepage-first experiment.
-
-Hero changes:
-- Replaces the old image + overlay composition with one integrated asymmetric hero
-- Cream editorial copy field on the left
-- Dedicated illustrated charcoal/navy night landscape on the right
-- Star field + topographic/engraved mountain forms + system-network constellation
-- Avery Moon appears deliberately above the value proposition
-- New headline: “I design systems that make complex work easier to navigate.”
-- Supporting copy focuses on scattered information, workflows, and institutional knowledge
-- Primary CTA: View Built Systems
-- Secondary CTA: About my approach
-- Keeps “Better systems. Better outcomes. Stronger teams.” as a quiet grounding line
-- Existing results band and every section below it remain unchanged
-
-V6.1.5 contact, social metadata, social card, Built Systems graphics, and terracotta CTAs are preserved.
+Changes:
+- Removed the duplicate “Avery Moon” label from the hero; identity remains in the site header
+- Reduced headline scale and tightened the first-viewport composition
+- Kept the new value proposition, supporting copy, and CTAs
+- Rebuilt hero artwork:
+  - smaller, more delicate system-network constellation
+  - finer topographic lines distributed through the sky
+  - engraved/cartographic mountain treatment rather than geometric polygon peaks
+  - mountains occupy the lower third rather than dominating the image
+  - charcoal/navy atmosphere retained
+- Softened and widened the cream-to-night transition
+- Changed the tagline from tiny uppercase to restrained serif italic
+- Existing metric band and all sections below remain unchanged
+- V6.1.5 contact, social metadata/card, and Built Systems polish remain intact
