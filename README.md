@@ -1,6 +1,30 @@
-# averymoon.co — V5.9.2 Hotfix
+# averymoon.co — V6.0 Case Study Preview
 
-Metric typography only:
-- Restores $3 and $1.25 as the dominant large numerals.
-- Keeps M / M+ modestly smaller at 72% of numeral size.
-- No other design or content changes from V5.9.1.
+Built on the working V5.9.2 site.
+
+## New flagship Built Systems pages
+- Alloy Procurement Planner
+- Workforce Training & Capability System
+
+## Alloy page
+- Precise project metrics
+- Before / after operating model
+- Custom material-planning architecture diagram
+- Multiple decision horizons
+- Design decisions and human-judgment layer
+- Validation / iteration story
+- Current-state vs. measured-impact distinction
+- Reserved sanitized workbook artifact area
+
+## Training page
+- Before / after employee journey
+- Visual 8-week capability pathway
+- Adaptive live-operations design decisions
+- Closed-loop training feedback diagram
+- Level 1 / 2 / 3 progression architecture
+- Link to building-wide workforce capability project
+- Conservative certification outcomes
+- Amazon RDU1 cross-training as a related pattern
+- Reserved training-artifact gallery
+
+The remaining Built Systems routes continue to use the existing dynamic case-study template until we expand them.

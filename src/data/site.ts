@@ -26,13 +26,13 @@ export const systems = [
   {
     slug: 'alloy-procurement',
     number: '01',
-    category: 'Forecasting',
-    title: 'Alloy Procurement Forecasting System',
-    metric: '$3M inventory · 18-month horizon',
-    summary: 'A semi-automated forecasting system that connected projected demand, current inventory, and future purchasing needs for production-critical alloy.',
-    problem: 'Production depended on having the correct alloy available at the correct time. Shortages could stop production entirely, while purchasing decisions required visibility far beyond the immediate schedule.',
-    approach: 'Designed a semi-automated forecasting structure that translated projected demand into an 18-month planning horizon and improved visibility for approximately $3M in alloy inventory.',
-    outcome: 'Improved proactive purchasing decisions, reduced shortage risk, and gave stakeholders a clearer view of future material requirements.'
+    category: 'Material Planning',
+    title: 'Alloy Procurement Planner',
+    metric: '~$3M on hand · up to 18 months',
+    summary: 'A material-planning decision system connecting customer demand, inventory, incoming supply, purchasing constraints, and supplier timing.',
+    problem: 'Alloy planning depended on manually consolidating several exports into a short-horizon view while critical purchasing knowledge remained concentrated in one person.',
+    approach: 'Designed a documented planning system that converts customer demand into alloy requirements, projects inventory depletion, applies purchasing constraints, and surfaces role-specific actions across multiple horizons.',
+    outcome: 'Reduced routine refresh time from as much as an hour to about five minutes and expanded planning visibility from roughly six months to as far as eighteen months.'
   },
   {
     slug: 'cross-training-matrix',
@@ -82,12 +82,12 @@ export const systems = [
     slug: 'onboarding-certification',
     number: '06',
     category: 'Learning Systems',
-    title: 'Onboarding & Certification Framework',
-    metric: '8 fastest certifications in 4 years',
-    summary: 'A structured onboarding and certification framework that clarified training progress and readiness.',
-    problem: 'New-hire qualification depended on consistent training, clear expectations, and visibility into progress across specialized work.',
-    approach: 'Created a more structured onboarding and certification framework connecting training steps, qualification requirements, coaching, and progress visibility.',
-    outcome: 'Supported eight of the fastest employee certifications achieved in the organization over a four-year period while creating a clearer path from onboarding to independent work.'
+    title: 'Workforce Training & Capability System',
+    metric: '8 employees · 6–14 week certification',
+    summary: 'An adaptive training, certification, and progression framework built for a live manufacturing environment without dedicated trainers.',
+    problem: 'After mandatory onboarding, new employees entered the department without a standardized training plan, assigned trainers, weekly expectations, or supervisor-level visibility into progress.',
+    approach: 'Built an eight-week adaptable pathway combining trainer assignments, weekly competencies, hands-on practice, Quality feedback, part-experience tracking, and Level 1/2/3 progression standards.',
+    outcome: 'All eight employees in the initial cohort certified faster than historically reported norms, with certification achieved in approximately 6–14 weeks.'
   },
 ];
 
