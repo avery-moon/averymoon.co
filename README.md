@@ -1,15 +1,23 @@
-# averymoon.co — V6.1 Polish
+# averymoon.co — V6.1.1 Built Systems Polish
 
-Built from the V6.0 custom-domain version.
+Built from V6.1.
 
-Changes:
-- Full readability/grammar pass on Alloy and Training case studies
-- Reduced case-study body copy while preserving the strongest evidence
-- Removed "sanitized" from public-facing case-study copy
-- Changed abbreviated metric units to "Weeks" and "Hours"
-- Reduced case-study hero size by ~10–15%
-- Reduced major vertical section spacing by roughly one-third
-- Simplified Built Systems cards into scan-friendly project gateways
-- Preserved the custom-domain Astro configuration for https://averymoon.co
+## Built Systems index
+- Reordered projects to alternate analytical/material and people/capability systems
+- Standardized project names around the organizational capability created, rather than the artifact/tool
+- Removed summary line clamping so every card ends with a complete sentence
+- Tightened card summaries for fast scanning
+- Redesigned all six abstract line graphics to represent each system's actual logic
+- Updated Training metric to “6–14 weeks to certification”
 
-No workflow changes are included.
+## New order
+1. Materials Planning & Procurement System
+2. Training & Certification System
+3. Inventory Planning & Control System
+4. Workforce Capability Planning System
+5. Operational Performance & Downtime System
+6. Workforce Planning & Scheduling System
+
+The two flagship case-study H1s now use the same standardized naming language as the index.
+
+Custom-domain configuration and deployment workflow are unchanged.

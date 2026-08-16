@@ -1003,3 +1003,21 @@ body:has(.about-grid) .photo-frame-v54{
   .case-before-after,.training-before{padding:34px 0}
   .case-outcomes{padding:44px 0}
 }
+
+/* ===== V6.1.1 BUILT SYSTEMS INDEX ===== */
+.system-card .card-summary{
+  display:block!important;
+  -webkit-line-clamp:unset!important;
+  -webkit-box-orient:unset!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+  white-space:normal!important;
+  max-height:none!important;
+}
+.system-signature svg path{
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.35;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}

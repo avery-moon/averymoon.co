@@ -2,12 +2,18 @@
 const { system } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const glyphs = {
-  'alloy-procurement': 'M8 45C35 45 35 16 64 16s29 29 57 29 29-18 57-18',
-  'cross-training-matrix': 'M18 18h36v36H18zm54 0h36v36H72zM18 72h36v36H18zm54 0h36v36H72z',
-  'equipment-downtime-dashboard': 'M8 82h25V42h22v40h23V22h22v60h25',
-  'foundry-inventory': 'M18 26h92v68H18zM34 42h60v36H34zM49 56h30v8H49z',
-  'workforce-scheduling': 'M15 25h100v76H15zM15 48h100M40 25v76M66 25v76M91 25v76',
-  'onboarding-certification': 'M18 94V35h28l13 15 14-26 15 26 13-15h17v59M38 72h61'
+  // Demand + inventory streams converge into a forward planning horizon.
+  'alloy-procurement': 'M10 26h28l18 22h20M10 70h28l18-22M76 48h42M94 34l24 14-24 14',
+  // A staged learning pathway culminates in qualification.
+  'onboarding-certification': 'M12 86h22V70h22V54h22V38h22V22h18M25 86V34M25 34l10 10M25 34L15 44M103 22l7 7 13-17',
+  // Multiple material groups feed a centralized inventory/control view.
+  'foundry-inventory': 'M12 25h25v18H12zM12 54h25v18H12zM12 83h25v18H12zM37 34h20M37 63h20M37 92h20M57 25h58v76H57zM72 43h29M72 58h21M72 73h33M72 88h25',
+  // Capability matrix with deliberate open gaps.
+  'cross-training-matrix': 'M14 18h102v84H14zM14 46h102M14 74h102M47 18v84M81 18v84M24 30h13M57 58h14M91 30h15M24 86h13M91 86h15',
+  // Operating timeline interrupted by downtime spikes / loss events.
+  'equipment-downtime-dashboard': 'M10 86h108M14 70l18-2 8-34 9 50 11-14 13-2 8-40 10 58 11-26 12 2 11-9M32 20v66M76 20v66M108 20v66',
+  // People/resources allocated across a time grid.
+  'workforce-scheduling': 'M12 22h106v82H12zM12 43h106M42 22v82M68 22v82M94 22v82M20 52h14v13H20zM48 72h14v13H48zM74 52h14v13H74zM100 86h12v10h-12z'
 };
 const glyph = glyphs[system.slug];
 ---
