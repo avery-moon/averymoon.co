@@ -1,26 +1,98 @@
 ---
 const { system } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const glyphs = {
-  // Demand + inventory streams converge into a forward planning horizon.
-  'alloy-procurement': 'M10 26h28l18 22h20M10 70h28l18-22M76 48h42M94 34l24 14-24 14',
-  // A staged learning pathway culminates in qualification.
-  'onboarding-certification': 'M12 86h22V70h22V54h22V38h22V22h18M25 86V34M25 34l10 10M25 34L15 44M103 22l7 7 13-17',
-  // Multiple material groups feed a centralized inventory/control view.
-  'foundry-inventory': 'M12 25h25v18H12zM12 54h25v18H12zM12 83h25v18H12zM37 34h20M37 63h20M37 92h20M57 25h58v76H57zM72 43h29M72 58h21M72 73h33M72 88h25',
-  // Capability matrix with deliberate open gaps.
-  'cross-training-matrix': 'M14 18h102v84H14zM14 46h102M14 74h102M47 18v84M81 18v84M24 30h13M57 58h14M91 30h15M24 86h13M91 86h15',
-  // Operating timeline interrupted by downtime spikes / loss events.
-  'equipment-downtime-dashboard': 'M10 86h108M14 70l18-2 8-34 9 50 11-14 13-2 8-40 10 58 11-26 12 2 11-9M32 20v66M76 20v66M108 20v66',
-  // People/resources allocated across a time grid.
-  'workforce-scheduling': 'M12 22h106v82H12zM12 43h106M42 22v82M68 22v82M94 22v82M20 52h14v13H20zM48 72h14v13H48zM74 52h14v13H74zM100 86h12v10h-12z'
-};
-const glyph = glyphs[system.slug];
 ---
 <a class="system-card reveal" href={`${base}/built-systems/${system.slug}/`}>
-  <div class="system-signature-field" aria-hidden="true"><div class="system-signature">
-    <svg viewBox="0 0 130 120"><path d={glyph}/></svg>
-  </div></div>
+  <div class={`system-diagram system-diagram-${system.slug}`} aria-hidden="true">
+    {system.slug === 'alloy-procurement' && (
+      <svg viewBox="0 0 300 88">
+        <g class="diagram-muted">
+          <path d="M14 18H68L92 43" /><path d="M14 43H92" /><path d="M14 68H68L92 43" />
+          <circle cx="14" cy="18" r="2"/><circle cx="14" cy="43" r="2"/><circle cx="14" cy="68" r="2"/>
+        </g>
+        <circle class="diagram-accent-fill" cx="94" cy="43" r="4"/>
+        <path d="M98 43H282" />
+        <g class="diagram-ticks">
+          <path d="M137 35V51M183 35V51M229 35V51M282 35V51"/>
+          <text x="137" y="67">13W</text><text x="183" y="67">6M</text>
+          <text x="229" y="67">12M</text><text x="282" y="67" text-anchor="end">18M</text>
+        </g>
+      </svg>
+    )}
+    {system.slug === 'onboarding-certification' && (
+      <svg viewBox="0 0 300 88">
+        <g class="diagram-guide">
+          <path d="M18 20H264M18 43H264M18 66H264"/>
+          <path d="M49 12V74M80 12V74M111 12V74M142 12V74M173 12V74M204 12V74M235 12V74"/>
+        </g>
+        <path d="M18 20H78L102 43H172L194 66H260"/>
+        <path class="diagram-secondary" d="M18 66H62L86 43H150L174 20H260"/>
+        <circle class="diagram-accent-fill" cx="263" cy="43" r="5"/>
+        <path class="diagram-accent" d="M268 43H285M278 36l7 7-7 7"/>
+      </svg>
+    )}
+    {system.slug === 'foundry-inventory' && (
+      <svg viewBox="0 0 300 88">
+        <g class="diagram-muted">
+          <path d="M15 17H75L105 43M15 43H105M15 69H75L105 43"/>
+          <circle cx="15" cy="17" r="2"/><circle cx="15" cy="43" r="2"/><circle cx="15" cy="69" r="2"/>
+        </g>
+        <rect x="105" y="24" width="62" height="38" rx="1"/>
+        <path class="diagram-guide" d="M116 35H155M116 43H148M116 51H158"/>
+        <path d="M167 43H211M211 43L238 22M211 43L238 65"/>
+        <g class="diagram-accent">
+          <path d="M238 22H282M274 15l8 7-8 7"/>
+          <path d="M238 65H282M274 58l8 7-8 7"/>
+        </g>
+      </svg>
+    )}
+    {system.slug === 'cross-training-matrix' && (
+      <svg viewBox="0 0 300 88">
+        <g class="diagram-guide">
+          <path d="M38 12V76M70 12V76M102 12V76M134 12V76M166 12V76M198 12V76M230 12V76M262 12V76"/>
+          <path d="M22 25H278M22 43H278M22 61H278"/>
+        </g>
+        <g class="diagram-fill">
+          <rect x="42" y="16" width="24" height="6"/><rect x="74" y="16" width="24" height="6"/>
+          <rect x="138" y="16" width="24" height="6"/><rect x="202" y="16" width="24" height="6"/>
+          <rect x="42" y="29" width="24" height="10"/><rect x="106" y="29" width="24" height="10"/>
+          <rect x="170" y="29" width="24" height="10"/><rect x="234" y="29" width="24" height="10"/>
+          <rect x="74" y="47" width="24" height="10"/><rect x="106" y="47" width="24" height="10"/>
+          <rect x="138" y="47" width="24" height="10"/><rect x="234" y="47" width="24" height="10"/>
+          <rect x="42" y="65" width="24" height="7"/><rect x="170" y="65" width="24" height="7"/><rect x="202" y="65" width="24" height="7"/>
+        </g>
+        <rect class="diagram-accent" x="166" y="25" width="32" height="18"/>
+      </svg>
+    )}
+    {system.slug === 'equipment-downtime-dashboard' && (
+      <svg viewBox="0 0 300 88">
+        <path class="diagram-guide" d="M14 69H286M14 18V69"/>
+        <path d="M14 55H52L58 30L65 63L72 55H108L114 29L121 64L128 55H165L171 31L178 62L185 55H222L228 18L235 67L242 55H286"/>
+        <g class="diagram-muted"><path d="M58 18V70M114 18V70M171 18V70"/></g>
+        <path class="diagram-accent" d="M228 13V70"/>
+        <circle class="diagram-accent-fill" cx="228" cy="18" r="4"/>
+      </svg>
+    )}
+    {system.slug === 'workforce-scheduling' && (
+      <svg viewBox="0 0 300 88">
+        <g class="diagram-muted">
+          <circle cx="18" cy="20" r="4"/><circle cx="18" cy="43" r="4"/><circle cx="18" cy="66" r="4"/>
+          <path d="M22 20H64L88 35M22 43H88M22 66H64L88 51"/>
+        </g>
+        <circle class="diagram-accent-fill" cx="91" cy="43" r="4"/>
+        <path d="M95 43H126"/>
+        <g class="diagram-guide">
+          <rect x="126" y="15" width="158" height="56"/>
+          <path d="M158 15V71M190 15V71M222 15V71M254 15V71M126 34H284M126 53H284"/>
+        </g>
+        <g class="diagram-fill">
+          <rect x="130" y="19" width="24" height="11"/><rect x="162" y="38" width="24" height="11"/>
+          <rect x="194" y="19" width="24" height="11"/><rect x="226" y="57" width="24" height="10"/>
+          <rect x="258" y="38" width="22" height="11"/>
+        </g>
+      </svg>
+    )}
+  </div>
   <div class="meta">{system.category}</div>
   <h3>{system.title}</h3>
   <div class="metric metric-v56">{system.metric}</div>

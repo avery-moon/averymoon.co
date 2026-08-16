@@ -1,23 +1,17 @@
-# averymoon.co — V6.1.1 Built Systems Polish
+# averymoon.co — V6.1.2 System Diagram Refinement
 
-Built from V6.1.
+Built from V6.1.1.
 
-## Built Systems index
-- Reordered projects to alternate analytical/material and people/capability systems
-- Standardized project names around the organizational capability created, rather than the artifact/tool
-- Removed summary line clamping so every card ends with a complete sentence
-- Tightened card summaries for fast scanning
-- Redesigned all six abstract line graphics to represent each system's actual logic
-- Updated Training metric to “6–14 weeks to certification”
+Changes are intentionally limited to the Built Systems index:
+- Removed aerospace/manufacturing/operations industry descriptors from card taxonomy
+- Shortened category labels to transferable capability language
+- Rebuilt all six graphics as wide miniature information diagrams
+- Preserved project names, order, metrics, copy, links, layout, custom domain, and deployment workflow
 
-## New order
-1. Materials Planning & Procurement System
-2. Training & Certification System
-3. Inventory Planning & Control System
-4. Workforce Capability Planning System
-5. Operational Performance & Downtime System
-6. Workforce Planning & Scheduling System
-
-The two flagship case-study H1s now use the same standardized naming language as the index.
-
-Custom-domain configuration and deployment workflow are unchanged.
+Category labels:
+- Materials + Procurement
+- Learning + Development
+- Inventory + Control
+- Workforce Capability
+- Operational Analytics
+- Workforce Planning

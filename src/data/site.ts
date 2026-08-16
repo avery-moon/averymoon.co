@@ -26,7 +26,7 @@ export const systems = [
   {
     slug: 'alloy-procurement',
     number: '01',
-    category: 'Materials Planning · Aerospace Manufacturing',
+    category: 'Materials + Procurement',
     title: 'Materials Planning & Procurement System',
     metric: '~$3M on hand · up to 18 months',
     summary: 'Turns customer demand, inventory, and purchasing constraints into forward material requirements.',
@@ -37,7 +37,7 @@ export const systems = [
   {
     slug: 'onboarding-certification',
     number: '02',
-    category: 'Learning Systems · Manufacturing Operations',
+    category: 'Learning + Development',
     title: 'Training & Certification System',
     metric: '8 employees · 6–14 weeks to certification',
     summary: 'Creates a structured pathway from onboarding through certification and continued development.',
@@ -48,7 +48,7 @@ export const systems = [
   {
     slug: 'foundry-inventory',
     number: '03',
-    category: 'Inventory Systems · Manufacturing Operations',
+    category: 'Inventory + Control',
     title: 'Inventory Planning & Control System',
     metric: '65 line items · ~$300K',
     summary: 'Centralizes material inventory for clearer purchasing and production planning.',
@@ -59,7 +59,7 @@ export const systems = [
   {
     slug: 'cross-training-matrix',
     number: '04',
-    category: 'Workforce Systems · Manufacturing Operations',
+    category: 'Workforce Capability',
     title: 'Workforce Capability Planning System',
     metric: '200 employees · ~40 roles',
     summary: 'Maps workforce capability across roles to reveal coverage gaps and training priorities.',
@@ -70,7 +70,7 @@ export const systems = [
   {
     slug: 'equipment-downtime-dashboard',
     number: '05',
-    category: 'Operational Analytics · Manufacturing Operations',
+    category: 'Operational Analytics',
     title: 'Operational Performance & Downtime System',
     metric: 'Recurring loss visibility',
     summary: 'Surfaces recurring equipment losses to support maintenance and operational priorities.',
@@ -81,7 +81,7 @@ export const systems = [
   {
     slug: 'workforce-scheduling',
     number: '06',
-    category: 'Workforce Planning · Operations',
+    category: 'Workforce Planning',
     title: 'Workforce Planning & Scheduling System',
     metric: 'Allocation · scheduling · coverage',
     summary: 'Organizes staffing needs and available capability into a repeatable scheduling process.',

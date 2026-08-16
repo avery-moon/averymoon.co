@@ -1021,3 +1021,67 @@ body:has(.about-grid) .photo-frame-v54{
   stroke-linecap:round;
   stroke-linejoin:round;
 }
+
+/* ===== V6.1.2 WIDE SYSTEM DIAGRAMS ===== */
+.system-card .system-signature-field{display:none!important}
+.system-diagram{
+  height:92px;
+  border:1px solid var(--line);
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  padding:9px 15px;
+  overflow:hidden;
+  background:rgba(255,255,255,.12);
+}
+.system-diagram svg{display:block;width:100%;height:100%;overflow:visible}
+.system-diagram svg path,
+.system-diagram svg line,
+.system-diagram svg rect,
+.system-diagram svg circle{
+  vector-effect:non-scaling-stroke;
+}
+.system-diagram svg path,
+.system-diagram svg rect,
+.system-diagram svg circle{
+  fill:none;
+  stroke:var(--forest);
+  stroke-width:1.05;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.system-diagram .diagram-guide path,
+.system-diagram .diagram-guide rect,
+.system-diagram .diagram-guide circle{
+  stroke:rgba(32,59,49,.18);
+}
+.system-diagram .diagram-muted path,
+.system-diagram .diagram-muted rect,
+.system-diagram .diagram-muted circle{
+  stroke:rgba(32,59,49,.48);
+}
+.system-diagram .diagram-secondary{stroke:rgba(32,59,49,.48)}
+.system-diagram .diagram-accent,
+.system-diagram .diagram-accent path,
+.system-diagram .diagram-accent rect,
+.system-diagram .diagram-accent circle{
+  stroke:var(--terracotta);
+}
+.system-diagram .diagram-accent-fill{
+  fill:var(--terracotta);
+  stroke:var(--terracotta);
+}
+.system-diagram .diagram-fill rect{
+  fill:rgba(32,59,49,.11);
+  stroke:none;
+}
+.system-diagram .diagram-ticks path{stroke:rgba(32,59,49,.35)}
+.system-diagram text{
+  fill:var(--muted);
+  font-family:inherit;
+  font-size:7px;
+  letter-spacing:.05em;
+}
+@media(max-width:760px){
+  .system-diagram{height:84px;padding:8px 12px}
+}
