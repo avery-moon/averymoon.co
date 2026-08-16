@@ -59,7 +59,7 @@ const projects = [
       <span>Knowledge · Learning · Documentation · Capability</span>
     </div>
 
-    <article class="selected-feature">
+    <article class="selected-feature selected-feature-text">
       <div class="selected-feature-copy">
         <div class="selected-card-top">
           <span class="selected-no">{projects[0].no}</span>
@@ -67,17 +67,11 @@ const projects = [
         </div>
         <div class="selected-meta">{projects[0].meta}</div>
         <h2>{projects[0].title}</h2>
+      </div>
+      <div class="selected-feature-detail">
         <p>{projects[0].body}</p>
         <div class="selected-tags">
           {projects[0].tags.map(tag => <span>{tag}</span>)}
-        </div>
-      </div>
-      <div class="playbook-graphic" aria-hidden="true">
-        <div class="playbook-page page-back"><span></span><span></span><span></span></div>
-        <div class="playbook-page page-front">
-          <small>MANAGER HANDOFF</small>
-          <strong>ICQA</strong>
-          <i></i><i></i><i></i><i></i><i></i>
         </div>
       </div>
     </article>
@@ -132,7 +126,7 @@ const projects = [
   <div class="container selected-future-grid">
     <div>
       <div class="case-kicker">An Expanding Collection</div>
-      <h2>Professional foundations,<br/><em>new technical directions.</em></h2>
+      <h2>The work continues in<br/><em>new technical directions.</em></h2>
     </div>
     <div>
       <p>An evolving collection of projects exploring new tools, technical methods, and ways of turning information into useful systems.</p>

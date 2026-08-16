@@ -1948,3 +1948,47 @@ body .selected-grid .selected-mark{display:none}
   body .selected-grid-four{grid-template-columns:1fr}
   body .selected-grid-four .selected-card{border-top:0}
 }
+
+/* ===== V6.4.5 SELECTED PROJECTS — FINAL RESTRAINT PASS ===== */
+body .selected-feature.selected-feature-text{
+  grid-template-columns:.95fr 1.05fr;
+  gap:86px;
+  padding:42px 42px 44px;
+  min-height:0;
+  align-items:center;
+}
+body .selected-feature-text .selected-feature-copy{
+  max-width:none;
+}
+body .selected-feature-text h2{
+  font-size:clamp(2rem,3.45vw,3.15rem);
+  margin-bottom:0;
+}
+body .selected-feature-detail{
+  max-width:600px;
+}
+body .selected-feature-detail p{
+  margin:0;
+}
+body .selected-feature-detail .selected-tags{
+  margin-top:22px;
+  padding-top:0;
+}
+/* Retire the illustrative mock artifact entirely. */
+body .playbook-graphic{display:none!important}
+
+/* Slightly reduce the empty handoff between hero and professional-work index. */
+body .selected-hero{
+  padding-bottom:44px;
+}
+body .selected-index{
+  padding-top:52px;
+}
+
+@media(max-width:850px){
+  body .selected-feature.selected-feature-text{
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:32px 25px;
+  }
+}

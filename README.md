@@ -1,15 +1,14 @@
-# averymoon.co — V6.4.4 Selected Projects Final Polish
+# averymoon.co — V6.4.5 Selected Projects Final
 
-Final compositional pass for Selected Projects, built on V6.4.3.
+Final restraint pass, built on V6.4.4.
 
 Changes:
-- Amazon is attributed once at the section level instead of repeated on every project.
-- ICQA Manager Handoff Playbook becomes the featured lead project with a restrained document graphic.
-- Quality Bootcamps, Multilingual Visual Knowledge Guides, Knowledge Resource Pages, and Process Documentation form a tighter Knowledge + Learning grid.
-- Problem Solve Cross-Training Planner becomes a wider closing professional-work card.
-- Removes the repeated constellation decoration from project cards.
-- Strengthens typography and contrast on cream: darker body copy, heavier forest headings, stronger labels, and more deliberate terracotta accents.
-- Replaces “Amazon · Lightweight Planning Tool” with “Cross-Training Planning.”
-- Preserves the dark-green future-project section and all V6.4.2 copy edits.
+- Removes the invented ICQA handoff/playbook illustration entirely.
+- Keeps the Handoff Playbook as the featured project, but presents it as a clean text-led evidence block.
+- Rebalances that feature into title/context + description/tags rather than title + faux artifact.
+- Changes the future section heading to: “The work continues in new technical directions.”
+- Slightly tightens the whitespace between the page intro and professional-work collection.
+- Leaves future project categories intentionally understated until real, non-proprietary projects are ready to be added.
+- Preserves all prior copy, hierarchy, typography, and color improvements.
 
-No other site pages changed.
+No other pages changed.
