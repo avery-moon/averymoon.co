@@ -1,18 +1,21 @@
-# averymoon.co — V6.2.1 Home Hero Refined
+# averymoon.co — V6.2.2 Light Editorial Hero
 
-Correction pass on V6.2.
+Built from V6.2.1.
+
+This pass changes the art direction rather than simply redrawing the dark hero.
 
 Changes:
-- Removed the duplicate “Avery Moon” label from the hero; identity remains in the site header
-- Reduced headline scale and tightened the first-viewport composition
-- Kept the new value proposition, supporting copy, and CTAs
-- Rebuilt hero artwork:
-  - smaller, more delicate system-network constellation
-  - finer topographic lines distributed through the sky
-  - engraved/cartographic mountain treatment rather than geometric polygon peaks
-  - mountains occupy the lower third rather than dominating the image
-  - charcoal/navy atmosphere retained
-- Softened and widened the cream-to-night transition
-- Changed the tagline from tiny uppercase to restrained serif italic
-- Existing metric band and all sections below remain unchanged
-- V6.1.5 contact, social metadata/card, and Built Systems polish remain intact
+- Keeps the stronger V6.2 headline, supporting copy, CTA structure, and single-name treatment
+- Removes the hard cream-vs-night split
+- Returns the hero to the site's warm cream editorial field
+- New right-side illustration is designed to feel printed into the page:
+  - pale topographic contour lines
+  - engraved/cartographic mountain ridge
+  - sparse celestial marks
+  - small system-network constellation with restrained terracotta nodes
+  - only a very subtle slate/dusk atmosphere in the upper-right
+  - light survey/botanical marks to reconnect with the site's original organic visual language
+- Preserves the existing metric band and all content below the hero
+- Preserves V6.1.5 contact, social metadata/card, and Built Systems polish
+
+Note: the current How I Work copy is intentionally unchanged for this visual test, even though it overlaps conceptually with the new hero. That can be edited after the hero direction is approved.
