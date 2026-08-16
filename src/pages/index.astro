@@ -6,19 +6,20 @@ import { systems } from '../data/site';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <BaseLayout title="Systems, Strategy & Organizational Design" description="Avery Moon designs practical systems for growing organizations, small and mid-sized businesses, and nonprofits—improving operations, workflows, knowledge, workforce capability, and decision-making.">
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <h1>Designing systems that help organizations <span class="accent"><em>work smarter.</em></span></h1>
-      <p>I'm Avery Moon. I design, document, and improve the systems that help people find what they need, make better decisions, and do complex work more clearly.</p>
-      <div class="hero-actions">
-        <a class="button primary" href={`${base}/built-systems/`}>Explore Built Systems</a>
-        <a class="button" href={`${base}/about/`}>About Me</a>
+<section class="hero hero-v62">
+  <div class="container hero-v62-grid">
+    <div class="hero-v62-copy">
+      <div class="hero-v62-name">Avery Moon</div>
+      <h1>I design systems that make <em>complex work</em> easier to navigate.</h1>
+      <p>I turn scattered information, workflows, and institutional knowledge into practical systems people can actually use.</p>
+      <div class="hero-v62-actions">
+        <a class="button primary" href={`${base}/built-systems/`}>View Built Systems <span>→</span></a>
+        <a class="text-link hero-v62-secondary" href={`${base}/approach/`}>About my approach</a>
       </div>
-      <div class="descriptors"><span>Systems Thinking</span><span>Knowledge</span><span>Process Design</span></div>
+      <div class="hero-v62-tagline">Better systems. Better outcomes. Stronger teams.</div>
     </div>
-    <div class="hero-art">
-      <img src={`${base}/images/hero-organic-systems.jpg`} alt="Abstract river system with topographic, geometric, and botanical elements" />
+    <div class="hero-v62-art" aria-hidden="true">
+      <img src={`${base}/images/hero-night-systems.png`} alt="" />
     </div>
   </div>
 </section>
