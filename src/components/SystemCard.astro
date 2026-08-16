@@ -21,14 +21,29 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     )}
     {system.slug === 'onboarding-certification' && (
       <svg viewBox="0 0 300 88">
+        <!-- abstract 8-week training timeline -->
         <g class="diagram-guide">
-          <path d="M18 20H264M18 43H264M18 66H264"/>
-          <path d="M49 12V74M80 12V74M111 12V74M142 12V74M173 12V74M204 12V74M235 12V74"/>
+          <path d="M22 15V73M54 15V73M86 15V73M118 15V73M150 15V73M182 15V73M214 15V73M246 15V73M278 15V73"/>
+          <path d="M22 73H278"/>
         </g>
-        <path d="M18 20H78L102 43H172L194 66H260"/>
-        <path class="diagram-secondary" d="M18 66H62L86 43H150L174 20H260"/>
-        <circle class="diagram-accent-fill" cx="263" cy="43" r="5"/>
-        <path class="diagram-accent" d="M268 43H285M278 36l7 7-7 7"/>
+
+        <!-- overlapping competency windows -->
+        <g class="gantt-bars">
+          <rect x="25" y="18" width="91" height="7" rx="1"/>
+          <rect x="57" y="30" width="121" height="7" rx="1"/>
+          <rect x="89" y="42" width="93" height="7" rx="1"/>
+          <rect x="121" y="54" width="125" height="7" rx="1"/>
+          <rect x="153" y="66" width="93" height="5" rx="1"/>
+        </g>
+
+        <!-- subtle mid-course adjustment -->
+        <rect class="diagram-accent-soft" x="182" y="30" width="29" height="7" rx="1"/>
+        <path class="diagram-accent" d="M196 27v-5h17v8"/>
+
+        <!-- qualification marker -->
+        <path d="M246 18V70"/>
+        <circle class="diagram-accent-fill" cx="263" cy="44" r="5"/>
+        <path class="diagram-accent" d="M268 44H283M277 38l6 6-6 6"/>
       </svg>
     )}
     {system.slug === 'foundry-inventory' && (
@@ -93,7 +108,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </svg>
     )}
   </div>
-  <div class="meta">{system.category}</div>
   <h3>{system.title}</h3>
   <div class="metric metric-v56">{system.metric}</div>
   <p class="muted card-summary">{system.summary}</p>
