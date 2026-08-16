@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout title="Production Planning & Scheduling" description="A constraint-aware daily and weekly production planning system that reduced routine planning work from hours to minutes.">
+<section class="case-hero">
+  <div class="container">
+    <a class="case-back" href={`${base}/built-systems/`}>← Built Systems</a>
+    <div class="case-kicker">06 / Production Planning</div>
+    <h1>Production Planning<br/><em>& Scheduling</em></h1>
+    <p class="case-deck">A constraint-aware planning system that turns current work-in-process into practical daily and weekly execution priorities.</p>
+    <div class="case-role-line"><span>Workflow Redesign</span><span>Business Logic</span><span>Capacity Planning</span><span>AI-Assisted Development</span><span>Validation</span></div>
+  </div>
+</section>
+
+<section class="case-metrics case-metrics-dark">
+  <div class="container case-metric-grid">
+    <div><strong>~13–19 hrs</strong><span>My Previous Weekly Planning Time</span></div>
+    <div><strong>~5–10 min</strong><span>Current Daily Planning Time</span></div>
+    <div><strong>7–8</strong><span>Departments Impacted</span></div>
+    <div><strong>~200</strong><span>Employees' Work Priorities Affected</span></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container case-two-col">
+    <div><div class="case-section-no">01</div><div class="eyebrow">The Constraint</div>
+      <h2>A daily production plan could take hours to build and become obsolete almost immediately.</h2>
+    </div>
+    <div class="case-copy">
+      <p>The facility's legacy planning software required supervisors to manually enter and manage work orders across multiple operations, repeatedly include or exclude routing steps, and update plans throughout the day when work did not move as expected.</p>
+      <p>For me, the process typically consumed four to six hours on Monday, two to three hours on most midweek days, and another three to four hours on Friday to plan ahead. The software was also unstable and did not account cleanly for staffing capacity, expected operation spans, or several constraints supervisors managed manually.</p>
+      <p class="case-emphasis">I replaced the repeated manual planning work with a refreshable model: paste current WIP, run the planner, review feasibility, and adjust only where judgment is needed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt">
+  <div class="container">
+    <div class="case-section-no">02</div><div class="eyebrow">Planning Logic</div>
+    <h2>Convert current WIP into an executable plan.</h2>
+    <div class="planning-engine reveal">
+      <div class="planning-inputs">
+        <span>Current Work Orders</span><span>WO Quantity</span><span>Part Routing</span><span>Operation Span</span><span>Available Headcount</span><span>Throughput Target</span><span>Earned Standard Hours</span>
+      </div>
+      <div class="planning-arrow">→</div>
+      <div class="planning-core"><small>Planning Engine</small><strong>Prioritize work against capacity, routing, timing, and throughput goals.</strong></div>
+      <div class="planning-arrow">→</div>
+      <div class="planning-outputs"><span>Daily Schedule</span><span>Weekly Schedule</span><span>Expected Throughput</span><span>Expected ESH</span><span>Aged WIP</span><span>Late Returns</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container route-example">
+    <div><div class="case-section-no">03</div><div class="eyebrow">Exception Logic</div>
+      <h2>The schedule understands that work can leave the department and still belong to the plan.</h2>
+      <p>Routing spans are encoded so work orders temporarily disappear from actionable work while they are expected elsewhere, then return to the schedule when that external span should be complete.</p>
+    </div>
+    <div class="route-flow">
+      <div><small>Monday</small><strong>Current Operation</strong></div><b>→</b>
+      <div class="route-away"><small>2-Day Span</small><strong>External Process</strong></div><b>→</b>
+      <div><small>Thursday</small><strong>Expected Return</strong></div><b>→</b>
+      <div class="route-late"><small>If Missing</small><strong>Flag Late</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt">
+  <div class="container">
+    <div class="case-section-no">04</div><div class="eyebrow">Human in the Loop</div>
+    <h2>Automate the planning load, not the supervisor's judgment.</h2>
+    <div class="human-loop">
+      <div><strong>01</strong><span>Paste current work orders</span></div><b>→</b>
+      <div><strong>02</strong><span>Run the macro</span></div><b>→</b>
+      <div><strong>03</strong><span>Review feasibility</span></div><b>→</b>
+      <div><strong>04</strong><span>Make quick WIP swaps if needed</span></div><b>→</b>
+      <div><strong>05</strong><span>Publish the plan</span></div>
+    </div>
+    <p class="case-note">Formula, formatting, prioritization, and VBA implementation were developed with AI assistance. I defined the operational parameters, work-center scope, routing behavior, span logic, constraints, planning goals, and validation criteria.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container current-state-grid">
+    <div><div class="case-section-no">05</div><div class="eyebrow">Observed Impact</div><h2>Planning moved from a recurring time sink to a short review process.</h2>
+      <p>My routine planning work dropped from approximately 13–19 hours per week to roughly 5–10 minutes per day under normal conditions. The system also makes aged inventory, late returns, expected throughput, and missed assignments easier to see.</p>
+    </div>
+    <div class="roadmap"><div class="eyebrow">Next Iteration</div><span>Attendance Feed</span><span>Workforce Capability Integration</span><span>Automated Alerts</span><span>More Direct Production-System Inputs</span></div>
+  </div>
+</section>
+
+<section class="case-artifact-section">
+  <div class="container">
+    <div class="artifact-head"><div><div class="case-section-no">06</div><div class="eyebrow">Artifacts</div><h2>The plan, the logic, and the exceptions.</h2></div>
+      <p>Final project materials will include the daily/weekly schedule output, planning dashboard, and exception views once the working file is ready for portfolio export.</p>
+    </div>
+    <div class="artifact-grid">
+      <div class="artifact-mini"><div class="mini-schedule"></div><span>Daily / Weekly Schedule</span><small>Work priorities generated from current WIP</small></div>
+      <div class="artifact-mini"><div class="mini-cap-dashboard"></div><span>Planning Dashboard</span><small>Throughput, ESH, priorities, and capacity</small></div>
+      <div class="artifact-mini"><div class="mini-alerts">!</div><span>Exception View</span><small>Aged WIP and late-return flags</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-next"><div class="container"><span class="eyebrow">Related System</span>
+  <a href={`${base}/built-systems/cross-training-matrix/`}><strong>Workforce Capability Planning System</strong><span>→</span></a>
+</div></section>
+</BaseLayout>

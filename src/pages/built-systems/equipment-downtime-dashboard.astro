@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout title="Equipment Reliability & Downtime Analysis" description="A reliability system that turns structured frontline downtime observations into recurring failure analysis and maintenance action.">
+<section class="case-hero">
+  <div class="container">
+    <a class="case-back" href={`${base}/built-systems/`}>← Built Systems</a>
+    <div class="case-kicker">05 / Operational Analytics</div>
+    <h1>Equipment Reliability &<br/><em>Downtime Analysis</em></h1>
+    <p class="case-deck">A reliability system that replaces low-context downtime reporting with structured failure data, Pareto analysis, and a path from frontline observation to corrective action.</p>
+    <div class="case-role-line"><span>Data Design</span><span>Failure Taxonomy</span><span>Operational Analytics</span><span>Frontline Workflow</span><span>Continuous Improvement</span></div>
+  </div>
+</section>
+
+<section class="case-metrics case-metrics-light">
+  <div class="container case-metric-grid">
+    <div><strong>4</strong><span>Primary Production Units</span></div>
+    <div><strong>3 Levels</strong><span>Failure Classification</span></div>
+    <div><strong>Weekly</strong><span>Reliability Review</span></div>
+    <div><strong>2</strong><span>Work Areas Using the Model</span></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container case-two-col">
+    <div><div class="case-section-no">01</div><div class="eyebrow">The Data Problem</div>
+      <h2>Better analysis required better data.</h2>
+    </div>
+    <div class="case-copy">
+      <p>Downtime was already being reported, but the machine-generated logs contained inaccurate inputs and were condensed into basic daily graphs that offered little context. With four production units more than 50 years old, maintenance demand was constant, yet recurring failure patterns were difficult to separate from one-off events.</p>
+      <p>I redesigned the collection process around structured operator observations so the analysis could answer more useful questions: where downtime occurs, why it occurs, how severe it is, which failure modes repeat, and what action followed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt">
+  <div class="container">
+    <div class="case-section-no">02</div><div class="eyebrow">Data Architecture</div>
+    <h2>Capture frontline context in a form the organization can analyze.</h2>
+    <div class="reliability-fields reveal">
+      <span>Date</span><span>Unit</span><span>Minutes</span><span>Operational Impact</span><span>Reason</span><span>Cause</span><span>Root Cause</span><span>Maintenance Action</span><span>Operator Notes</span>
+    </div>
+    <div class="pareto-stack">
+      <div><small>Level 1</small><strong>Downtime Category</strong></div><b>↓</b>
+      <div><small>Level 2</small><strong>Failure / Reason</strong></div><b>↓</b>
+      <div><small>Level 3</small><strong>Root Cause</strong></div>
+    </div>
+    <p class="case-note">The three-level structure supports an overall Pareto across all units and separate Pareto analysis for each primary asset.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container insight-shift">
+    <div><div class="case-section-no">03</div><div class="eyebrow">Insight → Action</div>
+      <h2>The data challenged the prevailing assumption about which unit was the problem.</h2>
+    </div>
+    <div class="insight-card">
+      <div><span>Perception</span><strong>One unit was widely viewed as the primary reliability problem.</strong></div>
+      <b>→</b>
+      <div><span>Analysis</span><strong>Recurring downtime showed another unit driving more day-to-day loss.</strong></div>
+      <b>→</b>
+      <div><span>Action</span><strong>Maintenance attention shifted toward recurring failure modes and longer-term fixes.</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt">
+  <div class="container">
+    <div class="case-section-no">04</div><div class="eyebrow">Closed-Loop Improvement</div>
+    <h2>Reporting is only useful if the insight has somewhere to go.</h2>
+    <div class="reliability-loop">
+      <span>Operator Downtime Tracker</span><b>→</b><span>Reliability Dashboard + Pareto</span><b>→</b><span>RAIL Action Tracking</span><b>→</b><span>A3 Problem Solving</span><b>→</b><span>Maintenance / Capital Action</span>
+    </div>
+    <p class="case-note">The system supports weekly review with operations, maintenance, facilities, and site leadership. Findings have informed repairs, longer-term vendor/rebuild discussions, and capital-spending justification.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container current-state-grid">
+    <div><div class="case-section-no">05</div><div class="eyebrow">Adoption & Sustainability</div><h2>A model another work area chose to adopt.</h2>
+      <p>The Foundry system is updated weekly from structured operator inputs and can be maintained by the supervisor, lead, or an operations/process co-op. A second work area has adopted the model for its own equipment downtime.</p>
+    </div>
+    <div class="roadmap"><div class="eyebrow">Next Iteration</div><span>Automated Machine Data Ingestion</span><span>Preserved Operator Context</span><span>Automatic Reports</span><span>Reliability Alerts</span></div>
+  </div>
+</section>
+
+<section class="case-artifact-section">
+  <div class="container">
+    <div class="artifact-head"><div><div class="case-section-no">06</div><div class="eyebrow">Artifacts</div><h2>From operator observation to recurring-failure analysis.</h2></div>
+      <p>The final artifact set will include the main reliability dashboard, an overall and unit-level Pareto view, and a small view of the structured downtime tracker.</p>
+    </div>
+    <div class="artifact-grid">
+      <div class="artifact-mini"><div class="mini-reliability"></div><span>Reliability Dashboard</span><small>KPI + machine-level performance view</small></div>
+      <div class="artifact-mini"><div class="mini-pareto"></div><span>Pareto Analysis</span><small>Overall + unit-specific recurring failures</small></div>
+      <div class="artifact-mini"><div class="mini-downtime-form"></div><span>Downtime Tracker</span><small>Structured frontline observations</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-next"><div class="container"><span class="eyebrow">Next System</span>
+  <a href={`${base}/built-systems/workforce-scheduling/`}><strong>Production Planning & Scheduling</strong><span>→</span></a>
+</div></section>
+</BaseLayout>

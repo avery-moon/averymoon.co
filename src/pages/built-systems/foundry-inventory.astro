@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout title="Consumables Inventory & Replenishment" description="A centralized inventory and replenishment system for approximately $300K in production consumables and supplies.">
+<section class="case-hero">
+  <div class="container">
+    <a class="case-back" href={`${base}/built-systems/`}>← Built Systems</a>
+    <div class="case-kicker">03 / Inventory + Replenishment</div>
+    <h1>Consumables Inventory<br/><em>& Replenishment</em></h1>
+    <p class="case-deck">A centralized operating system for weekly inventory control, supplier knowledge, reorder timing, incoming supply, and recurring purchasing decisions.</p>
+    <div class="case-role-line"><span>Inventory Control</span><span>Replenishment Logic</span><span>Knowledge Design</span><span>Purchasing Visibility</span><span>Process Ownership</span></div>
+  </div>
+</section>
+
+<section class="case-metrics case-metrics-dark">
+  <div class="container case-metric-grid">
+    <div><strong>~$300K</strong><span>Active Inventory Managed</span></div>
+    <div><strong>60–65</strong><span>Consumable Line Items</span></div>
+    <div><strong>~$40K</strong><span>Excess Inventory Reconciled</span></div>
+    <div><strong>3–5</strong><span>Shortages Prevented</span></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container case-two-col">
+    <div><div class="case-section-no">01</div><div class="eyebrow">The Operating Gap</div>
+      <h2>A count sheet could tell us what was there. It could not tell us what to do next.</h2>
+    </div>
+    <div class="case-copy">
+      <p>Finance maintained a basic inventory sheet for physical and consignment counts. It captured quantities, location when maintained, and cost, but recurring replenishment knowledge—supplier, lead time, order history, reorder timing, MOQ, and delivery status—had to be reconstructed repeatedly from old requisitions and departmental experience.</p>
+      <p>Taking over the Foundry meant inheriting responsibility for roughly 60–65 consumable production items, from pour cups and filters to thermocouples, liners, crucibles, and saw blades. The area had a history of both shortages and over-ordering.</p>
+      <p class="case-emphasis">I turned the inventory list into a replenishment system so the next purchasing decision would not depend on whoever happened to remember the item best.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt">
+  <div class="container">
+    <div class="case-section-no">02</div><div class="eyebrow">Inventory Knowledge Model</div>
+    <h2>Put stock state and purchasing knowledge in the same place.</h2>
+    <div class="inventory-model reveal">
+      <div><small>Identity</small><span>Supply #</span><span>Item</span><span>Type</span><span>Location</span></div>
+      <div><small>Supply</small><span>Vendor</span><span>Lead Time</span><span>MOQ / Notes</span></div>
+      <div><small>State</small><span>Qty On Hand</span><span>Cost</span><span>Safety Stock</span><span>Reorder Point</span></div>
+      <div><small>Incoming</small><span>PO / Requisition</span><span>Delivery Date</span><span>Order Notes</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container">
+    <div class="case-section-no">03</div><div class="eyebrow">Weekly Replenishment Loop</div>
+    <h2>Make recurring purchasing decisions repeatable.</h2>
+    <div class="replenishment-loop">
+      <div><strong>01</strong><span>Physical Count</span></div><b>→</b>
+      <div><strong>02</strong><span>Update On-Hand Inventory</span></div><b>→</b>
+      <div><strong>03</strong><span>Compare to Reorder Threshold</span></div><b>→</b>
+      <div><strong>04</strong><span>Check Lead Time + Incoming Orders</span></div><b>→</b>
+      <div><strong>05</strong><span>Replenish + Track Receipt</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt">
+  <div class="container">
+    <div class="case-section-no">04</div><div class="eyebrow">Observed Outcomes</div>
+    <h2>Inventory control has to manage both scarcity and excess.</h2>
+    <div class="outcome-split">
+      <article><span>Too Little</span><strong>3–5 shortages prevented</strong><p>Reorder points and supplier lead times helped prevent shortages of critical consumables including crucibles, saw blades, filters, and liners.</p></article>
+      <article><span>Too Much</span><strong>~$40K reconciled</strong><p>Excess inventory that had not been used since roughly 2021–2022 was identified, reconciled with Finance, and removed from active records.</p></article>
+    </div>
+    <p class="case-note">The model has also helped avoid duplicate purchasing and establish recurring replenishment frequencies rather than requiring each order to be rediscovered from scratch.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container current-state-grid">
+    <div><div class="case-section-no">05</div><div class="eyebrow">In Development</div><h2>From reorder thresholds toward demand-informed consumption planning.</h2>
+      <p>The next analytical layer connects expected molds by part number to consumable usage, creating quarterly consumption estimates rather than relying only on current stock position.</p>
+    </div>
+    <div class="roadmap"><div class="eyebrow">Future State</div><span>Quarterly Consumption Forecasting</span><span>Automated Purchasing Alerts</span><span>Barcode Scanning</span><span>ERP / PBOM Integration</span><span>Replicable Department Model</span></div>
+  </div>
+</section>
+
+<section class="case-artifact-section">
+  <div class="container">
+    <div class="artifact-head"><div><div class="case-section-no">06</div><div class="eyebrow">Artifacts</div><h2>One source for stock, supply, and replenishment decisions.</h2></div>
+      <p>The final project materials will include the main replenishment view, dashboard, and the developing consumption-planning layer once ready for portfolio export.</p>
+    </div>
+    <div class="artifact-grid">
+      <div class="artifact-mini"><div class="mini-inventory"></div><span>Inventory + Reorder View</span><small>Weekly stock state and threshold visibility</small></div>
+      <div class="artifact-mini"><div class="mini-cap-dashboard"></div><span>Inventory Dashboard</span><small>Value, low-stock, and purchasing visibility</small></div>
+      <div class="artifact-mini"><div class="mini-consumption"></div><span>Consumption Model</span><small>Expected molds → consumable usage</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-next"><div class="container"><span class="eyebrow">Related System</span>
+  <a href={`${base}/built-systems/alloy-procurement/`}><strong>Materials Planning & Procurement System</strong><span>→</span></a>
+</div></section>
+</BaseLayout>

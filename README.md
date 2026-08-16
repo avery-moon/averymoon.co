@@ -1,22 +1,16 @@
-# averymoon.co — V6.2.5 Final Polish
+# averymoon.co — V6.3 Four Case-Study Foundations
 
-Final stopping point for today's homepage/social work.
+Built from V6.2.5.
 
-Homepage:
-- Extends hero illustration farther left
-- Replaces the cream-overlay technique with a true CSS gradient mask on the illustration itself
-- Artwork now emerges progressively from transparent → faint → full visibility
-- Removes the right-side 01 / HOME editorial marker where present
-- No copy or section changes beyond V6.2.4
+Adds full foundational pages for the four remaining Built Systems projects:
 
-Social preview:
-- New cache-busting asset: /images/averymoon-social-preview-v3.png
-- Rebuilt at 1200×630 specifically for thumbnail legibility
-- Larger typography
-- Simplified right-side illustration
-- Softer ridge instead of the previous jagged mountain stack
-- Fewer contours and more negative space
-- Maximum-quality PNG output
-- Open Graph/Twitter metadata updated to the new v3 image URL
+1. Consumables Inventory & Replenishment
+2. Workforce Capability Planning System
+3. Equipment Reliability & Downtime Analysis
+4. Production Planning & Scheduling
 
-No other site changes.
+Also updates their Built Systems card titles, metrics, summaries, problem statements, approaches, and outcomes.
+
+These pages intentionally stop short of final artifact integration. Each includes designed artifact placeholders and an explicit evidence shopping list so real portfolio exports can be inserted Wednesday/Thursday without reworking the narrative architecture.
+
+No changes to the homepage, contact form, metadata, social card, Alloy case study, or Training & Certification case study.

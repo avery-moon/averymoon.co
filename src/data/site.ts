@@ -49,45 +49,45 @@ export const systems = [
     slug: 'foundry-inventory',
     number: '03',
     category: 'Inventory + Control',
-    title: 'Inventory Planning & Control System',
-    metric: '65 line items · ~$300K',
-    summary: 'Centralizes material inventory for clearer purchasing and production planning.',
-    problem: 'Material information was fragmented across roughly 65 line items, making purchasing decisions and production planning harder to coordinate.',
-    approach: 'Built a centralized tracking system covering approximately $300K in material value and designed around the recurring information needs of production planning.',
-    outcome: 'Improved inventory purchasing visibility, accountability, and production planning.'
+    title: 'Consumables Inventory & Replenishment',
+    metric: '~$300K managed · $40K excess identified',
+    summary: 'Turns physical counts, purchasing history, supplier information, and reorder logic into repeatable replenishment decisions.',
+    problem: 'A basic count sheet showed inventory quantities and cost but left lead times, suppliers, reorder thresholds, purchasing history, and replenishment knowledge scattered across records and departmental memory.',
+    approach: 'Built a centralized consumables inventory and replenishment model combining weekly physical counts with supplier, cost, lead-time, reorder, receipt, and purchasing information.',
+    outcome: 'Prevented several shortages, identified and reconciled roughly $40K in excess inventory, and established repeatable replenishment decisions across about $300K in active supplies.'
   },
   {
     slug: 'cross-training-matrix',
     number: '04',
     category: 'Workforce Capability',
     title: 'Workforce Capability Planning System',
-    metric: '200 employees · ~40 roles',
-    summary: 'Maps workforce capability across roles to reveal coverage gaps and training priorities.',
-    problem: 'Workforce capability was difficult to assess across a large population with many specialized roles, making staffing and development planning harder than necessary.',
-    approach: 'Built a structured matrix covering approximately 200 employees across roughly 40 operational roles, making existing competencies and development gaps visible.',
-    outcome: 'Supported workforce planning, succession planning, training prioritization, and more flexible staffing decisions.'
+    metric: '~200 employees · 9 departments · ~40 skills',
+    summary: 'Makes organizational capability visible by showing who can do what, where coverage is thin, and where cross-training matters most.',
+    problem: 'Capability knowledge lived primarily in supervisor memory and fragmented employee-level HR records, making building-wide coverage and skill gaps difficult to see.',
+    approach: 'Built a centralized capability model linking employees, departments, tenure, skills, competency levels, and certification dates with forward and reverse lookup tools.',
+    outcome: 'Creates facility-wide visibility into capability gaps, single points of failure, staffing flexibility, and cross-training opportunities while transferring long-term ownership to HR.'
   },
   {
     slug: 'equipment-downtime-dashboard',
     number: '05',
     category: 'Operational Analytics',
-    title: 'Operational Performance & Downtime System',
-    metric: 'Recurring loss visibility',
-    summary: 'Surfaces recurring equipment losses to support maintenance and operational priorities.',
-    problem: 'Recurring equipment losses were difficult to interpret consistently without a clear view of when, where, and how downtime was occurring.',
-    approach: 'Created a structured dashboard that surfaced production losses and recurring equipment issues, helping teams identify patterns and prioritize maintenance attention.',
-    outcome: 'Improved operational visibility and supported more data-informed maintenance prioritization.'
+    title: 'Equipment Reliability & Downtime Analysis',
+    metric: '4 primary units · 3-level Pareto analysis',
+    summary: 'Turns structured frontline downtime observations into recurring-failure intelligence and maintenance action.',
+    problem: 'Machine-generated downtime reports contained unreliable inputs and basic charts but little context for understanding recurring failures or prioritizing limited maintenance resources.',
+    approach: 'Redesigned downtime data collection, created a three-level failure taxonomy, and built machine-level and overall Pareto analysis tied to maintenance and problem-solving workflows.',
+    outcome: 'Revealed chronic equipment issues that differed from prevailing assumptions, shifted maintenance attention toward recurring failure modes, and supported repair and capital-investment decisions.'
   },
   {
     slug: 'workforce-scheduling',
     number: '06',
     category: 'Workforce Planning',
-    title: 'Workforce Planning & Scheduling System',
-    metric: 'Allocation · scheduling · coverage',
-    summary: 'Organizes staffing needs and available capability into a repeatable scheduling process.',
-    problem: 'Staffing decisions required repeated manual coordination across roles, coverage needs, and changing priorities, creating unnecessary administrative work and inconsistent visibility.',
-    approach: 'Built a structured scheduling workflow that organized workforce requirements, available capability, and allocation decisions into a more repeatable planning process.',
-    outcome: 'Reduced manual scheduling effort, improved visibility into coverage, and supported faster workforce allocation decisions.'
+    title: 'Production Planning & Scheduling',
+    metric: '~5–10 min/day planning',
+    summary: 'Turns current work-in-process, routing constraints, capacity, and throughput targets into daily and weekly production priorities.',
+    problem: 'Legacy production-planning software required hours of manual work each week, was unstable, and did not adequately account for operational spans, available capacity, or changing WIP.',
+    approach: 'Designed a constraint-aware planning model that ingests current work orders, applies routing and span logic, incorporates headcount and throughput targets, and generates daily and weekly schedules.',
+    outcome: 'Reduced my routine planning work from roughly 13–19 hours per week to about 5–10 minutes per day while improving visibility into aged WIP, late returns, and execution priorities.'
   },
 ];
 

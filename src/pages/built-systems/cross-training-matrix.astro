@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout title="Workforce Capability Planning System" description="A facility-wide capability planning system mapping approximately 200 employees across nine departments and roughly 40 skills.">
+<section class="case-hero case-capability">
+  <div class="container">
+    <a class="case-back" href={`${base}/built-systems/`}>← Built Systems</a>
+    <div class="case-kicker">04 / Workforce Capability</div>
+    <h1>Workforce Capability<br/><em>Planning System</em></h1>
+    <p class="case-deck">A facility-wide model for understanding who can do what, where coverage is thin, and where cross-training should happen next.</p>
+    <div class="case-role-line"><span>System Design</span><span>Data Modeling</span><span>Requirements Discovery</span><span>Governance</span><span>Workforce Planning</span></div>
+  </div>
+</section>
+
+<section class="case-metrics case-metrics-light">
+  <div class="container case-metric-grid">
+    <div><strong>~200</strong><span>Employees Modeled</span></div>
+    <div><strong>9</strong><span>Departments</span></div>
+    <div><strong>~40</strong><span>Skills / Operations</span></div>
+    <div><strong>35</strong><span>Records Reconciled in One Department</span></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container case-two-col">
+    <div><div class="case-section-no">01</div><div class="eyebrow">The Visibility Gap</div>
+      <h2>Capability existed across the building. Visibility did not.</h2>
+    </div>
+    <div class="case-copy">
+      <p>Employee capability was tracked primarily through supervisor memory and individual competency forms held by HR. Those forms were not consistently maintained, and because records were organized employee by employee, there was no simple way to understand capability by department, role, or business need.</p>
+      <p>When I took over a department with mixed tenure and six to seven distinct functions, I needed a faster way to understand who was trained in what. I built a departmental model first, then expanded it after HR recognized the same gap at the facility level.</p>
+      <p class="case-emphasis">In one department alone, I reconciled 35 competency records, some reflecting training that had occurred nearly a decade earlier.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt">
+  <div class="container">
+    <div class="case-section-no">02</div><div class="eyebrow">Capability Model</div>
+    <h2>Turn fragmented records into an organizational view.</h2>
+    <div class="capability-model reveal">
+      <div class="cap-node"><small>Employee</small><strong>Person</strong></div><b>→</b>
+      <div class="cap-node"><small>Context</small><strong>Department + Tenure</strong></div><b>→</b>
+      <div class="cap-node"><small>Capability</small><strong>Skill / Operation</strong></div><b>→</b>
+      <div class="cap-node"><small>Depth</small><strong>Competency Level</strong></div><b>→</b>
+      <div class="cap-node"><small>Evidence</small><strong>Certification Date</strong></div>
+    </div>
+    <div class="lookup-pair">
+      <article><span>Lookup</span><h3>Employee → Skills</h3><p>See the work an individual is trained to perform and the depth of that capability.</p></article>
+      <article><span>Reverse Lookup</span><h3>Skill → Employees</h3><p>Find everyone qualified for a process when coverage, absence, or cross-training decisions need to be made.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container">
+    <div class="case-section-no">03</div><div class="eyebrow">Decision Support</div>
+    <h2>See the gaps before they become staffing problems.</h2>
+    <div class="decision-grid">
+      <article><span>01</span><h3>Single points of failure</h3><p>Flag operations where only one or a small number of employees hold critical capability.</p></article>
+      <article><span>02</span><h3>Cross-training opportunities</h3><p>Identify where additional capability would improve flexibility, while leaving final training priorities to department leadership.</p></article>
+      <article><span>03</span><h3>Staffing and backfill</h3><p>Use reverse lookup to find qualified coverage when employees are absent, on vacation, or needed elsewhere.</p></article>
+      <article><span>04</span><h3>Workforce planning</h3><p>Support hiring, succession, promotion, and manning discussions with facility-level capability visibility instead of memory alone.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt">
+  <div class="container governance-grid">
+    <div><div class="case-section-no">04</div><div class="eyebrow">Ownership & Governance</div>
+      <h2>Design the system so its creator does not have to remain its owner.</h2>
+    </div>
+    <div class="governance-flow">
+      <div><strong>Supervisors</strong><span>Document new competencies</span></div><b>→</b>
+      <div><strong>HR</strong><span>Maintains the central capability record</span></div><b>→</b>
+      <div><strong>Leaders</strong><span>Use outputs for planning and development</span></div>
+    </div>
+    <p class="case-note">The remaining limitation is still human: if a new competency is not documented, the system cannot know it exists. Future development would connect capability updates more directly to training and certification workflows.</p>
+  </div>
+</section>
+
+<section class="case-artifact-section">
+  <div class="container">
+    <div class="artifact-head">
+      <div><div class="case-section-no">05</div><div class="eyebrow">Artifacts</div><h2>Capability at three levels of detail.</h2></div>
+      <p>The final project materials will show the executive view, the employee/skill lookup logic, and the underlying capability matrix once the workbook is ready for portfolio export.</p>
+    </div>
+    <div class="artifact-grid">
+      <div class="artifact-mini"><div class="mini-cap-dashboard"></div><span>Executive Dashboard</span><small>Facility capability, gaps, and coverage</small></div>
+      <div class="artifact-mini"><div class="mini-lookup">↔</div><span>Bidirectional Lookup</span><small>Employee → skill / Skill → employee</small></div>
+      <div class="artifact-mini"><div class="mini-matrix"></div><span>Capability Matrix</span><small>Departments × people × operational skills</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-next"><div class="container"><span class="eyebrow">Related System</span>
+  <a href={`${base}/built-systems/onboarding-certification/`}><strong>Training & Certification System</strong><span>→</span></a>
+</div></section>
+</BaseLayout>
