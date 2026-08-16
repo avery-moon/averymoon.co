@@ -1,17 +1,21 @@
-# averymoon.co — V6.4 Selected Projects
+# averymoon.co — V6.4.2 Human Copy Pass
 
-Adds a new **Selected Projects** page and navigation item.
+A restrained site-wide copy edit built on V6.4.1.
 
-Initial gallery:
-- ICQA Manager Handoff Playbook
-- Operational Quality Bootcamps
-- Multilingual Visual Knowledge Guides
-- Internal Knowledge Resource Pages
-- Standardized Process Documentation
-- Problem Solve Cross-Training Planner
+Goals:
+- Prefer concrete, plainspoken language over portfolio/consulting phrasing.
+- Remove obvious AI/LinkedIn-style constructions where they added no value.
+- Keep strong existing copy intact rather than rewriting for the sake of rewriting.
+- Preserve specific metrics, claims, project structure, and visual design.
 
-The page intentionally describes proprietary professional work at a high level rather than reproducing internal source materials.
+Key edits include:
+- Homepage: removes “sits at the intersection of.”
+- About: simplifies the systems/knowledge framing and makes sustainability of ownership more direct.
+- Approach: replaces “enablement” with training and clear ownership.
+- Selected Projects: simpler intro, cleaner Amazon project descriptions, corrected wiki ownership language, and a more natural future-project sentence.
+- Consumables: “inventory and replenishment system” rather than “operating system.”
+- Reliability: replaces “low-context” phrasing.
+- Alloy: replaces “tribal knowledge” with person-dependent working knowledge.
+- Training: replaces “operating system” and abstract capability language with concrete training language.
 
-It also includes a restrained future-growth section for independent/course projects in AI product development, data/SQL, GIS/spatial analysis, and future technical builds.
-
-Built on V6.3.1. No changes to the six Built Systems case studies beyond the existing V6.3.1 state.
+No intentional visual/layout changes beyond those already present in V6.4.1.

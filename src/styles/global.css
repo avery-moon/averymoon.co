@@ -1703,3 +1703,20 @@ body:has(.about-grid) .photo-frame-v54{
   .selected-card{min-height:390px}
   .selected-index-head span:last-child{display:none}
 }
+
+/* V6.4.1 — Selected Projects visual balance */
+.selected-hero{padding:88px 0 68px}
+.selected-hero h1{
+  font-size:clamp(2.75rem,5.7vw,5.35rem);
+  max-width:920px;
+  margin-top:14px;
+  margin-bottom:38px;
+}
+.selected-index{
+  background:
+    radial-gradient(circle at 82% 10%,rgba(217,154,135,.055),transparent 28%),
+    linear-gradient(180deg,#1c3d34 0%,#17372e 100%);
+}
+.selected-card{min-height:405px}
+.selected-mark{height:56px;margin:19px 0 7px}
+.selected-future{padding:82px 0}
