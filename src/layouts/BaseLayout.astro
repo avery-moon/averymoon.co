@@ -92,11 +92,12 @@ const socialImage = new URL('/images/averymoon-social-preview-v3.png', Astro.sit
     // V5.5: active navigation, page orientation, and scroll progress.
     const cleanPath = window.location.pathname.replace(/\/+$/, '');
     const pageMap = [
+      ['selected-projects', '05 / PROJECTS'],
       ['built-systems', '04 / SYSTEMS'],
-      ['research-writing', '05 / RESEARCH'],
+      ['research-writing', '06 / RESEARCH'],
       ['approach', '03 / APPROACH'],
       ['about', '02 / ABOUT'],
-      ['contact', '06 / CONTACT']
+      ['contact', '07 / CONTACT']
     ];
     const pageLabel = pageMap.find(([key]) => cleanPath.includes(key))?.[1] || '01 / HOME';
     const pageLabelEl = document.querySelector('[data-page-label]');

@@ -3,6 +3,7 @@ export const nav = [
   { href: '/about/', label: 'About' },
   { href: '/approach/', label: 'Approach' },
   { href: '/built-systems/', label: 'Built Systems' },
+  { href: '/selected-projects/', label: 'Selected Projects' },
   { href: '/research-writing/', label: 'Research & Writing' },
   { href: '/contact/', label: 'Contact' },
 ];

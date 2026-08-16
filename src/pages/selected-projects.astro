@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const projects = [
+  {
+    no:'01', title:'ICQA Manager Handoff Playbook', area:'Knowledge Stewardship',
+    meta:'Amazon · ~15–20 pages',
+    body:'Created a structured transition playbook to consolidate recurring responsibilities, operational knowledge, key processes, and resources for the next manager inheriting the function.',
+    tags:['Knowledge Transfer','Documentation','Role Transition']
+  },
+  {
+    no:'02', title:'Operational Quality Bootcamps', area:'Learning Design',
+    meta:'Amazon · Inbound / Outbound / Ship Dock',
+    body:'Developed approximately four-hour training sessions for major operational groups connecting quality metrics to common root causes, corrective actions, and the decisions frontline teams could make differently.',
+    tags:['Learning Design','Quality','Root Cause Analysis']
+  },
+  {
+    no:'03', title:'Multilingual Visual Knowledge Guides', area:'Accessible Knowledge',
+    meta:'Amazon · Frontline Reference',
+    body:'Designed visual point-of-work resources to make complex operational procedures easier to use in practice, including materials adapted into three languages for a multilingual frontline workforce.',
+    tags:['Visual Documentation','Accessibility','Frontline Enablement']
+  },
+  {
+    no:'04', title:'Internal Knowledge Resource Pages', area:'Knowledge Management',
+    meta:'Amazon · ICQA + CAP / Pick',
+    body:'Built internal wiki-style resource pages to centralize frequently needed operational knowledge and create a more navigable reference point for teams working across interconnected processes.',
+    tags:['Knowledge Architecture','Self-Service','Information Design']
+  },
+  {
+    no:'05', title:'Standardized Process Documentation', area:'Process Design',
+    meta:'Amazon · Multi-Site / National Scope',
+    body:'Developed standardized process documentation for inter-building inventory transfers and discrepancy handling, translating a cross-site operational process into a repeatable reference.',
+    tags:['SOP Design','Standardization','Cross-Site Operations']
+  },
+  {
+    no:'06', title:'Problem Solve Cross-Training Planner', area:'Capability Planning',
+    meta:'Amazon · Lightweight Planning Tool',
+    body:'Built a lightweight planning framework to make cross-training needs and functional coverage more visible across Problem Solve work, supporting more deliberate capability development.',
+    tags:['Cross-Training','Capability Visibility','Workforce Planning']
+  }
+];
+---
+<BaseLayout title="Selected Projects" description="Selected knowledge, learning, documentation, and systems projects by Avery Moon, including professional work described at a high level where source materials are proprietary.">
+<section class="selected-hero">
+  <div class="container">
+    <div class="case-kicker">Selected Projects</div>
+    <h1>Smaller projects.<br/><em>Same systems thinking.</em></h1>
+    <div class="selected-intro">
+      <p>A collection of knowledge, learning, documentation, and systems work that does not need a full case study to show something useful about how I work.</p>
+      <p class="selected-discretion">Some professional source materials are proprietary. Those projects are described at a high level rather than reproduced.</p>
+    </div>
+  </div>
+</section>
+
+<section class="selected-index">
+  <div class="container">
+    <div class="selected-index-head">
+      <span>Professional Work</span>
+      <span>Knowledge · Learning · Documentation · Capability</span>
+    </div>
+    <div class="selected-grid">
+      {projects.map(project => (
+        <article class="selected-card">
+          <div class="selected-card-top">
+            <span class="selected-no">{project.no}</span>
+            <span class="selected-area">{project.area}</span>
+          </div>
+          <div class="selected-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="selected-card-body">
+            <div class="selected-meta">{project.meta}</div>
+            <h2>{project.title}</h2>
+            <p>{project.body}</p>
+          </div>
+          <div class="selected-tags">
+            {project.tags.map(tag => <span>{tag}</span>)}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="selected-future">
+  <div class="container selected-future-grid">
+    <div>
+      <div class="case-kicker">An Expanding Collection</div>
+      <h2>Professional foundations,<br/><em>new technical directions.</em></h2>
+    </div>
+    <div>
+      <p>This collection is designed to grow with independent and course-based work in AI product development, data, GIS, and related technical practice.</p>
+      <div class="future-tracks">
+        <span>AI Product Development</span>
+        <span>Data + SQL</span>
+        <span>GIS + Spatial Analysis</span>
+        <span>Future Builds</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-next">
+  <div class="container">
+    <span class="eyebrow">Deeper Case Studies</span>
+    <a href={`${base}/built-systems/`}><strong>Explore Built Systems</strong><span>→</span></a>
+  </div>
+</section>
+</BaseLayout>
