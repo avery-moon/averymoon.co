@@ -1,12 +1,13 @@
-# averymoon.co — V6.2.3 Convergence Pass
+# averymoon.co — V6.2.4 Final Home Polish
 
-Changes:
-- Hero artwork now extends leftward so the page gradually becomes the map
-- Mountains pushed down/right and reduced to restrained engraved linework
-- System constellation reduced again and softened
-- Added one subtle terracotta route through the topography
-- Increased negative space and softened the copy/art boundary
-- Hero supporting copy: “institutional knowledge” → “knowledge”
-- Rebuilt Open Graph / LinkedIn social card in the same cream editorial/cartographic aesthetic
-- Social card includes a subtle perimeter so the cream field remains visible against LinkedIn's light UI
-- Everything below the hero remains unchanged
+Built from V6.2.3.
+
+Final homepage adjustments:
+- Extends the cartographic/celestial hero artwork farther left so it feels embedded in the page
+- Softens the artwork overall by ~12% so typography remains the first visual priority
+- Widens and smooths the cream-to-art fade
+- Repositions the artwork slightly for a more organic transition
+- Reframes How I Work around method rather than repeating the hero:
+  “Start with how the work actually happens.”
+  “I look at the people, information, constraints, and decisions behind a process before designing the system around it.”
+- Everything else remains unchanged, including social metadata, contact form, Built Systems, metrics, and case-study pages.

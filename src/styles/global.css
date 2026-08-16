@@ -1457,3 +1457,28 @@ body:has(.about-grid) .photo-frame-v54{
     min-height:315px;
   }
 }
+
+/* ===== V6.2.4 FINAL HOME POLISH ===== */
+.hero-v62-art{
+  margin-left:-215px;
+}
+.hero-v62-art:before{
+  width:455px;
+  background:linear-gradient(90deg,
+    var(--paper) 0%,
+    rgba(245,239,230,.985) 20%,
+    rgba(245,239,230,.90) 38%,
+    rgba(245,239,230,.67) 57%,
+    rgba(245,239,230,.34) 75%,
+    rgba(245,239,230,.10) 89%,
+    rgba(245,239,230,0) 100%);
+}
+.hero-v62-art img{
+  opacity:.82;
+  object-position:51% center;
+}
+@media(max-width:900px){
+  .hero-v62-art{
+    margin-left:0;
+  }
+}
