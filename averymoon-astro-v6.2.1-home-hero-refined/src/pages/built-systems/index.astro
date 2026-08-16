@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SystemCard from '../../components/SystemCard.astro';
+import { systems } from '../../data/site';
+---
+<BaseLayout title="Built Systems"><section class="systems-v53"><div class="container">
+<header class="simple-page-head"><div class="eyebrow">Built Systems / Projects</div><h1>Selected systems I've built.</h1></header>
+<div class="systems-equal-grid">{systems.map(system => <SystemCard system={system} />)}</div>
+</div></section></BaseLayout>

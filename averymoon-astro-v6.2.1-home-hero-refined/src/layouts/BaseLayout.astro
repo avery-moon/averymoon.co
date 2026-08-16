@@ -1,0 +1,123 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import { theories } from '../data/site';
+const {
+  title,
+  description='Avery Moon designs practical systems for growing organizations, small and mid-sized businesses, and nonprofits—improving operations, workflows, knowledge, workforce capability, and decision-making.'
+} = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL('/images/averymoon-social-preview.png', Astro.site);
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+  <meta name="theme-color" content="#f5efe6" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Avery Moon" />
+  <meta property="og:title" content={`${title} | Avery Moon`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={socialImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Avery Moon — Systems, Strategy & Organizational Design" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${title} | Avery Moon`} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={socialImage} />
+
+  <title>{title} | Avery Moon</title>
+</head>
+<body>
+  <Header />
+  <main><slot /></main>
+  <div class="page-indicator" aria-hidden="true">
+  <span class="page-indicator-line"></span>
+  <span data-page-label>01 / HOME</span>
+</div>
+<Footer />
+  <script define:vars={{ theories }}>
+    const theory = document.querySelector('[data-theory]');
+    if (theory) {
+      let index = Math.floor(Math.random() * theories.length);
+      theory.textContent = theories[index];
+      const theoryNumber = document.querySelector('[data-theory-number]');
+      if (theoryNumber) theoryNumber.textContent = `${String(index + 1).padStart(2,'0')} / ${String(theories.length).padStart(2,'0')}`;
+    }
+
+    const menu = document.querySelector('.menu');
+    const nav = document.querySelector('.navlinks');
+    if (menu && nav) {
+      menu.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        menu.setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Restrained desktop-only pointer response on the homepage artwork.
+    const heroArt = document.querySelector('.hero-art');
+    if (heroArt && window.matchMedia('(pointer:fine)').matches) {
+      heroArt.addEventListener('pointermove', (event) => {
+        const r = heroArt.getBoundingClientRect();
+        const x = ((event.clientX - r.left) / r.width - .5);
+        const y = ((event.clientY - r.top) / r.height - .5);
+        heroArt.style.setProperty('--pointer-x', `${x * 8}px`);
+        heroArt.style.setProperty('--pointer-y', `${y * 8}px`);
+      });
+      heroArt.addEventListener('pointerleave', () => {
+        heroArt.style.setProperty('--pointer-x', '0px');
+        heroArt.style.setProperty('--pointer-y', '0px');
+      });
+    }
+  
+    // V5.5: active navigation, page orientation, and scroll progress.
+    const cleanPath = window.location.pathname.replace(/\/+$/, '');
+    const pageMap = [
+      ['built-systems', '04 / SYSTEMS'],
+      ['research-writing', '05 / RESEARCH'],
+      ['approach', '03 / APPROACH'],
+      ['about', '02 / ABOUT'],
+      ['contact', '06 / CONTACT']
+    ];
+    const pageLabel = pageMap.find(([key]) => cleanPath.includes(key))?.[1] || '01 / HOME';
+    const pageLabelEl = document.querySelector('[data-page-label]');
+    if (pageLabelEl) pageLabelEl.textContent = pageLabel;
+
+    document.querySelectorAll('.site-nav a').forEach(link => {
+      const href = link.getAttribute('href') || '';
+      const normalizedHref = href.replace(/\/+$/, '');
+      const isHome = /index\.html$/.test(href) || normalizedHref.endsWith('/averymoon.co');
+      const active = isHome ? pageLabel === '01 / HOME' : normalizedHref && cleanPath.endsWith(normalizedHref.replace(/^.*averymoon\.co/, ''));
+      if (active) link.classList.add('active');
+    });
+
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+      document.documentElement.style.setProperty('--scroll-progress', progress);
+    };
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout
+  title="Alloy Procurement Planner"
+  description="Avery Moon designed an 18-month material planning system connecting customer demand, alloy inventory, scheduled receipts, purchasing constraints, and supplier forecasting."
+>
+<section class="case-hero case-alloy">
+  <div class="container">
+    <a class="case-back" href={`${base}/built-systems/`}>← Built Systems</a>
+    <div class="case-kicker">01 / Material Planning</div>
+    <h1>Alloy Procurement<br/><em>Planner</em></h1>
+    <p class="case-deck">An 18-month material planning and purchasing decision system for approximately $3M in on-hand raw material inventory.</p>
+    <div class="case-role-line"><span>System Architecture</span><span>Planning Logic</span><span>Requirements Discovery</span><span>Validation</span><span>Implementation</span></div>
+  </div>
+</section>
+
+<section class="case-metrics case-metrics-dark">
+  <div class="container case-metric-grid">
+    <div><strong>20</strong><span>Alloys Planned</span></div>
+    <div><strong>~18 mo.</strong><span>Planning Horizon</span></div>
+    <div><strong>~5 min.</strong><span>Routine Refresh</span></div>
+    <div><strong>~$3M</strong><span>On-Hand Inventory Visibility</span></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container case-two-col">
+    <div>
+      <div class="case-section-no">01</div>
+      <div class="eyebrow">The Constraint</div>
+      <h2>Critical material planning depended on fragmented data and one person’s experience.</h2>
+    </div>
+    <div class="case-copy">
+      <p>Alloy planning required downloading four to five separate datasets, consolidating them manually in Excel, and refreshing a pivot-based view about every two weeks. Planning typically extended no farther than six months.</p>
+      <p>Purchasing rules, supplier timing, test-bar requirements, historical usage, safety-stock considerations, and special alloy behavior also lived largely as tribal knowledge. One person had maintained the process for roughly four years before teaching it to me as they left.</p>
+      <p class="case-emphasis">Alloy shortages occurred roughly two to three times per quarter. A shortage could stop affected production until replacement material arrived and completed a 2–8 week verification cycle.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-before-after">
+  <div class="container">
+    <div class="eyebrow">Before / After</div>
+    <div class="ba-grid">
+      <article>
+        <span class="ba-label">Before</span>
+        <strong>4–5</strong><p>datasets manually downloaded and consolidated</p>
+        <strong>up to ~60 min.</strong><p>to perform a routine planning update</p>
+        <strong>~6 months</strong><p>of typical forward visibility</p>
+        <strong>1 person</strong><p>holding most of the planning knowledge</p>
+      </article>
+      <div class="ba-arrow" aria-hidden="true">→</div>
+      <article class="ba-after">
+        <span class="ba-label">After</span>
+        <strong>2 recurring refreshes</strong><p>plus a maintained scheduled-receipts table</p>
+        <strong>~5 min.</strong><p>to refresh routine planning inputs</p>
+        <strong>up to ~18 months</strong><p>of selectable forward planning visibility</p>
+        <strong>documented</strong><p>methodology, operating instructions, and constraints</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-architecture">
+  <div class="container">
+    <div class="case-section-no">02</div>
+    <div class="eyebrow">System Architecture</div>
+    <h2>From customer demand to purchasing action.</h2>
+    <p class="case-intro">The workbook converts operational exports into material requirements, reconciles supply, applies purchasing constraints, and presents decision horizons tailored to different users.</p>
+
+    <div class="alloy-flow reveal">
+      <div class="flow-inputs">
+        <div class="flow-node">
+          <span>Input 01</span><strong>Current Inventory</strong><small>On-hand pounds by alloy</small>
+        </div>
+        <div class="flow-node">
+          <span>Input 02</span><strong>Customer Work Orders</strong><small>Part · Quantity · Pour Weight · Due Date</small>
+        </div>
+        <div class="flow-node">
+          <span>Input 03</span><strong>Scheduled Receipts</strong><small>Planned · Ordered · Confirmed · ETA</small>
+        </div>
+      </div>
+
+      <div class="flow-spine"><span></span></div>
+
+      <div class="flow-engine">
+        <div class="engine-title">Planning Engine</div>
+        <div class="engine-row">WO / Part <b>→</b> Alloy Mapping</div>
+        <div class="engine-row">Quantity × Pour Weight <b>→</b> Material Demand</div>
+        <div class="engine-row">Aggregate Demand <b>→</b> Alloy Requirements</div>
+        <div class="engine-row">On Hand + Receipts − Demand <b>→</b> Running Balance</div>
+        <div class="engine-row">MOQ + Lead Time + Test-Bar Timing <b>→</b> Suggested Order</div>
+      </div>
+
+      <div class="flow-spine"><span></span></div>
+
+      <div class="flow-horizons">
+        <div><strong>13 Weeks</strong><span>Immediate purchasing actions</span></div>
+        <div><strong>6 Months</strong><span>Operational material readiness</span></div>
+        <div><strong>1 Year</strong><span>Long-range planning</span></div>
+        <div><strong>18 Months</strong><span>Supplier forecasting</span></div>
+      </div>
+    </div>
+
+    <div class="supporting-views">
+      <span>Parts by Alloy</span><span>Scheduled Receipts</span><span>Purchasing Calendar</span><span>YoY Consumption</span>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt">
+  <div class="container">
+    <div class="case-section-no">03</div>
+    <div class="eyebrow">Design Decisions</div>
+    <h2>Automate the calculation. Preserve the judgment.</h2>
+    <div class="decision-grid">
+      <article>
+        <span>01</span>
+        <h3>Human judgment stays in the loop.</h3>
+        <p>The planner suggests quantities and order timing while leaving room for customer expedites, overdue orders, business conditions, and current production priorities to shape the final decision.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Plan for plant capacity, not only supplier capacity.</h3>
+        <p>The purchasing calendar staggers incoming material to avoid overloading test-bar verification or creating unnecessary mix-up risk on the production floor.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Different horizons answer different questions.</h3>
+        <p>Purchasing needs the next quarter’s actions; operations needs six-month readiness; leadership and suppliers benefit from longer-range forecasting.</p>
+      </article>
+      <article>
+        <span>04</span>
+        <h3>Convert tribal knowledge into explicit constraints.</h3>
+        <p>MOQ rules, supplier lead time, test-bar timing, historical consumption, special-material behavior, and planning notes are documented instead of left in one person’s memory.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container case-validation">
+    <div>
+      <div class="case-section-no">04</div>
+      <div class="eyebrow">Validation & Iteration</div>
+      <h2>A forecast is only useful if its timing reflects operational reality.</h2>
+    </div>
+    <div class="validation-card">
+      <div class="validation-old"><span>Early signal</span><strong>Risk in Q3 2027</strong><p>Quarter-level logic could imply urgency from the start of the quarter.</p></div>
+      <div class="validation-arrow">→</div>
+      <div class="validation-new"><span>Refined signal</span><strong>Precise Need-By Date</strong><p>The model now uses the next relevant customer due date to locate the actual material need inside the quarter.</p></div>
+    </div>
+    <p class="case-note">I validated the planner by tracing discrepancies against operational expectations and refining formulas or business logic when recommendations did not reflect the real decision.</p>
+  </div>
+</section>
+
+<section class="case-section case-alt">
+  <div class="container">
+    <div class="case-section-no">05</div>
+    <div class="eyebrow">Current State</div>
+    <h2>Built, validated, documented, and entering operational use.</h2>
+    <div class="current-state-grid">
+      <div>
+        <p>The planner entered deployment after formula validation, stakeholder review, and functional refinement with purchasing and operational leadership.</p>
+        <p>Because deployment is recent, I do not yet attribute shortage reductions or inventory savings to the system. Long-term impact will be evaluated as it accumulates operating history.</p>
+      </div>
+      <div class="roadmap">
+        <div class="eyebrow">Next Iteration</div>
+        <span>Automated Data Ingestion</span>
+        <span>Action Alerts</span>
+        <span>Supplier Capacity Inputs</span>
+        <span>Reduced Manual Copy / Paste</span>
+        <span>Potential Migration Beyond Excel</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-artifact-section">
+  <div class="container">
+    <div class="artifact-head">
+      <div>
+        <div class="case-section-no">06</div>
+        <div class="eyebrow">Working Artifact</div>
+        <h2>The system, not just a screenshot.</h2>
+      </div>
+      <p>A portfolio version will preserve the workbook’s planning architecture and decision logic using fictionalized alloy, part, demand, and supplier data.</p>
+    </div>
+    <div class="artifact-placeholder artifact-alloy">
+      <div class="artifact-window">
+        <div class="artifact-dots"><i></i><i></i><i></i></div>
+        <div class="artifact-skeleton">
+          <div class="sk-side"></div>
+          <div class="sk-main">
+            <span></span><span></span><span></span>
+            <div class="sk-chart"></div>
+          </div>
+        </div>
+      </div>
+      <div class="artifact-caption"><span>Artifact slot reserved</span><strong>Alloy Procurement Planner</strong><small>Workbook screenshots + downloadable .xlsx coming next</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-next">
+  <div class="container">
+    <span class="eyebrow">Next System</span>
+    <a href={`${base}/built-systems/onboarding-certification/`}>
+      <strong>Workforce Training & Capability System</strong><span>→</span>
+    </a>
+  </div>
+</section>
+</BaseLayout>

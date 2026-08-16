@@ -1,0 +1,10 @@
+---
+const { number, stage, text, image } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<div class="approach-step-v52 reveal">
+  <div class="approach-art-v52"><img src={`${base}/images/${image}`} alt={`${stage} systems illustration`} /></div>
+  <span class="step-index">{number}</span>
+  <h3>{stage}</h3>
+  <p>{text}</p>
+</div>
