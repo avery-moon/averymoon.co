@@ -1482,3 +1482,44 @@ body:has(.about-grid) .photo-frame-v54{
     margin-left:0;
   }
 }
+
+/* ===== V6.2.5 FINAL POLISH ===== */
+/* Let the illustration itself emerge gradually from the paper instead of
+   placing a cream veil over a hard-edged image. */
+.hero-v62-art{
+  margin-left:-255px;
+}
+.hero-v62-art:before{
+  display:none!important;
+}
+.hero-v62-art img{
+  opacity:.88;
+  -webkit-mask-image:linear-gradient(90deg,
+    transparent 0%,
+    rgba(0,0,0,.03) 14%,
+    rgba(0,0,0,.12) 27%,
+    rgba(0,0,0,.32) 41%,
+    rgba(0,0,0,.60) 57%,
+    rgba(0,0,0,.82) 72%,
+    #000 88%);
+  mask-image:linear-gradient(90deg,
+    transparent 0%,
+    rgba(0,0,0,.03) 14%,
+    rgba(0,0,0,.12) 27%,
+    rgba(0,0,0,.32) 41%,
+    rgba(0,0,0,.60) 57%,
+    rgba(0,0,0,.82) 72%,
+    #000 88%);
+}
+.section-index,
+.hero-marker,
+.section-marker{
+  /* Homepage editorial marker retired in V6.2.5. */
+}
+@media(max-width:900px){
+  .hero-v62-art{margin-left:0}
+  .hero-v62-art img{
+    -webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.25) 18%,#000 46%);
+    mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.25) 18%,#000 46%);
+  }
+}
