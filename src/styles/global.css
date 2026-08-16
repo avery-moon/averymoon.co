@@ -1101,3 +1101,30 @@ body:has(.about-grid) .photo-frame-v54{
   stroke:var(--terracotta);
   stroke-width:.9;
 }
+
+/* ===== V6.1.4 CONTACT FORM ===== */
+.contact-v614{padding:44px 0 72px}
+.contact-form-shell{max-width:1040px}
+.contact-form-head{max-width:760px}
+.contact-form-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(230px,.7fr);gap:64px;padding:42px 0 52px}
+.portfolio-contact-form{display:grid;grid-template-columns:1fr 1fr;gap:26px 22px}
+.form-field{display:flex;flex-direction:column;gap:9px}
+.form-field-message{grid-column:1/-1}
+.form-field label{font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--forest);font-weight:700}
+.form-field input,.form-field textarea{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;border-radius:0;padding:10px 2px 12px;color:var(--ink);font:inherit;outline:none}
+.form-field textarea{border:1px solid var(--line);padding:14px;resize:vertical;min-height:160px}
+.form-field input:focus{border-bottom-color:var(--terracotta)}
+.form-field textarea:focus{border-color:var(--terracotta)}
+.form-submit{grid-column:1/-1;justify-self:start;border:0;background:var(--forest);color:var(--paper);padding:14px 20px;font:inherit;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;display:inline-flex;gap:28px;align-items:center}
+.form-submit:hover{transform:translateY(-1px)}
+.contact-secondary{border-left:1px solid var(--line);padding-left:28px}
+.contact-secondary p{font-size:.88rem;line-height:1.65;color:var(--muted);margin:14px 0 24px}
+.contact-secondary a{display:flex;justify-content:space-between;padding:14px 0;border-top:1px solid var(--line);font-size:.78rem;color:var(--forest)}
+.contact-secondary a:last-child{border-bottom:1px solid var(--line)}
+@media(max-width:760px){
+  .contact-v614{padding-top:28px}
+  .contact-form-layout{grid-template-columns:1fr;gap:40px;padding-top:32px}
+  .portfolio-contact-form{grid-template-columns:1fr}
+  .form-field-message,.form-submit{grid-column:1}
+  .contact-secondary{border-left:0;border-top:1px solid var(--line);padding:28px 0 0}
+}

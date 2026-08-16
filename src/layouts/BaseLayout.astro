@@ -3,7 +3,12 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import { theories } from '../data/site';
-const { title, description='Avery Moon designs systems that help organizations work smarter.' } = Astro.props;
+const {
+  title,
+  description='Avery Moon designs practical systems for growing organizations, small and mid-sized businesses, and nonprofits—improving operations, workflows, knowledge, workforce capability, and decision-making.'
+} = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL('/images/averymoon-social-preview.png', Astro.site);
 ---
 <!doctype html>
 <html lang="en">
@@ -11,7 +16,24 @@ const { title, description='Avery Moon designs systems that help organizations w
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
   <meta name="theme-color" content="#f5efe6" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Avery Moon" />
+  <meta property="og:title" content={`${title} | Avery Moon`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={socialImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Avery Moon — Systems, Strategy & Organizational Design" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${title} | Avery Moon`} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={socialImage} />
+
   <title>{title} | Avery Moon</title>
 </head>
 <body>

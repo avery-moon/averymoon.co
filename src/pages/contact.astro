@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Contact">
-<section class="contact-v57">
-  <div class="container">
-    <header class="contact-head">
+<BaseLayout title="Contact" description="Connect with Avery Moon about systems design, organizational improvement, operations, knowledge, and project work.">
+<section class="contact-v614">
+  <div class="container contact-form-shell">
+    <header class="contact-head contact-form-head">
       <div class="eyebrow">Contact</div>
       <h1>Let's talk about the work.</h1>
       <p>If you're building a team, untangling a process, organizing knowledge, or trying to make a complex system easier to use, I'd be happy to connect.</p>
@@ -12,19 +12,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <div class="contact-rule"></div>
 
-    <div class="contact-links">
-      <a href="mailto:aemoon01@gmail.com" class="contact-row">
-        <span class="contact-index">01</span><span class="contact-type">Email</span>
-        <strong>aemoon01@gmail.com</strong><span class="contact-arrow">↗</span>
-      </a>
-      <a href="https://www.linkedin.com/in/avery-moon" target="_blank" rel="noopener" class="contact-row">
-        <span class="contact-index">02</span><span class="contact-type">LinkedIn</span>
-        <strong>linkedin.com/in/avery-moon</strong><span class="contact-arrow">↗</span>
-      </a>
-      <a href="https://github.com/avery-moon" target="_blank" rel="noopener" class="contact-row">
-        <span class="contact-index">03</span><span class="contact-type">GitHub</span>
-        <strong>github.com/avery-moon</strong><span class="contact-arrow">↗</span>
-      </a>
+    <div class="contact-form-layout">
+      <form class="portfolio-contact-form" action="https://usebasin.com/f/ca05aafaf913" method="POST">
+        <input type="hidden" name="_gotcha" value="" />
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="form-field form-field-message">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="7" required></textarea>
+        </div>
+        <button class="form-submit" type="submit">Send Message <span>→</span></button>
+      </form>
+
+      <aside class="contact-secondary">
+        <div class="eyebrow">Elsewhere</div>
+        <p>Prefer another route? You can also find my work and professional profile here.</p>
+        <a href="https://www.linkedin.com/in/avery-moon" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+        <a href="https://github.com/avery-moon" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+      </aside>
     </div>
 
     <div class="contact-close">

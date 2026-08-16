@@ -1,10 +1,14 @@
-# averymoon.co — V6.1.3 Training Gantt
+# averymoon.co — V6.1.4 Infrastructure & Social Polish
 
-Built from V6.1.2.
+Built from V6.1.3.
 
-Changes are intentionally surgical:
-- Removed the orange category/eyebrow text from all six Built Systems cards
-- Replaced only the Training & Certification graphic
-- New Training graphic is an abstract 8-week Gantt-style timeline with overlapping development windows, a subtle mid-course adjustment, and a final qualification marker
-- Added a small spacing adjustment between each diagram and project title
-- Other five diagrams, project names, order, metrics, descriptions, links, case studies, custom domain, and deployment workflow are unchanged
+Changes:
+- Replaced exposed email address with a custom Basin contact form
+- Basin endpoint: configured in Contact page form action
+- Kept LinkedIn and GitHub as secondary contact routes
+- Changed About: AI/ML Engineering → AI Product Development
+- Added canonical URLs and Open Graph / Twitter social metadata
+- Added a dedicated 1200×630 social preview image
+- Homepage metadata positions Avery around Systems, Strategy & Organizational Design
+- Metadata includes growing organizations, small and mid-sized businesses, and nonprofits
+- Built Systems and homepage hero design are otherwise unchanged
