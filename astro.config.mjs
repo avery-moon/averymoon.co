@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://avery-moon.github.io',
-  base: '/averymoon.co',
+  site: 'https://averymoon.co',
+  base: '/',
   build: {
     format: 'directory'
   }

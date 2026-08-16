@@ -28,3 +28,8 @@ Built on the working V5.9.2 site.
 - Reserved training-artifact gallery
 
 The remaining Built Systems routes continue to use the existing dynamic case-study template until we expand them.
+
+
+## Custom domain patch
+- Astro canonical site changed to https://averymoon.co
+- Base path changed from /averymoon.co to / for root-domain hosting.
