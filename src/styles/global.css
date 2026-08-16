@@ -1421,3 +1421,39 @@ body:has(.about-grid) .photo-frame-v54{
       rgba(245,239,230,0) 100%);
   }
 }
+
+/* ===== V6.2.3 CONVERGENCE PASS ===== */
+.hero-v62-grid{
+  grid-template-columns:minmax(0,1fr) minmax(455px,1fr);
+  min-height:510px;
+}
+.hero-v62-copy{
+  padding:52px 40px 52px 0;
+}
+.hero-v62-art{
+  min-height:510px;
+  margin-left:-145px;
+  margin-right:calc((100vw - min(1120px, calc(100vw - 48px)))/-2);
+  z-index:0;
+}
+.hero-v62-copy{z-index:2}
+.hero-v62-art:before{
+  width:360px;
+  background:linear-gradient(90deg,
+    var(--paper) 0%,
+    rgba(245,239,230,.99) 24%,
+    rgba(245,239,230,.88) 45%,
+    rgba(245,239,230,.58) 65%,
+    rgba(245,239,230,.20) 84%,
+    rgba(245,239,230,0) 100%);
+}
+.hero-v62-art img{
+  object-position:54% center;
+  opacity:.94;
+}
+@media(max-width:900px){
+  .hero-v62-art{
+    margin-left:0;
+    min-height:315px;
+  }
+}
