@@ -1,35 +1,15 @@
-# averymoon.co — V6.0 Case Study Preview
+# averymoon.co — V6.1 Polish
 
-Built on the working V5.9.2 site.
+Built from the V6.0 custom-domain version.
 
-## New flagship Built Systems pages
-- Alloy Procurement Planner
-- Workforce Training & Capability System
+Changes:
+- Full readability/grammar pass on Alloy and Training case studies
+- Reduced case-study body copy while preserving the strongest evidence
+- Removed "sanitized" from public-facing case-study copy
+- Changed abbreviated metric units to "Weeks" and "Hours"
+- Reduced case-study hero size by ~10–15%
+- Reduced major vertical section spacing by roughly one-third
+- Simplified Built Systems cards into scan-friendly project gateways
+- Preserved the custom-domain Astro configuration for https://averymoon.co
 
-## Alloy page
-- Precise project metrics
-- Before / after operating model
-- Custom material-planning architecture diagram
-- Multiple decision horizons
-- Design decisions and human-judgment layer
-- Validation / iteration story
-- Current-state vs. measured-impact distinction
-- Reserved sanitized workbook artifact area
-
-## Training page
-- Before / after employee journey
-- Visual 8-week capability pathway
-- Adaptive live-operations design decisions
-- Closed-loop training feedback diagram
-- Level 1 / 2 / 3 progression architecture
-- Link to building-wide workforce capability project
-- Conservative certification outcomes
-- Amazon RDU1 cross-training as a related pattern
-- Reserved training-artifact gallery
-
-The remaining Built Systems routes continue to use the existing dynamic case-study template until we expand them.
-
-
-## Custom domain patch
-- Astro canonical site changed to https://averymoon.co
-- Base path changed from /averymoon.co to / for root-domain hosting.
+No workflow changes are included.

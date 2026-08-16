@@ -33,9 +33,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <h2>Critical material planning depended on fragmented data and one person’s experience.</h2>
     </div>
     <div class="case-copy">
-      <p>Alloy planning previously required downloading roughly four to five separate datasets, copying them into Excel, and manually consolidating the results into a pivot-based view about every two weeks. The process typically looked no farther than six months ahead.</p>
-      <p>At the same time, purchasing rules, supplier timing, test-bar requirements, historical usage, safety-stock considerations, and special alloy behavior were largely held as tribal knowledge. One person had maintained the process for roughly four years before teaching it to me as they left.</p>
-      <p class="case-emphasis">The result was not simply an inefficient spreadsheet process. Alloy shortages occurred roughly two to three times per quarter, and a shortage could stop affected production until replacement material arrived and completed a 2–8 week verification cycle.</p>
+      <p>Alloy planning required downloading four to five separate datasets, consolidating them manually in Excel, and refreshing a pivot-based view about every two weeks. Planning typically extended no farther than six months.</p>
+      <p>Purchasing rules, supplier timing, test-bar requirements, historical usage, safety-stock considerations, and special alloy behavior also lived largely as tribal knowledge. One person had maintained the process for roughly four years before teaching it to me as they left.</p>
+      <p class="case-emphasis">Alloy shortages occurred roughly two to three times per quarter. A shortage could stop affected production until replacement material arrived and completed a 2–8 week verification cycle.</p>
     </div>
   </div>
 </section>
@@ -68,7 +68,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="case-section-no">02</div>
     <div class="eyebrow">System Architecture</div>
     <h2>From customer demand to purchasing action.</h2>
-    <p class="case-intro">The workbook converts operational exports into material requirements, reconciles supply, applies purchasing constraints, and then presents different decision horizons for different users.</p>
+    <p class="case-intro">The workbook converts operational exports into material requirements, reconciles supply, applies purchasing constraints, and presents decision horizons tailored to different users.</p>
 
     <div class="alloy-flow reveal">
       <div class="flow-inputs">
@@ -119,22 +119,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <article>
         <span>01</span>
         <h3>Human judgment stays in the loop.</h3>
-        <p>The planner suggests quantities and order timing, but operational priorities can change. Customer expedites, overdue orders, business conditions, and current production strategy still shape the final purchasing decision.</p>
+        <p>The planner suggests quantities and order timing while leaving room for customer expedites, overdue orders, business conditions, and current production priorities to shape the final decision.</p>
       </article>
       <article>
         <span>02</span>
         <h3>Plan for plant capacity, not only supplier capacity.</h3>
-        <p>The purchasing calendar helps stagger incoming material so too many alloys do not enter test-bar verification simultaneously, creating a downstream foundry bottleneck or increasing mix-up risk.</p>
+        <p>The purchasing calendar staggers incoming material to avoid overloading test-bar verification or creating unnecessary mix-up risk on the production floor.</p>
       </article>
       <article>
         <span>03</span>
         <h3>Different horizons answer different questions.</h3>
-        <p>A purchaser needs the next quarter’s actions. Operations needs six-month readiness. Leadership needs longer-range exposure. Suppliers benefit from twelve-to-eighteen-month forecasting.</p>
+        <p>Purchasing needs the next quarter’s actions; operations needs six-month readiness; leadership and suppliers benefit from longer-range forecasting.</p>
       </article>
       <article>
         <span>04</span>
         <h3>Convert tribal knowledge into explicit constraints.</h3>
-        <p>MOQ rules, supplier lead time, test-bar timing, historical consumption from 2022–2026, special-material behavior, and planning notes are documented rather than left in one person’s memory.</p>
+        <p>MOQ rules, supplier lead time, test-bar timing, historical consumption, special-material behavior, and planning notes are documented instead of left in one person’s memory.</p>
       </article>
     </div>
   </div>
@@ -152,7 +152,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="validation-arrow">→</div>
       <div class="validation-new"><span>Refined signal</span><strong>Precise Need-By Date</strong><p>The model now uses the next relevant customer due date to locate the actual material need inside the quarter.</p></div>
     </div>
-    <p class="case-note">I validated the planner by tracing discrepancies, comparing outputs against operational expectations, and refining formulas or business logic when the recommendation did not accurately represent the real decision.</p>
+    <p class="case-note">I validated the planner by tracing discrepancies against operational expectations and refining formulas or business logic when recommendations did not reflect the real decision.</p>
   </div>
 </section>
 
@@ -163,8 +163,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <h2>Built, validated, documented, and entering operational use.</h2>
     <div class="current-state-grid">
       <div>
-        <p>The planner entered deployment after iterative formula validation, stakeholder review, and functional refinement. Reviewers include the site purchaser, general management, and an experienced former operations manager.</p>
-        <p>Because deployment is recent, I do not attribute unmeasured shortage reductions or inventory savings to the system yet. Long-term impact will be evaluated as the planner accumulates operating history.</p>
+        <p>The planner entered deployment after formula validation, stakeholder review, and functional refinement with purchasing and operational leadership.</p>
+        <p>Because deployment is recent, I do not yet attribute shortage reductions or inventory savings to the system. Long-term impact will be evaluated as it accumulates operating history.</p>
       </div>
       <div class="roadmap">
         <div class="eyebrow">Next Iteration</div>
@@ -186,7 +186,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="eyebrow">Working Artifact</div>
         <h2>The system, not just a screenshot.</h2>
       </div>
-      <p>A sanitized portfolio version will preserve the workbook’s planning architecture and decision logic while using entirely synthetic alloy, part, demand, and supplier data.</p>
+      <p>A portfolio version will preserve the workbook’s planning architecture and decision logic using fictionalized alloy, part, demand, and supplier data.</p>
     </div>
     <div class="artifact-placeholder artifact-alloy">
       <div class="artifact-window">
@@ -199,7 +199,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           </div>
         </div>
       </div>
-      <div class="artifact-caption"><span>Artifact slot reserved</span><strong>Sanitized Alloy Procurement Planner</strong><small>Workbook screenshots + downloadable .xlsx coming next</small></div>
+      <div class="artifact-caption"><span>Artifact slot reserved</span><strong>Alloy Procurement Planner</strong><small>Workbook screenshots + downloadable .xlsx coming next</small></div>
     </div>
   </div>
 </section>

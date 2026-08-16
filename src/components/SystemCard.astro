@@ -15,12 +15,9 @@ const glyph = glyphs[system.slug];
   <div class="system-signature-field" aria-hidden="true"><div class="system-signature">
     <svg viewBox="0 0 130 120"><path d={glyph}/></svg>
   </div></div>
-  <div class="meta">{system.number} · {system.category}</div>
+  <div class="meta">{system.category}</div>
   <h3>{system.title}</h3>
-  <p class="muted card-summary">{system.summary}</p>
-  <div class="card-reveal">
-    <span>{system.category}</span><span>View system</span>
-  </div>
   <div class="metric metric-v56">{system.metric}</div>
-  <span class="arrow">↗</span>
+  <p class="muted card-summary">{system.summary}</p>
+  <div class="card-gateway"><span>Explore system</span><span>→</span></div>
 </a>

@@ -964,3 +964,42 @@ body:has(.about-grid) .photo-frame-v54{
   .feedback-loop{grid-template-columns:1fr}
   .feedback-loop b{transform:rotate(90deg)}
 }
+
+
+/* ===== V6.1 POLISH ===== */
+.case-hero{padding-top:42px;padding-bottom:30px}
+.case-hero h1{font-size:clamp(3rem,5.55vw,5.65rem)}
+.case-deck{margin-bottom:26px}
+.case-section{padding:58px 0}
+.case-before-after{padding:44px 0}
+.training-before{padding:38px 0}
+.case-outcomes{padding:54px 0}
+.case-artifact-section{padding:58px 0}
+.case-next{padding:32px 0}
+.artifact-head{margin-bottom:26px}
+.case-copy .case-emphasis{margin-top:20px}
+.decision-grid{margin-top:26px}
+.pathway-track{margin-top:28px}
+.feedback-loop{margin-top:30px}
+.progression-layout{margin-top:28px}
+.related-system{margin-top:30px}
+.outcome-grid{margin-top:26px}
+.amazon-compare{margin-top:26px}
+
+/* Built Systems index: cards are gateways, not mini case studies. */
+.system-card .card-reveal,.system-card .arrow{display:none!important}
+.system-card .metric-v56{margin:12px 0 9px;font-family:Georgia,serif;font-size:1.05rem;color:var(--terracotta)}
+.system-card .card-summary{font-size:.78rem;line-height:1.48;margin:0;max-width:32ch}
+.system-card .card-gateway{margin-top:auto;padding-top:18px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);font-size:.61rem;letter-spacing:.1em;text-transform:uppercase;color:var(--forest)}
+.system-card .card-gateway span:last-child{color:var(--terracotta);font-size:1rem}
+.system-card:hover .card-gateway span:last-child{transform:translateX(3px)}
+.system-card .card-gateway span:last-child{transition:transform .2s ease}
+.system-card h3{margin-bottom:0}
+
+@media(max-width:760px){
+  .case-hero{padding-top:24px;padding-bottom:24px}
+  .case-hero h1{font-size:clamp(2.55rem,10.5vw,3.9rem)}
+  .case-section,.case-artifact-section{padding:48px 0}
+  .case-before-after,.training-before{padding:34px 0}
+  .case-outcomes{padding:44px 0}
+}
