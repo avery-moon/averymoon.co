@@ -4,37 +4,37 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const projects = [
   {
     no:'01', title:'ICQA Manager Handoff Playbook', area:'Knowledge Stewardship',
-    meta:'Amazon · ~15–20 pages',
+    meta:'Transition Guide · ~15–20 pages',
     body:'Created a structured transition playbook to consolidate recurring responsibilities, operational knowledge, key processes, and resources for the next manager inheriting the function.',
     tags:['Knowledge Transfer','Documentation','Role Transition']
   },
   {
     no:'02', title:'Operational Quality Bootcamps', area:'Learning Design',
-    meta:'Amazon · Inbound / Outbound / Ship Dock',
+    meta:'Quality Training · 3 Operational Groups',
     body:'Developed approximately four-hour training sessions for major operational groups connecting quality metrics to common root causes, corrective actions, and the decisions frontline teams could make differently.',
     tags:['Learning Design','Quality','Root Cause Analysis']
   },
   {
     no:'03', title:'Multilingual Visual Knowledge Guides', area:'Accessible Knowledge',
-    meta:'Amazon · Frontline Reference',
+    meta:'Frontline Reference · 3 Languages',
     body:'Designed visual point-of-work resources to make complex operational procedures easier to use in practice, including materials adapted into three languages for a multilingual frontline workforce.',
     tags:['Visual Documentation','Accessibility','Frontline Use']
   },
   {
     no:'04', title:'Internal Knowledge Resource Pages', area:'Knowledge Management',
-    meta:'Amazon · ICQA + CAP / Pick',
+    meta:'Living Knowledge Resource',
     body:'Grew and maintained internal wiki-style resource pages that centralized frequently needed operational knowledge and kept reference material useful as processes evolved.',
     tags:['Knowledge Architecture','Self-Service','Information Design']
   },
   {
     no:'05', title:'Standardized Process Documentation', area:'Process Design',
-    meta:'Amazon · Multi-Site / National Scope',
+    meta:'Multi-Site / National Scope',
     body:'Developed standardized documentation for inter-building inventory transfers and discrepancy handling across multiple sites.',
     tags:['SOP Design','Standardization','Cross-Site Operations']
   },
   {
     no:'06', title:'Problem Solve Cross-Training Planner', area:'Capability Planning',
-    meta:'Amazon · Lightweight Planning Tool',
+    meta:'Cross-Training Planning',
     body:'Built a lightweight planner to make cross-training needs and functional coverage easier to see across Problem Solve roles.',
     tags:['Cross-Training','Capability Visibility','Workforce Planning']
   }
@@ -55,18 +55,43 @@ const projects = [
 <section class="selected-index">
   <div class="container">
     <div class="selected-index-head">
-      <span>Professional Work</span>
+      <span>Selected professional work · Amazon, 2021–2025</span>
       <span>Knowledge · Learning · Documentation · Capability</span>
     </div>
-    <div class="selected-grid">
-      {projects.map(project => (
+
+    <article class="selected-feature">
+      <div class="selected-feature-copy">
+        <div class="selected-card-top">
+          <span class="selected-no">{projects[0].no}</span>
+          <span class="selected-area">{projects[0].area}</span>
+        </div>
+        <div class="selected-meta">{projects[0].meta}</div>
+        <h2>{projects[0].title}</h2>
+        <p>{projects[0].body}</p>
+        <div class="selected-tags">
+          {projects[0].tags.map(tag => <span>{tag}</span>)}
+        </div>
+      </div>
+      <div class="playbook-graphic" aria-hidden="true">
+        <div class="playbook-page page-back"><span></span><span></span><span></span></div>
+        <div class="playbook-page page-front">
+          <small>MANAGER HANDOFF</small>
+          <strong>ICQA</strong>
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+    </article>
+
+    <div class="selected-subhead">
+      <span>Knowledge + Learning</span>
+      <span>02—05</span>
+    </div>
+    <div class="selected-grid selected-grid-four">
+      {projects.slice(1,5).map(project => (
         <article class="selected-card">
           <div class="selected-card-top">
             <span class="selected-no">{project.no}</span>
             <span class="selected-area">{project.area}</span>
-          </div>
-          <div class="selected-mark" aria-hidden="true">
-            <span></span><span></span><span></span>
           </div>
           <div class="selected-card-body">
             <div class="selected-meta">{project.meta}</div>
@@ -79,6 +104,27 @@ const projects = [
         </article>
       ))}
     </div>
+
+    <div class="selected-subhead">
+      <span>Capability Planning</span>
+      <span>06</span>
+    </div>
+    <article class="selected-wide-card">
+      <div>
+        <div class="selected-card-top">
+          <span class="selected-no">{projects[5].no}</span>
+          <span class="selected-area">{projects[5].area}</span>
+        </div>
+        <div class="selected-meta">{projects[5].meta}</div>
+        <h2>{projects[5].title}</h2>
+      </div>
+      <div>
+        <p>{projects[5].body}</p>
+        <div class="selected-tags">
+          {projects[5].tags.map(tag => <span>{tag}</span>)}
+        </div>
+      </div>
+    </article>
   </div>
 </section>
 
