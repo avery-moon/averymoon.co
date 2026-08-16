@@ -1,14 +1,17 @@
-# averymoon.co — V6.1.4 Infrastructure & Social Polish
+# averymoon.co — V6.1.5 Visual Polish
 
-Built from V6.1.3.
+Built from V6.1.4.
 
 Changes:
-- Replaced exposed email address with a custom Basin contact form
-- Basin endpoint: configured in Contact page form action
-- Kept LinkedIn and GitHub as secondary contact routes
-- Changed About: AI/ML Engineering → AI Product Development
-- Added canonical URLs and Open Graph / Twitter social metadata
-- Added a dedicated 1200×630 social preview image
-- Homepage metadata positions Avery around Systems, Strategy & Organizational Design
-- Metadata includes growing organizations, small and mid-sized businesses, and nonprofits
-- Built Systems and homepage hero design are otherwise unchanged
+- Built Systems “Explore System” CTA + arrow now use terracotta
+- Contact form sits on a subtle warm editorial panel with restrained depth and contour detail
+- Contact submit button uses terracotta for a clearer action hierarchy
+- Replaced the social/Open Graph card with a more illustrated/cartographic night-sky treatment:
+  - charcoal/navy atmosphere rather than green
+  - layered engraved-style mountain silhouettes
+  - star field
+  - system-network constellation integrated into the sky
+  - existing Avery Moon typography and tagline
+- Homepage hero itself is intentionally unchanged; this social card can serve as a visual reference for the dedicated hero redesign next
+
+No deployment workflow or domain changes.

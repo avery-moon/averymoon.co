@@ -1128,3 +1128,61 @@ body:has(.about-grid) .photo-frame-v54{
   .form-field-message,.form-submit{grid-column:1}
   .contact-secondary{border-left:0;border-top:1px solid var(--line);padding:28px 0 0}
 }
+
+/* ===== V6.1.5 VISUAL POLISH ===== */
+
+/* Built Systems: forest carries content; terracotta marks the primary action. */
+.system-card .card-gateway{
+  color:var(--terracotta)!important;
+}
+.system-card .card-gateway span:last-child{
+  color:var(--terracotta)!important;
+}
+
+/* Contact: give the form a grounded editorial surface without making it SaaS-card heavy. */
+.contact-form-layout{
+  position:relative;
+  padding:34px 34px 40px!important;
+  margin-top:26px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(189,89,61,.025), transparent 34%),
+    rgba(245,242,235,.34);
+  box-shadow:0 16px 42px rgba(32,59,49,.045);
+  overflow:hidden;
+}
+.contact-form-layout:after{
+  content:"";
+  position:absolute;
+  width:210px;height:150px;
+  right:-46px;top:-32px;
+  opacity:.18;
+  pointer-events:none;
+  background:
+    repeating-radial-gradient(
+      ellipse at center,
+      transparent 0 10px,
+      rgba(32,59,49,.13) 11px 12px,
+      transparent 13px 22px
+    );
+  transform:rotate(-13deg);
+}
+.portfolio-contact-form,.contact-secondary{position:relative;z-index:1}
+.form-field input{
+  background:rgba(255,255,255,.16);
+}
+.form-field textarea{
+  background:rgba(255,255,255,.18);
+}
+.form-submit{
+  background:var(--terracotta)!important;
+}
+.form-submit:hover{
+  background:var(--terracotta-dark)!important;
+}
+
+@media(max-width:760px){
+  .contact-form-layout{
+    padding:26px 22px 30px!important;
+  }
+}
