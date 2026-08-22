@@ -1,16 +1,17 @@
-# averymoon.co — V6.6.1 Workforce Governance Refinement
+# averymoon.co — V6.7.0 Equipment Reliability Artifact Pass
 
-Built on V6.6.0.
+Built on V6.6.1.
 
 Changes:
-- Reworks section 07 to remove the arrow-based governance hierarchy.
-- Gives Supervisors, HR, and Leaders / Executives equal visual weight.
-- Corrects responsibilities:
-  - Supervisors complete/review competency assessments and use the system to identify gaps and cross-training opportunities.
-  - HR receives and enters records, maintains the central system, and uses coverage data for workforce planning.
-  - Leaders / Executives use capability and coverage data for workforce planning and risk visibility.
-- Changes the heading to “Shared ownership keeps the system useful.”
-- Rewrites the limitation as a record-upkeep/data-maintenance constraint.
-- Tightens the section layout to remove excess blank space.
+- Rebuilds the Equipment Reliability & Downtime Analysis case study around the completed portfolio artifacts.
+- Treats the weekly downtime tracker as the frontline data-capture layer feeding the structured downtime log and dashboard.
+- Adds a website-native representation of the lightweight operator tracker.
+- Adds a website-native dashboard view based on the synthetic portfolio workbook, including KPI, unit downtime, and top-failure-mode values.
+- Keeps synthetic demo metrics explicitly separate from live production claims.
+- Clarifies the three-level analysis structure: downtime category → failure mode → root cause.
+- Connects the analysis to RAIL action tracking and A3 problem solving.
+- Adds the working synthetic Excel demo as a downloadable artifact.
+- Updates next-project navigation to Consumables Inventory & Replenishment.
 
-No other page content changed.
+Artifact:
+public/artifacts/equipment-reliability-downtime-demo.xlsx
