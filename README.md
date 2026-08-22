@@ -1,13 +1,8 @@
-# averymoon.co — V6.7.1 Equipment Reliability Polish
+# averymoon.co — V6.7.2 Equipment Reliability Unit Labels
 
-Built on V6.7.0.
+Built on V6.7.1.
 
-Changes:
-- Replaces “Failure Taxonomy” with the clearer “Downtime Classification.”
-- Centers the dark metric-band values.
-- Rewrites the section 01 heading to identify the subject and use a more professional tone.
-- Centers section 03 analysis-model content.
-- Expands the synthetic dashboard evidence with an overall mock Pareto chart, cumulative-share line, and compact per-unit Pareto indicators.
-- Tightens section 05 to remove the awkward inherited two-column spacing.
-- Rewrites section 06 heading to “Analysis connects directly to corrective action and problem solving.”
-- No production data was added; Pareto visuals remain explicitly synthetic.
+Change:
+- Replaces the synthetic dashboard labels “Vacuum Cell 1–4” with the more neutral “Unit 1–4.”
+
+No other page content changed.
