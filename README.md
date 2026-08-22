@@ -1,17 +1,16 @@
-# averymoon.co — V6.6.0 Workforce Capability & Cross-Training
+# averymoon.co — V6.6.1 Workforce Governance Refinement
 
-Built on V6.5.3.
+Built on V6.6.0.
 
-Updates the Workforce Capability case study using the completed synthetic technology-industry portfolio demo.
+Changes:
+- Reworks section 07 to remove the arrow-based governance hierarchy.
+- Gives Supervisors, HR, and Leaders / Executives equal visual weight.
+- Corrects responsibilities:
+  - Supervisors complete/review competency assessments and use the system to identify gaps and cross-training opportunities.
+  - HR receives and enters records, maintains the central system, and uses coverage data for workforce planning.
+  - Leaders / Executives use capability and coverage data for workforce planning and risk visibility.
+- Changes the heading to “Shared ownership keeps the system useful.”
+- Rewrites the limitation as a record-upkeep/data-maintenance constraint.
+- Tightens the section layout to remove excess blank space.
 
-Key changes:
-- Renames the project to Workforce Capability & Cross-Training System.
-- Keeps the real manufacturing implementation story and scope separate from the fictional demo context.
-- Adds three evidence views modeled on the actual workbook: HR Quick View, Skill Management, and Employee Transcript.
-- Adds the workbook operating model: competency event → current record → coverage analysis → training action.
-- Adds handoff/governance language based on the workbook's How to Use guide.
-- Includes the working synthetic Excel demo as a downloadable site artifact.
-- Rewrites page copy for a direct, practical tone and removes the old placeholder artifact section.
-
-Artifact:
-public/artifacts/technology-workforce-capability-demo.xlsx
+No other page content changed.

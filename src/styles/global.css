@@ -2355,3 +2355,42 @@ body .download-card>a:hover{background:#214c3e;color:#fffaf1}
  body .cap-table-head.transcript,body .cap-table-row.transcript{grid-template-columns:1.3fr .7fr .5fr}
  body .cap-table-head.transcript span:nth-child(4),body .cap-table-head.transcript span:nth-child(5),body .cap-table-row.transcript em,body .cap-table-row.transcript span:nth-child(5){display:none}
 }
+
+/* ===== V6.6.1 governance refinement ===== */
+body .governance-section h2{
+  max-width:760px;
+  margin-bottom:34px;
+}
+body .governance-equal{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+body .governance-equal>div{
+  min-height:180px;
+  padding:26px;
+  border:1px solid rgba(30,68,56,.16);
+  background:#fbf8f0;
+}
+body .governance-equal strong{
+  display:block;
+  color:#183f34;
+  font:600 1.2rem/1.2 var(--serif);
+}
+body .governance-equal span{
+  display:block;
+  margin-top:12px;
+  color:#68716d;
+  font:.86rem/1.6 var(--sans);
+}
+body .governance-limit{
+  max-width:920px;
+  margin:28px 0 0;
+}
+body .governance-limit strong{
+  color:#31473f;
+}
+@media(max-width:800px){
+  body .governance-equal{grid-template-columns:1fr}
+  body .governance-equal>div{min-height:0}
+}
