@@ -2265,3 +2265,24 @@ body .training-related{padding-bottom:78px}
   body .competency-row{grid-template-columns:1fr 48px}
   body .competency-row span{grid-column:1/-1}
 }
+
+/* ===== V6.5.1 competency abstraction refinement ===== */
+body .competency-transform .competency-row{
+  grid-template-columns:105px 1fr;
+}
+@media(max-width:560px){
+  body .competency-transform .competency-row{
+    grid-template-columns:1fr;
+  }
+  body .competency-transform .competency-row span{
+    grid-column:auto;
+  }
+}
+
+/* ===== V6.5.2 final training page polish ===== */
+body .case-metric-grid .metric-centered{
+  text-align:center;
+}
+body .training-evidence-path.section-divider{
+  border-top:1px solid rgba(30,68,56,.14);
+}
