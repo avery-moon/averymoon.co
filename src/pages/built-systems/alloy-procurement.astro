@@ -2,214 +2,195 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
-<BaseLayout
-  title="Alloy Procurement Planner"
-  description="Avery Moon designed an 18-month material planning system connecting customer demand, alloy inventory, scheduled receipts, purchasing constraints, and supplier forecasting."
->
-<section class="case-hero case-alloy">
+<BaseLayout title="Material Procurement & Planning" description="A long-range material planning system combining inventory, open customer demand, scheduled receipts, historical consumption, and supplier lead times into purchasing recommendations.">
+
+<section class="case-hero">
   <div class="container">
     <a class="case-back" href={`${base}/built-systems/`}>← Built Systems</a>
-    <div class="case-kicker">01 / Material Planning</div>
-    <h1>Alloy Procurement<br/><em>Planner</em></h1>
-    <p class="case-deck">An 18-month material planning and purchasing decision system for approximately $3M in on-hand raw material inventory.</p>
-    <div class="case-role-line"><span>System Architecture</span><span>Planning Logic</span><span>Requirements Discovery</span><span>Validation</span><span>Implementation</span></div>
+    <div class="case-kicker">07 / Procurement Planning</div>
+    <h1>Material Procurement &<br/><em>Planning</em></h1>
+    <p class="case-deck">A long-range planning system that combines current inventory, open customer demand, scheduled receipts, historical consumption, and supplier lead times to show what material is needed, how much to buy, and when to act.</p>
+    <div class="case-role-line"><span>Demand Planning</span><span>Procurement</span><span>Forecasting</span><span>Data Integration</span><span>Decision Support</span></div>
   </div>
 </section>
 
 <section class="case-metrics case-metrics-dark">
   <div class="container case-metric-grid">
-    <div><strong>20</strong><span>Alloys Planned</span></div>
-    <div><strong>~18 mo.</strong><span>Planning Horizon</span></div>
-    <div><strong>~5 min.</strong><span>Routine Refresh</span></div>
-    <div><strong>~$3M</strong><span>On-Hand Inventory Visibility</span></div>
+    <div><strong>~$3M</strong><span>Material Inventory Scope</span></div>
+    <div><strong>18 Months</strong><span>Planning Horizon</span></div>
+    <div><strong>20</strong><span>Materials in Portfolio Demo</span></div>
+    <div><strong>Weekly</strong><span>Input Update Cycle</span></div>
   </div>
 </section>
 
 <section class="case-section">
   <div class="container case-two-col">
     <div>
-      <div class="case-section-no">01</div>
-      <div class="eyebrow">The Constraint</div>
-      <h2>Critical material planning depended on fragmented data and one person’s experience.</h2>
+      <div class="case-section-no">01</div><div class="eyebrow">The Planning Problem</div>
+      <h2>Long lead times made a current inventory snapshot insufficient.</h2>
     </div>
     <div class="case-copy">
-      <p>Alloy planning required downloading four to five separate datasets, consolidating them manually in Excel, and refreshing a pivot-based view about every two weeks. Planning typically extended no farther than six months.</p>
-      <p>Purchasing rules, supplier timing, test-bar requirements, historical usage, safety-stock considerations, and special alloy behavior also lived largely in one person's working knowledge. One person had maintained the process for roughly four years before teaching it to me as they left.</p>
-      <p class="case-emphasis">Alloy shortages occurred roughly two to three times per quarter. A shortage could stop affected production until replacement material arrived and completed a 2–8 week verification cycle.</p>
+      <p>Material purchasing required decisions well before the production need was visible on the floor. Inventory, purchase orders, customer demand, and historical consumption existed in separate sources, which made it difficult to see future coverage in one place.</p>
+      <p>I built a planning model that brings those inputs together and translates them into quarterly requirements, longer-range exposure, recommended order quantities, and purchasing dates.</p>
+      <p class="case-emphasis">The question shifted from “how much material do we have?” to “when will supply stop covering expected demand, and what should we do before then?”</p>
     </div>
   </div>
 </section>
 
-<section class="case-before-after">
+<section class="case-section case-alt section-divider material-input-section">
   <div class="container">
-    <div class="eyebrow">Before / After</div>
-    <div class="ba-grid">
-      <article>
-        <span class="ba-label">Before</span>
-        <strong>4–5</strong><p>datasets manually downloaded and consolidated</p>
-        <strong>up to ~60 min.</strong><p>to perform a routine planning update</p>
-        <strong>~6 months</strong><p>of typical forward visibility</p>
-        <strong>1 person</strong><p>holding most of the planning knowledge</p>
-      </article>
-      <div class="ba-arrow" aria-hidden="true">→</div>
-      <article class="ba-after">
-        <span class="ba-label">After</span>
-        <strong>2 recurring refreshes</strong><p>plus a maintained scheduled-receipts table</p>
-        <strong>~5 min.</strong><p>to refresh routine planning inputs</p>
-        <strong>up to ~18 months</strong><p>of selectable forward planning visibility</p>
-        <strong>documented</strong><p>methodology, operating instructions, and constraints</p>
-      </article>
+    <div class="case-section-no">02</div><div class="eyebrow">Planning Inputs</div>
+    <h2>Bring separate planning signals into one model.</h2>
+    <div class="material-source-grid">
+      <div><small>Inventory</small><strong>Current usable supply</strong><span>On-hand material and safety-stock assumptions</span></div>
+      <div><small>Customer Demand</small><strong>Open production requirements</strong><span>Visible released and planned demand by need date</span></div>
+      <div><small>Scheduled Receipts</small><strong>Existing purchase orders</strong><span>Quantity, expected receipt date, and order status</span></div>
+      <div><small>Consumption History</small><strong>Historical material use</strong><span>Trend and seasonal baseline for demand not yet visible</span></div>
+      <div><small>Supplier Rules</small><strong>Lead time + buying constraints</strong><span>Timing, minimum buys, shared-source rules, and planner notes</span></div>
+    </div>
+    <div class="material-model-line">
+      <span>Inputs</span><b>→</b><span>Demand & Coverage Model</span><b>→</b><span>Risk Quarter</span><b>→</b><span>Order Quantity + Timing</span>
     </div>
   </div>
 </section>
 
-<section class="case-section case-architecture">
+<section class="case-section material-demo-section">
   <div class="container">
-    <div class="case-section-no">02</div>
-    <div class="eyebrow">System Architecture</div>
-    <h2>From customer demand to purchasing action.</h2>
-    <p class="case-intro">The workbook converts operational exports into material requirements, reconciles supply, applies purchasing constraints, and presents decision horizons tailored to different users.</p>
+    <div class="case-section-no">03</div><div class="eyebrow">Portfolio Demo</div>
+    <h2>A decision center for immediate purchasing and long-range coverage.</h2>
+    <p class="case-intro">The downloadable workbook uses synthetic material, demand, purchasing, and transaction data. The Planning Hub consolidates the model into a single operating view.</p>
 
-    <div class="alloy-flow reveal">
-      <div class="flow-inputs">
-        <div class="flow-node">
-          <span>Input 01</span><strong>Current Inventory</strong><small>On-hand pounds by alloy</small>
+    <div class="material-demo-window">
+      <div class="material-demo-bar"><span></span><span></span><span></span><b>Material Planning Hub</b></div>
+      <div class="material-demo-body">
+        <div class="material-demo-title"><small>DECISION CENTER</small><strong>Immediate orders, customer demand, and 18-month outlook</strong></div>
+        <div class="material-kpis">
+          <div><span>Materials Covered</span><strong>7</strong></div>
+          <div><span>Immediate / Expedite</span><strong>5</strong></div>
+          <div><span>Order Within 30 Days</span><strong>0</strong></div>
+          <div><span>Suggested New Orders</span><strong>77K lb</strong></div>
         </div>
-        <div class="flow-node">
-          <span>Input 02</span><strong>Customer Work Orders</strong><small>Part · Quantity · Pour Weight · Due Date</small>
+        <div class="material-action-table">
+          <div class="material-table-head"><span>Material</span><span>Status</span><span>Suggested Order</span><span>Current Inventory</span><span>Open Orders</span><span>18M Forecast</span><span>Confidence</span></div>
+          <div class="material-table-row"><span>MTL-004</span><em>EXPEDITE / ORDER NOW</em><span>21.8K lb</span><span>46.5K</span><span>19K</span><span>344K</span><b>48</b></div>
+          <div class="material-table-row"><span>MTL-008</span><em>EXPEDITE / ORDER NOW</em><span>22.9K lb</span><span>9.4K</span><span>6K</span><span>73.9K</span><b>59</b></div>
+          <div class="material-table-row"><span>MTL-003</span><i>MONITOR</i><span>—</span><span>12.8K</span><span>10K</span><span>34.1K</span><b>89</b></div>
+          <div class="material-table-row"><span>MTL-010</span><strong>COVERED</strong><span>—</span><span>7.6K</span><span>32K</span><span>23.9K</span><b>88</b></div>
         </div>
-        <div class="flow-node">
-          <span>Input 03</span><strong>Scheduled Receipts</strong><small>Planned · Ordered · Confirmed · ETA</small>
+        <div class="material-insight-strip">
+          <div><span>Immediate purchasing exposure</span><strong>~77,026 lb across 5 materials</strong></div>
+          <div><span>Estimated demo spend</span><strong>~$2.07M in suggested orders</strong></div>
+          <div><span>Forecast confidence</span><strong>12 high · 4 medium · 4 low</strong></div>
         </div>
       </div>
-
-      <div class="flow-spine"><span></span></div>
-
-      <div class="flow-engine">
-        <div class="engine-title">Planning Engine</div>
-        <div class="engine-row">WO / Part <b>→</b> Alloy Mapping</div>
-        <div class="engine-row">Quantity × Pour Weight <b>→</b> Material Demand</div>
-        <div class="engine-row">Aggregate Demand <b>→</b> Alloy Requirements</div>
-        <div class="engine-row">On Hand + Receipts − Demand <b>→</b> Running Balance</div>
-        <div class="engine-row">MOQ + Lead Time + Test-Bar Timing <b>→</b> Suggested Order</div>
-      </div>
-
-      <div class="flow-spine"><span></span></div>
-
-      <div class="flow-horizons">
-        <div><strong>13 Weeks</strong><span>Immediate purchasing actions</span></div>
-        <div><strong>6 Months</strong><span>Operational material readiness</span></div>
-        <div><strong>1 Year</strong><span>Long-range planning</span></div>
-        <div><strong>18 Months</strong><span>Supplier forecasting</span></div>
-      </div>
     </div>
-
-    <div class="supporting-views">
-      <span>Parts by Alloy</span><span>Scheduled Receipts</span><span>Purchasing Calendar</span><span>YoY Consumption</span>
-    </div>
+    <p class="case-note">All quantities, costs, material IDs, and purchasing recommendations shown in the portfolio demo are synthetic.</p>
   </div>
 </section>
 
-<section class="case-section case-alt">
+<section class="case-section case-alt material-demand-section">
   <div class="container">
-    <div class="case-section-no">03</div>
-    <div class="eyebrow">Design Decisions</div>
-    <h2>Automate the calculation. Preserve the judgment.</h2>
-    <div class="decision-grid">
-      <article>
-        <span>01</span>
-        <h3>Human judgment stays in the loop.</h3>
-        <p>The planner suggests quantities and order timing while leaving room for customer expedites, overdue orders, business conditions, and current production priorities to shape the final decision.</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h3>Plan for plant capacity, not only supplier capacity.</h3>
-        <p>The purchasing calendar staggers incoming material to avoid overloading test-bar verification or creating unnecessary mix-up risk on the production floor.</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h3>Different horizons answer different questions.</h3>
-        <p>Purchasing needs the next quarter’s actions; operations needs six-month readiness; leadership and suppliers benefit from longer-range forecasting.</p>
-      </article>
-      <article>
-        <span>04</span>
-        <h3>Convert tribal knowledge into explicit constraints.</h3>
-        <p>MOQ rules, supplier lead time, test-bar timing, historical consumption, special-material behavior, and planning notes are documented instead of left in one person’s memory.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="case-section">
-  <div class="container case-validation">
-    <div>
-      <div class="case-section-no">04</div>
-      <div class="eyebrow">Validation & Iteration</div>
-      <h2>A forecast is only useful if its timing reflects operational reality.</h2>
-    </div>
-    <div class="validation-card">
-      <div class="validation-old"><span>Early signal</span><strong>Risk in Q3 2027</strong><p>Quarter-level logic could imply urgency from the start of the quarter.</p></div>
-      <div class="validation-arrow">→</div>
-      <div class="validation-new"><span>Refined signal</span><strong>Precise Need-By Date</strong><p>The model now uses the next relevant customer due date to locate the actual material need inside the quarter.</p></div>
-    </div>
-    <p class="case-note">I validated the planner by tracing discrepancies against operational expectations and refining formulas or business logic when recommendations did not reflect the real decision.</p>
-  </div>
-</section>
-
-<section class="case-section case-alt">
-  <div class="container">
-    <div class="case-section-no">05</div>
-    <div class="eyebrow">Current State</div>
-    <h2>Built, validated, documented, and entering operational use.</h2>
-    <div class="current-state-grid">
+    <div class="case-section-no">04</div><div class="eyebrow">Demand Logic</div>
+    <h2>Use visible customer demand without assuming it tells the whole story.</h2>
+    <div class="demand-comparison">
       <div>
-        <p>The planner entered deployment after formula validation, stakeholder review, and functional refinement with purchasing and operational leadership.</p>
-        <p>Because deployment is recent, I do not yet attribute shortage reductions or inventory savings to the system. Long-term impact will be evaluated as it accumulates operating history.</p>
+        <small>Historical Baseline</small>
+        <strong>Consumption trend + seasonality</strong>
+        <p>Historical use provides a baseline for material demand that has not yet appeared in open customer orders.</p>
       </div>
-      <div class="roadmap">
-        <div class="eyebrow">Next Iteration</div>
-        <span>Automated Data Ingestion</span>
-        <span>Action Alerts</span>
-        <span>Supplier Capacity Inputs</span>
-        <span>Reduced Manual Copy / Paste</span>
-        <span>Potential Migration Beyond Excel</span>
+      <b>vs.</b>
+      <div>
+        <small>Visible Customer Demand</small>
+        <strong>Open requirements by material need date</strong>
+        <p>Released and planned demand is translated into material requirements and grouped into the planning horizon.</p>
       </div>
+      <b>→</b>
+      <div class="demand-result">
+        <small>Planning Forecast</small>
+        <strong>Use the greater demand signal</strong>
+        <p>For each material and quarter, the model uses the greater of the historical baseline or visible open demand to reduce the risk of understating future need.</p>
+      </div>
+    </div>
+    <p class="case-note">In the portfolio model, customer material need dates are derived from the customer due date using a planning offset, while past-due open demand rolls into the first planning quarter rather than disappearing from the forecast.</p>
+  </div>
+</section>
+
+<section class="case-section material-calendar-section">
+  <div class="container">
+    <div class="case-section-no">05</div><div class="eyebrow">Purchasing Calendar</div>
+    <h2>Translate the forecast into a weekly buying timeline.</h2>
+    <div class="purchase-calendar-demo">
+      <div class="calendar-legend"><span><i class="scheduled"></i>Scheduled receipt</span><span><i class="suggested"></i>Suggested order</span></div>
+      <div class="calendar-grid">
+        <div class="calendar-head"><span>Material</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span></div>
+        <div class="calendar-row"><strong>MTL-004</strong><span class="suggested">21.8K</span><span></span><span class="scheduled">8K</span><span></span><span></span><span class="scheduled">5K</span><span></span><span></span></div>
+        <div class="calendar-row"><strong>MTL-007</strong><span></span><span class="suggested">8.2K</span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="calendar-row"><strong>MTL-008</strong><span class="suggested">22.9K</span><span></span><span></span><span></span><span class="scheduled">20K</span><span></span><span></span><span></span></div>
+        <div class="calendar-row"><strong>MTL-010</strong><span></span><span class="scheduled">6K</span><span></span><span></span><span></span><span></span><span></span><span class="scheduled">10K</span></div>
+      </div>
+    </div>
+    <p class="case-note">The workbook includes a rolling 52-week calendar that places scheduled receipts and recommended orders on the same timeline.</p>
+  </div>
+</section>
+
+<section class="case-section case-alt material-horizon-section">
+  <div class="container">
+    <div class="case-section-no">06</div><div class="eyebrow">Planning Horizons</div>
+    <h2>Near-term action and long-range planning use the same underlying model.</h2>
+    <div class="horizon-grid">
+      <div><strong>Current Quarter</strong><span>Immediate demand, inventory coverage, and purchasing action</span></div>
+      <div><strong>12 Months</strong><span>Annual requirement, open-order coverage, and supplier planning</span></div>
+      <div><strong>18 Months</strong><span>Longer-range exposure for materials with extended procurement timelines</span></div>
+    </div>
+    <div class="horizon-bars">
+      <div><span>MTL-004</span><i style="--w:66%"></i><b>12M 229K</b><i class="long" style="--w:100%"></i><b>18M 344K</b></div>
+      <div><span>MTL-016</span><i style="--w:60%"></i><b>12M 105K</b><i class="long" style="--w:100%"></i><b>18M 173K</b></div>
+      <div><span>MTL-011</span><i style="--w:61%"></i><b>12M 39K</b><i class="long" style="--w:100%"></i><b>18M 65K</b></div>
     </div>
   </div>
 </section>
 
-<section class="case-artifact-section">
+<section class="case-section material-ownership-section">
   <div class="container">
-    <div class="artifact-head">
-      <div>
-        <div class="case-section-no">06</div>
-        <div class="eyebrow">Working Artifact</div>
-        <h2>The system, not just a screenshot.</h2>
-      </div>
-      <p>A portfolio version will preserve the workbook’s planning architecture and decision logic using fictionalized alloy, part, demand, and supplier data.</p>
+    <div class="case-section-no">07</div><div class="eyebrow">Operating Model</div>
+    <h2>Different users update the inputs and consume the same planning view.</h2>
+    <div class="material-user-grid">
+      <div><strong>Procurement</strong><span>Updates scheduled receipts and uses recommended quantities and timing to support purchasing decisions.</span></div>
+      <div><strong>Operations</strong><span>Maintains planning assumptions and reviews demand, coverage, and operational risk.</span></div>
+      <div><strong>Leadership</strong><span>Uses the consolidated outlook to understand purchasing exposure, forecast growth, and longer-range material risk.</span></div>
     </div>
-    <div class="artifact-placeholder artifact-alloy">
-      <div class="artifact-window">
-        <div class="artifact-dots"><i></i><i></i><i></i></div>
-        <div class="artifact-skeleton">
-          <div class="sk-side"></div>
-          <div class="sk-main">
-            <span></span><span></span><span></span>
-            <div class="sk-chart"></div>
-          </div>
-        </div>
+    <p class="case-note">The demo workbook includes a Start Here guide, methodology notes, color conventions, update cadence, model limits, and troubleshooting instructions so the planning logic can be maintained and reviewed by other users.</p>
+  </div>
+</section>
+
+<section class="case-section case-alt material-next-section">
+  <div class="container">
+    <div class="case-section-no">08</div><div class="eyebrow">Model Boundaries</div>
+    <h2>The system supports a purchasing decision; it does not make one blindly.</h2>
+    <div class="boundary-grid">
+      <span>Safety Stock</span><span>Supplier Lead Time</span><span>Minimum Buys</span><span>Yield Loss</span><span>Shared Supply Rules</span><span>Planner Notes</span><span>Forecast Confidence</span>
+    </div>
+    <p class="case-note">Recommended orders remain planning outputs. Buyers and operations still review supplier constraints, changing production conditions, and assumptions before committing spend.</p>
+  </div>
+</section>
+
+<section class="case-section material-download">
+  <div class="container">
+    <div class="download-card">
+      <div>
+        <div class="eyebrow">Explore the Demo</div>
+        <h2>Material Procurement & Planning Dashboard</h2>
+        <p>Download the desktop Excel portfolio demo with synthetic inventory, customer demand, scheduled receipts, purchasing calendar, consumption review, planning recommendations, 12- and 18-month forecasts, operational insights, methodology, and instructions.</p>
       </div>
-      <div class="artifact-caption"><span>Artifact slot reserved</span><strong>Alloy Procurement Planner</strong><small>Workbook screenshots + downloadable .xlsx coming next</small></div>
+      <a href={`${base}/artifacts/material-procurement-planning-demo.xlsx`} download><span>Download Excel Demo</span><b>↓</b></a>
     </div>
   </div>
 </section>
 
 <section class="case-next">
   <div class="container">
-    <span class="eyebrow">Next System</span>
-    <a href={`${base}/built-systems/onboarding-certification/`}>
-      <strong>Workforce Training & Capability System</strong><span>→</span>
-    </a>
+    <span class="eyebrow">Related System</span>
+    <a href={`${base}/built-systems/foundry-inventory/`}><strong>Production Supplies & Replenishment</strong><span>→</span></a>
   </div>
 </section>
 </BaseLayout>

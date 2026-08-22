@@ -50,7 +50,7 @@ export const systems = [
     slug: 'foundry-inventory',
     number: '03',
     category: 'Inventory + Control',
-    title: 'Consumables Inventory & Replenishment',
+    title: 'Production Supplies & Replenishment',
     metric: '~$300K managed · $40K excess identified',
     summary: 'Turns physical counts, purchasing history, supplier information, and reorder logic into repeatable replenishment decisions.',
     problem: 'A basic count sheet showed inventory quantities and cost but left lead times, suppliers, reorder thresholds, purchasing history, and replenishment knowledge scattered across records and departmental memory.',

@@ -1,16 +1,15 @@
-# averymoon.co — V6.8.0 Consumables Inventory & Replenishment
+# averymoon.co — V6.9.0 Material Procurement & Planning
 
-Built on V6.7.2.
+Built on V6.8.0.
 
 Changes:
-- Rebuilds the consumables inventory case study around the completed synthetic Fashion & Beauty Inventory Operations workbook.
-- Frames the original system as weekly physical-count data extended into replenishment, supplier, lead-time, purchasing, and cost visibility.
-- Adds a website-native weekly action dashboard with ordering status, forecast risk, and action queue.
-- Adds forward-planning logic from product forecast → consolidated supply requirements → SHORT / WATCH / OK planning flags.
-- Adds cost-history evidence and the original project's excess-inventory cleanup outcome.
-- Keeps original manufacturing outcomes separate from synthetic demo values.
-- Adds the working synthetic Excel demo as a downloadable artifact.
-- Centers metric-band values and the inventory-model section by default.
+- Rebuilds the alloy/material procurement case study around the completed desktop Excel portfolio demo.
+- Uses the desktop Excel workbook as the downloadable artifact; the cross-platform compatible workbook is not duplicated on the site.
+- Frames the system around integrated inventory, open customer demand, scheduled receipts, historical consumption, supplier constraints, and 18-month purchasing visibility.
+- Adds website-native representations of the Planning Hub, demand logic, purchasing calendar, planning horizons, and user/ownership model.
+- Keeps synthetic demo quantities and spend explicitly separate from the original project's real-world scope.
+- Carries forward the agreed site-wide rename:
+  “Consumables Inventory & Replenishment” → “Production Supplies & Replenishment.”
 
 Artifact:
-public/artifacts/inventory-replenishment-portfolio-demo.xlsx
+public/artifacts/material-procurement-planning-demo.xlsx
