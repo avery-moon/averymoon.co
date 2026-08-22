@@ -1,17 +1,13 @@
-# averymoon.co — V6.7.0 Equipment Reliability Artifact Pass
+# averymoon.co — V6.7.1 Equipment Reliability Polish
 
-Built on V6.6.1.
+Built on V6.7.0.
 
 Changes:
-- Rebuilds the Equipment Reliability & Downtime Analysis case study around the completed portfolio artifacts.
-- Treats the weekly downtime tracker as the frontline data-capture layer feeding the structured downtime log and dashboard.
-- Adds a website-native representation of the lightweight operator tracker.
-- Adds a website-native dashboard view based on the synthetic portfolio workbook, including KPI, unit downtime, and top-failure-mode values.
-- Keeps synthetic demo metrics explicitly separate from live production claims.
-- Clarifies the three-level analysis structure: downtime category → failure mode → root cause.
-- Connects the analysis to RAIL action tracking and A3 problem solving.
-- Adds the working synthetic Excel demo as a downloadable artifact.
-- Updates next-project navigation to Consumables Inventory & Replenishment.
-
-Artifact:
-public/artifacts/equipment-reliability-downtime-demo.xlsx
+- Replaces “Failure Taxonomy” with the clearer “Downtime Classification.”
+- Centers the dark metric-band values.
+- Rewrites the section 01 heading to identify the subject and use a more professional tone.
+- Centers section 03 analysis-model content.
+- Expands the synthetic dashboard evidence with an overall mock Pareto chart, cumulative-share line, and compact per-unit Pareto indicators.
+- Tightens section 05 to remove the awkward inherited two-column spacing.
+- Rewrites section 06 heading to “Analysis connects directly to corrective action and problem solving.”
+- No production data was added; Pareto visuals remain explicitly synthetic.

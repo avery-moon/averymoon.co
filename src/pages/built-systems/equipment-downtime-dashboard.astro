@@ -9,7 +9,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="case-kicker">05 / Operational Analytics</div>
     <h1>Equipment Reliability &<br/><em>Downtime Analysis</em></h1>
     <p class="case-deck">A reliability system that replaced inconsistent downtime inputs with structured operator data, recurring-failure analysis, and a clearer view of where maintenance attention was needed.</p>
-    <div class="case-role-line"><span>Data Design</span><span>Failure Taxonomy</span><span>Operational Analytics</span><span>Frontline Workflow</span><span>Continuous Improvement</span></div>
+    <div class="case-role-line"><span>Data Design</span><span>Downtime Classification</span><span>Operational Analytics</span><span>Frontline Workflow</span><span>Continuous Improvement</span></div>
   </div>
 </section>
 
@@ -25,7 +25,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <section class="case-section">
   <div class="container case-two-col">
     <div><div class="case-section-no">01</div><div class="eyebrow">The Data Problem</div>
-      <h2>The reports showed downtime. They did not explain it very well.</h2>
+      <h2>Existing reports showed downtime, but offered limited insight into recurring causes.</h2>
     </div>
     <div class="case-copy">
       <p>Downtime was already being reported, but the machine-generated logs relied on inaccurate inputs and were condensed into basic daily graphs. With four production units more than 50 years old, equipment issues were common, but it was difficult to separate recurring problems from one-off failures.</p>
@@ -115,6 +115,40 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </div>
       </div>
     </div>
+
+    <div class="pareto-gallery">
+      <div class="pareto-gallery-head">
+        <div><span>Overall Pareto</span><strong>Recurring downtime across all units</strong></div>
+        <p>The dashboard also breaks downtime into Pareto views so the largest recurring contributors are visible at a glance.</p>
+      </div>
+      <div class="pareto-chart-card">
+        <div class="pareto-chart-title"><strong>All Units — Failure Mode Pareto</strong><span>Downtime minutes + cumulative share</span></div>
+        <div class="pareto-chart">
+          <div class="pareto-axis"><span>3,000</span><span>2,000</span><span>1,000</span><span>0</span></div>
+          <div class="pareto-bars">
+            <div><i style="--h:100%"></i><span>Air Leak</span></div>
+            <div><i style="--h:87%"></i><span>Bad Pump</span></div>
+            <div><i style="--h:86%"></i><span>Bushings</span></div>
+            <div><i style="--h:83%"></i><span>Power Loss</span></div>
+            <div><i style="--h:68%"></i><span>Motor</span></div>
+            <div><i style="--h:55%"></i><span>Other</span></div>
+            <svg class="pareto-line" viewBox="0 0 600 180" preserveAspectRatio="none" aria-hidden="true">
+              <polyline points="50,132 150,92 250,63 350,40 450,24 550,12" fill="none" stroke="currentColor" stroke-width="3"/>
+              <circle cx="50" cy="132" r="5"/><circle cx="150" cy="92" r="5"/><circle cx="250" cy="63" r="5"/><circle cx="350" cy="40" r="5"/><circle cx="450" cy="24" r="5"/><circle cx="550" cy="12" r="5"/>
+            </svg>
+          </div>
+          <div class="pareto-percent"><span>100%</span><span>75%</span><span>50%</span><span>25%</span></div>
+        </div>
+      </div>
+      <div class="unit-pareto-strip">
+        <div><strong>Unit 1</strong><span><i style="--w:82%"></i><i style="--w:58%"></i><i style="--w:34%"></i></span></div>
+        <div><strong>Unit 2</strong><span><i style="--w:74%"></i><i style="--w:52%"></i><i style="--w:30%"></i></span></div>
+        <div><strong>Unit 3</strong><span><i style="--w:94%"></i><i style="--w:63%"></i><i style="--w:41%"></i></span></div>
+        <div><strong>Unit 4</strong><span><i style="--w:100%"></i><i style="--w:71%"></i><i style="--w:46%"></i></span></div>
+      </div>
+      <p class="pareto-caption">The live system includes an overall Pareto and separate Pareto analysis for each primary unit. The values above are synthetic portfolio data.</p>
+    </div>
+
     <p class="case-note">Values shown in this section come from the synthetic portfolio demo, not the live production dataset.</p>
   </div>
 </section>
@@ -137,7 +171,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <section class="case-section case-alt reliability-loop-section">
   <div class="container">
     <div class="case-section-no">06</div><div class="eyebrow">From Analysis to Action</div>
-    <h2>The dashboard feeds the improvement work; it is not the end of it.</h2>
+    <h2>Analysis connects directly to corrective action and problem solving.</h2>
     <div class="reliability-loop">
       <span>Operator Downtime Tracker</span><b>→</b><span>Structured Downtime Log</span><b>→</b><span>Dashboard + Pareto</span><b>→</b><span>RAIL Action Tracker</span><b>→</b><span>A3 Problem Solving</span>
     </div>
