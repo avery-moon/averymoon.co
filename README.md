@@ -1,11 +1,12 @@
-# averymoon.co — V6.12.6 Option E OG Preview
+# averymoon.co — V6.12.7 Final Portfolio Spacing Pass
 
-Built on V6.12.5.
+Built on V6.12.6.
 
-Changes:
-- Replaces the previous Open Graph artwork with the approved Option E design.
-- Preserves the existing site metadata and scheduler-page fixes.
-- Exports the social image at the standard 1200×630 Open Graph size.
-- Existing `/og-avery-moon.png` references continue to work; no metadata-path change is required.
+Final portfolio edit:
+- Tightens the Selected Projects hero composition only.
+- Pulls the supporting copy row closer to “Same systems thinking.”
+- Aligns the supporting statement and proprietary note at the top.
+- Slightly reduces excess hero-bottom space.
+- No copy, typography, color, project-content, or other site changes.
 
-Note: LinkedIn, iMessage, Slack, and other platforms may temporarily show a cached older preview after deployment.
+This package retains the approved Option E Open Graph preview and all V6.12.6 changes.
