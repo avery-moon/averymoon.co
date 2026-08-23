@@ -1,11 +1,11 @@
-# averymoon.co — V6.12.5 Final OG Hybrid + Scheduler CTA
+# averymoon.co — V6.12.6 Option E OG Preview
 
-Built on V6.12.4.
+Built on V6.12.5.
 
 Changes:
-- Replaces the OG graphic with Option A's clean hierarchy plus Option C's denser contour/network graphic.
-- Rebuilds Section 03 markup into an explicit two-column editorial layout to remove excessive dead space.
-- Keeps the Exception Logic headline left, supporting copy right, and the external-span flow centered underneath.
-- Restores a large, prominent `Read the Technical Overview →` CTA after the reconstructed scheduler graphics.
-- CTA links to `/downloads/production-planning-scheduling-technical-brief.pdf`.
-- Hides any legacy small technical-brief CTA.
+- Replaces the previous Open Graph artwork with the approved Option E design.
+- Preserves the existing site metadata and scheduler-page fixes.
+- Exports the social image at the standard 1200×630 Open Graph size.
+- Existing `/og-avery-moon.png` references continue to work; no metadata-path change is required.
+
+Note: LinkedIn, iMessage, Slack, and other platforms may temporarily show a cached older preview after deployment.
