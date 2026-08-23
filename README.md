@@ -1,27 +1,8 @@
-# averymoon.co — V6.9.3 Link Fix + Chart Spacing
+# averymoon.co — V6.9.5 Planning Horizon Spacing
 
-Built on V6.9.2.
+Built on V6.9.4.
 
-## Fixes
-- Keeps the Long-Range Requirement chart.
-- Prevents the 12M / 18M labels and values from wrapping awkwardly.
-- Gives the material label and both comparison bars more breathing room.
-
-## Built Systems link/route audit
-Current system-card slugs:
-- material-procurement-planning
-- training-certification-system
-- production-supplies-replenishment
-- workforce-capability-planning
-- equipment-reliability-downtime
-- production-planning-scheduling
-
-Legacy routes now issue permanent redirects:
-- alloy-procurement → material-procurement-planning
-- onboarding-certification → training-certification-system
-- foundry-inventory → production-supplies-replenishment
-- cross-training-matrix → workforce-capability-planning
-- equipment-downtime-dashboard → equipment-reliability-downtime
-- workforce-scheduling → production-planning-scheduling
-
-This means both newly rendered cards and old/cached/bookmarked URLs resolve to the renamed case-study pages.
+Final Material Procurement table polish:
+- Keeps `CURRENT QUARTER · 3M · 6M` on one line in the Near-Term Coverage panel.
+- Slightly reduces the horizon-label type size and spacing rather than allowing it to wrap.
+- Preserves the V6.9.4 Long-Range Requirement layout and all V6.9.3 route/link fixes.

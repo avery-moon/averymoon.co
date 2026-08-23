@@ -154,11 +154,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="coverage-mini"><span>MTL-004</span><i class="risk">ORDER</i><span>MTL-008</span><i class="risk">ORDER</i><span>MTL-003</span><i class="watch">MONITOR</i><span>MTL-010</span><i class="ok">COVERED</i></div>
       </div>
       <div class="horizon-panel">
-        <div class="horizon-panel-head"><strong>Long-Range Requirement</strong><span>12M · 18M</span></div>
-        <div class="requirement-bars">
-          <div><span>MTL-004</span><i style="--w:66%"></i><b>12M 229K</b><i class="long" style="--w:100%"></i><b>18M 344K</b></div>
-          <div><span>MTL-016</span><i style="--w:61%"></i><b>12M 105K</b><i class="long" style="--w:100%"></i><b>18M 173K</b></div>
-          <div><span>MTL-011</span><i style="--w:60%"></i><b>12M 39K</b><i class="long" style="--w:100%"></i><b>18M 65K</b></div>
+        <div class="horizon-panel-head"><strong>Long-Range Requirement</strong></div>
+        <div class="requirement-bars requirement-bars-v2">
+          <div class="requirement-header"><span>Material</span><strong>12 Months</strong><strong>18 Months</strong></div>
+          <div class="requirement-row"><span>MTL-004</span><div><i style="--w:66%"></i><b>229K</b></div><div><i class="long" style="--w:100%"></i><b>344K</b></div></div>
+          <div class="requirement-row"><span>MTL-016</span><div><i style="--w:61%"></i><b>105K</b></div><div><i class="long" style="--w:100%"></i><b>173K</b></div></div>
+          <div class="requirement-row"><span>MTL-011</span><div><i style="--w:60%"></i><b>39K</b></div><div><i class="long" style="--w:100%"></i><b>65K</b></div></div>
         </div>
       </div>
     </div>
