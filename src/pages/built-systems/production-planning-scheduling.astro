@@ -61,11 +61,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 </section>
 
 <section class="case-section scheduler-exception-section">
-  <div class="container route-example">
-    <div><div class="case-section-no">03</div><div class="eyebrow">Exception Logic</div>
+  <div class="container scheduler-exception-layout">
+    <div class="scheduler-exception-heading">
+      <div class="case-section-no">03</div>
+      <div class="eyebrow">Exception Logic</div>
       <h2>The schedule understands that work can leave the department and still belong to the plan.</h2>
+    </div>
+
+    <div class="scheduler-exception-context">
       <p>Routing spans are encoded so work orders temporarily disappear from actionable work while they are expected elsewhere, then return to the schedule when that external span should be complete.</p>
     </div>
+
     <div class="route-flow">
       <div><small>Monday</small><strong>Current Operation</strong></div><b>→</b>
       <div class="route-away"><small>2-Day Span</small><strong>External Process</strong></div><b>→</b>
@@ -167,6 +173,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
 
     <p class="case-note scheduler-reconstruction-note"><strong>Reconstruction note:</strong> the original system used modular VBA, including separate routing, leveling, capacity, weekly, daily-dispatch, pipeline, ESH, output, and orchestration modules. The portfolio visuals above reproduce the documented architecture and decision logic, not the original production workbook.</p>
+
+    <a class="technical-brief-closing" href="/downloads/production-planning-scheduling-technical-brief.pdf" target="_blank" rel="noopener">
+      <span class="technical-brief-closing-kicker">TECHNICAL DEEP DIVE</span>
+      <span class="technical-brief-closing-title">Read the Technical Overview <span aria-hidden="true">→</span></span>
+      <span class="technical-brief-closing-copy">Architecture · Scheduling Logic · Route Semantics · Exception Handling · Controls · VBA Implementation</span>
+    </a>
+
   </div>
 </section>
 

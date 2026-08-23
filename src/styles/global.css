@@ -3799,3 +3799,113 @@ body .technical-brief-closing-copy{
     padding:24px 22px !important;
   }
 }
+
+
+/* ===== V6.12.5 — EXCEPTION SECTION + TECHNICAL CTA + OG HYBRID ===== */
+
+/* Exception section: compact editorial layout, no giant empty top half. */
+body .scheduler-exception-section{
+  padding-top:46px !important;
+  padding-bottom:54px !important;
+}
+body .scheduler-exception-section > .scheduler-exception-layout{
+  width:min(1420px,calc(100% - 64px)) !important;
+  max-width:none !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr) !important;
+  grid-template-areas:
+    "heading context"
+    "flow flow";
+  column-gap:72px !important;
+  row-gap:28px !important;
+  align-items:end !important;
+}
+body .scheduler-exception-heading{
+  grid-area:heading;
+}
+body .scheduler-exception-heading h2{
+  font-size:clamp(2.75rem,4.2vw,4.7rem) !important;
+  line-height:1.01 !important;
+  max-width:760px !important;
+  margin:16px 0 0 !important;
+}
+body .scheduler-exception-context{
+  grid-area:context;
+  align-self:end !important;
+  padding-bottom:10px;
+}
+body .scheduler-exception-context p{
+  max-width:520px !important;
+  margin:0 !important;
+  font-size:1rem;
+  line-height:1.52;
+}
+body .scheduler-exception-section .route-flow{
+  grid-area:flow;
+  width:min(1080px,100%) !important;
+  justify-self:center !important;
+  margin:4px auto 0 !important;
+}
+body .scheduler-exception-section .route-flow > div{
+  min-height:106px !important;
+}
+
+/* Prominent deep-dive CTA after all reconstructed views. */
+body .scheduler-artifacts .technical-brief-closing{
+  display:block !important;
+  width:min(980px,100%) !important;
+  margin:34px auto 0 !important;
+  padding:30px 34px !important;
+  border:1px solid rgba(30,68,56,.22) !important;
+  background:#f7f2e8 !important;
+  text-decoration:none !important;
+  text-align:left !important;
+  transition:transform .18s ease,border-color .18s ease,background .18s ease;
+}
+body .scheduler-artifacts .technical-brief-closing:hover{
+  transform:translateY(-2px);
+  border-color:rgba(201,99,69,.62) !important;
+  background:#fbf7ef !important;
+}
+body .technical-brief-closing-kicker{
+  display:block;
+  color:#c96345;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+body .technical-brief-closing-title{
+  display:block;
+  margin-top:8px;
+  color:#214c3e;
+  font-family:var(--font-serif,Georgia,serif);
+  font-size:clamp(1.8rem,2.7vw,2.45rem);
+  line-height:1.08;
+}
+body .technical-brief-closing-copy{
+  display:block;
+  margin-top:8px;
+  color:#68716d;
+  font-size:.92rem;
+  line-height:1.4;
+}
+
+/* In case a legacy small CTA survives elsewhere, hide it. */
+body .technical-brief-cta{
+  display:none !important;
+}
+
+@media(max-width:900px){
+  body .scheduler-exception-section > .scheduler-exception-layout{
+    grid-template-columns:1fr !important;
+    grid-template-areas:
+      "heading"
+      "context"
+      "flow";
+    row-gap:20px !important;
+  }
+  body .scheduler-exception-context{
+    padding-bottom:0;
+  }
+}
