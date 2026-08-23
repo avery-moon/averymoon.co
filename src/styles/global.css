@@ -4180,3 +4180,52 @@ body .selected-hero-final + .selected-index{
     padding-top:46px !important;
   }
 }
+
+
+/* ===== V6.13.0 — SELECTED PROJECTS TYPOGRAPHY FIX =====
+   Keep the new consolidated layout; restore the supporting sentence to a calm
+   editorial subhead instead of a third all-caps headline. */
+
+body .selected-hero-final .selected-subhead{
+  max-width:760px !important;
+  margin:0 !important;
+  padding:0 !important;
+
+  font-family:var(--font-serif, Georgia, serif) !important;
+  font-size:clamp(1.25rem,1.65vw,1.55rem) !important;
+  font-style:normal !important;
+  font-weight:400 !important;
+  line-height:1.45 !important;
+
+  text-transform:none !important;
+  letter-spacing:0 !important;
+  color:var(--forest,#214c3e) !important;
+
+  border:0 !important;
+  border-bottom:0 !important;
+}
+
+/* Remove any decorative rule/pseudo-element inherited from older subhead styles. */
+body .selected-hero-final .selected-subhead::before,
+body .selected-hero-final .selected-subhead::after{
+  content:none !important;
+  display:none !important;
+}
+
+/* Keep the disclaimer where it is, just nudge it slightly upward for balance. */
+@media(min-width:901px){
+  body .selected-hero-final .selected-hero-note{
+    transform:translateY(-12px) !important;
+  }
+}
+
+/* Mobile remains stacked and understated. */
+@media(max-width:900px){
+  body .selected-hero-final .selected-subhead{
+    max-width:620px !important;
+    font-size:1.15rem !important;
+  }
+  body .selected-hero-final .selected-hero-note{
+    transform:none !important;
+  }
+}

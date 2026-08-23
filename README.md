@@ -1,13 +1,11 @@
-# averymoon.co — V6.12.9 Selected Projects Hero Rebuild
+# averymoon.co — V6.13.0 Selected Projects Typography Fix
 
-Built on V6.12.8.
+Built on V6.12.9.
 
-This fixes the Selected Projects hero structurally rather than adding another positioning override.
-
-Changes:
-- Replaces the old `.selected-intro` block with an explicit two-column editorial grid.
-- Keeps the supporting statement directly under the headline on the left.
-- Places the proprietary-materials note in the right column and bottom-aligns it with the left content.
-- Removes absolute positioning, viewport-based `top` values, transforms, and inherited margin hacks from this hero.
-- Reduces hero dead space and pulls the following project section upward.
-- Preserves the approved Option E Open Graph image and every other portfolio page unchanged.
+This keeps the final two-column Selected Projects hero layout and changes only the supporting-copy hierarchy:
+- Restores the supporting sentence to normal sentence case.
+- Uses regular-weight serif typography with normal tracking.
+- Removes any inherited horizontal rule / pseudo-element.
+- Keeps the current hero height and metadata position unchanged.
+- Nudges the proprietary note upward slightly for visual balance.
+- Preserves all other site content, styling, and the approved Option E OG preview.
