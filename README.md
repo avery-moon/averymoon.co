@@ -1,19 +1,13 @@
-# averymoon.co — V6.12.2 Production Planning Spacing Hard Fix
+# averymoon.co — V6.12.3 Final Scheduler Composition
 
-Built on V6.12.1.
+Built on V6.12.2.
 
-This is a corrective spacing pass after the earlier layout overrides did not visibly apply.
+Changes:
+- Architecture diagram is now symmetrical: 3 inputs, 3 engines, full-width master result set, then six equal downstream-view cards.
+- Weekly Summary is no longer stranded beside the master result set.
+- Exception Logic section uses an editorial split: headline left, explanatory copy right, flow graphic centered below.
+- Removes the small/buried Technical Overview link near the reconstructed-view introduction.
+- Adds a larger closing "Read the Technical Overview" CTA after the reconstructed graphics.
+- Preserves the six-page technical brief and prior scheduler spacing fixes.
 
-Root causes found:
-1. The shared `.container` uses an explicit width capped by `--max`; increasing `max-width` alone could not widen scheduler sections.
-2. The Section 03 override targeted `.external-span-flow`, but the live page uses `.route-flow`.
-
-Fixes:
-- Adds explicit section classes to Production Planning sections 03–05.
-- Overrides container `width` directly on sections 02–06.
-- Rebalances Section 02 architecture boxes.
-- Rebalances Section 03 copy and actual `.route-flow` graphic.
-- Tightens Section 04 Human-in-the-Loop spacing.
-- Rebalances Section 05 Observed Impact / Next Iteration.
-- Rebalances Section 06 reconstructed-views intro and chart spacing.
-- Preserves the final six-page Technical Brief and its CTA.
+OG/social preview design is intentionally left for the next patch so the chosen Option A/C direction can be finalized independently.
