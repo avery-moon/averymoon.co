@@ -1,15 +1,18 @@
-# averymoon.co — V6.13.1 Final Mobile QA
+# averymoon.co — V6.13.2 Built Systems Navigation + Final Mobile Polish
 
-Built on V6.13.0.
+Built on V6.13.1.
 
-Mobile-only / responsive fixes:
-- Forces the homepage hero into a true single-column mobile layout and restores usable text width.
-- Reduces oversized editorial headings on narrow screens.
-- Contains wide scheduler, procurement, calendar, and table-like visuals in local horizontal-scroll areas instead of letting them overflow the page.
-- Makes scheduler demo title bars wrap cleanly.
-- Stacks architecture / split-column content on mobile.
-- Cleans up the dark-green future/research section typography and spacing.
-- Preserves the mobile header.
-- Reorders Currently Exploring to put GIS first.
-- Removes the duplicated workforce-capability destination from the Training & Certification page's bottom navigation by pointing the bottom Next System to Equipment Reliability & Downtime Analysis.
-- Desktop styling remains unchanged.
+Site consistency:
+- Renumbers Built Systems case-study headers 01–06 to match the order of cards on the Built Systems landing page.
+- Adds/standardizes a `Next System` link at the bottom of every system page.
+- Navigation sequence follows the landing page order and loops 06 back to 01.
+- Keeps the Training & Certification page's contextual Workforce Capability cross-link once, while its bottom Next System now advances to Production Supplies & Replenishment.
+
+Mobile QA fixes:
+- Equipment weekly downtime tracker now scrolls locally instead of clipping the Tuesday panel.
+- Material Procurement planning-horizon headers no longer force the panel wider than the phone viewport.
+- Near-Term Coverage fits inside its card.
+- Long-Range Requirement remains readable inside a contained horizontal-scroll area.
+- Reduces oversized end-of-page spacing around downloadable demo cards and the footer.
+- Normalizes mobile Next System spacing.
+- Desktop layouts remain unchanged.
