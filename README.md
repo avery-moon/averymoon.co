@@ -1,12 +1,13 @@
-# averymoon.co — V6.12.7 Final Portfolio Spacing Pass
+# averymoon.co — V6.12.8 Final-Final Portfolio
 
-Built on V6.12.6.
+Built on V6.12.7.
 
-Final portfolio edit:
-- Tightens the Selected Projects hero composition only.
-- Pulls the supporting copy row closer to “Same systems thinking.”
-- Aligns the supporting statement and proprietary note at the top.
-- Slightly reduces excess hero-bottom space.
-- No copy, typography, color, project-content, or other site changes.
+Selected Projects hero only:
+- Consolidates excess vertical whitespace.
+- Realigns the supporting statement directly beneath the main headline.
+- Moves the proprietary-materials note farther right and upward as an editorial annotation.
+- Pulls the lower metadata band upward.
+- Preserves a clean stacked layout on mobile/tablet.
+- No copy, color, typography, project-content, OG-image, or other site changes.
 
-This package retains the approved Option E Open Graph preview and all V6.12.6 changes.
+This retains the approved Option E link preview and all prior portfolio fixes.

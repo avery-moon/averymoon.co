@@ -4006,3 +4006,96 @@ body .selected-hero .selected-discretion{
     gap:24px !important;
   }
 }
+
+
+/* ===== V6.12.8 — SELECTED PROJECTS HERO: FINAL COMPACT EDITORIAL PASS ===== */
+
+@media(min-width:901px){
+
+  /* Consolidate the hero vertically. */
+  body .selected-hero{
+    padding-top:clamp(64px,6vw,92px) !important;
+    padding-bottom:34px !important;
+    min-height:0 !important;
+    height:auto !important;
+  }
+
+  body .selected-hero > .container{
+    position:relative !important;
+    display:block !important;
+    min-height:0 !important;
+  }
+
+  body .selected-hero h1{
+    margin-top:18px !important;
+    margin-bottom:0 !important;
+    max-width:900px !important;
+  }
+
+  /* Supporting sentence now belongs directly to the headline. */
+  body .selected-hero .selected-intro{
+    display:block !important;
+    margin-top:28px !important;
+    padding-left:0 !important;
+    transform:none !important;
+    min-height:118px !important;
+  }
+
+  body .selected-hero .selected-intro > p:first-child{
+    width:min(690px,52%) !important;
+    max-width:690px !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  /* Treat proprietary language as a right-side editorial annotation.
+     Move it right AND up so it shares the headline field rather than
+     creating another row underneath it. */
+  body .selected-hero .selected-discretion{
+    position:absolute !important;
+    right:clamp(50px,7vw,125px) !important;
+    top:clamp(250px,22vw,320px) !important;
+    width:min(390px,29vw) !important;
+    margin:0 !important;
+    padding:4px 0 4px 28px !important;
+    align-self:auto !important;
+  }
+
+  body .selected-hero .selected-discretion p,
+  body .selected-hero .selected-discretion{
+    line-height:1.5 !important;
+  }
+
+  /* Pull the metadata band up into the composition. */
+  body .selected-hero .selected-meta,
+  body .selected-hero .hero-meta,
+  body .selected-hero .selected-footer,
+  body .selected-hero .hero-footer{
+    margin-top:20px !important;
+    padding-top:22px !important;
+  }
+}
+
+/* Preserve a clean stacked mobile/tablet reading order. */
+@media(max-width:900px){
+  body .selected-hero{
+    min-height:0 !important;
+    height:auto !important;
+    padding-bottom:42px !important;
+  }
+
+  body .selected-hero .selected-intro{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:24px !important;
+    margin-top:24px !important;
+    padding-left:0 !important;
+    transform:none !important;
+  }
+
+  body .selected-hero .selected-discretion{
+    position:static !important;
+    width:100% !important;
+    margin:0 !important;
+  }
+}
