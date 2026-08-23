@@ -3050,3 +3050,129 @@ body .horizon-panel-head span{
     letter-spacing:.02em;
   }
 }
+
+/* ===== V6.10.0 — SITEWIDE FINAL POLISH ===== */
+
+/* All metric banners: center the metric and label consistently, light or dark. */
+body .case-metric-grid>div,
+body .outcome-grid>div{
+  text-align:center;
+  align-items:center;
+}
+body .case-metric-grid>div:first-child{padding-left:28px}
+
+/* Workforce Capability — center visual labels/data where they function as UI headers. */
+body .cap-demo-title{text-align:center}
+body .cap-demo-kpis>div{text-align:center}
+body .cap-demo-kpis span,
+body .cap-demo-kpis strong{text-align:center}
+body .cap-lookup-card>label{
+  display:block;
+  text-align:center;
+}
+body .cap-select{
+  justify-content:center;
+  position:relative;
+  text-align:center;
+}
+body .cap-select b{
+  position:absolute;
+  right:12px;
+}
+body .cap-table-head>span,
+body .cap-table-row>span,
+body .cap-table-row>em{
+  text-align:center;
+}
+body .risk-row>*{text-align:center}
+body .cap-action-copy>div{text-align:center}
+body .transcript-head{text-align:center;align-items:center}
+body .transcript-head>div:first-child{flex:1}
+body .transcript-stats{justify-content:center}
+body .cap-transcript-wrap>p{text-align:center}
+
+/* Section 06 capability operating model: everything inside the boxes is centered. */
+body .cap-architecture>div{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+body .cap-architecture small,
+body .cap-architecture strong,
+body .cap-architecture span{text-align:center}
+body .cap-supporting span{text-align:center}
+
+/* Governance roles are equal peers, visually as well as structurally. */
+body .governance-equal>div{
+  text-align:center;
+  align-items:center;
+}
+body .governance-equal strong,
+body .governance-equal span{text-align:center}
+
+/* Production Planning section 04: equal-height, wider-feeling steps so step 04 does not warp. */
+body .human-loop{
+  grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1.18fr) 18px minmax(0,1fr);
+  gap:0;
+}
+body .human-loop>div{
+  min-height:118px;
+  padding:20px 14px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+}
+body .human-loop strong,
+body .human-loop span{text-align:center}
+body .human-loop span{font-size:.84rem;line-height:1.35}
+
+/* Production Planning section 05: cleaner balance and alignment. */
+body .current-state-grid{
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  align-items:start;
+}
+body .current-state-grid>.roadmap{
+  margin-top:0;
+  align-self:stretch;
+}
+body .current-state-grid>.roadmap .eyebrow{text-align:center}
+
+/* Production Planning section 06: center the artifact/dashboard treatments. */
+body .artifact-head{
+  grid-template-columns:1.15fr .85fr;
+  gap:48px;
+  align-items:center;
+}
+body .artifact-grid{align-items:stretch}
+body .artifact-mini{
+  text-align:center;
+  align-items:center;
+}
+body .artifact-mini>span,
+body .artifact-mini>small{text-align:center}
+body .mini-cap-dashboard,
+body .mini-schedule,
+body .mini-alerts{
+  width:100%;
+  max-width:330px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Weekly downtime tracker: center weekday headers. */
+body .tracker-days>div>b{text-align:center}
+
+/* Keep desktop workforce tables visually balanced without hurting mobile stacking. */
+@media(min-width:801px){
+  body .cap-demo-lookups{align-items:stretch}
+  body .cap-lookup-card{height:100%}
+}
+@media(max-width:900px){
+  body .human-loop{
+    grid-template-columns:1fr 18px 1fr 18px 1fr;
+  }
+}
