@@ -4229,3 +4229,274 @@ body .selected-hero-final .selected-subhead::after{
     transform:none !important;
   }
 }
+
+
+/* ===== V6.13.1 — FINAL MOBILE QA PASS ===== */
+@media(max-width:768px){
+
+  html,body{
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  /* Keep site chrome intact; only tighten spacing slightly. */
+  header .container,
+  .site-header .container,
+  nav .container{
+    width:calc(100% - 32px) !important;
+  }
+
+  /* Global page gutters / sections */
+  .container{
+    width:calc(100% - 32px) !important;
+    max-width:none !important;
+  }
+  .case-section,
+  .case-artifact-section,
+  .selected-hero,
+  .selected-index,
+  .selected-future{
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+
+  /* Home hero: force a true single-column mobile layout. */
+  .hero,
+  .home-hero,
+  .hero-home,
+  .home-intro,
+  .hero-grid{
+    display:block !important;
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    overflow:visible !important;
+  }
+
+  .hero .container,
+  .home-hero .container,
+  .hero-home .container{
+    display:block !important;
+    width:calc(100% - 32px) !important;
+    margin-inline:auto !important;
+  }
+
+  .hero h1,
+  .home-hero h1,
+  .hero-home h1{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    font-size:clamp(3rem,13vw,4.5rem) !important;
+    line-height:.98 !important;
+    letter-spacing:-.03em !important;
+  }
+
+  .hero p,
+  .home-hero p,
+  .hero-home p{
+    width:100% !important;
+    max-width:100% !important;
+    font-size:1rem !important;
+    line-height:1.55 !important;
+  }
+
+  /* Prevent any desktop grid child from keeping a narrow column width. */
+  .hero-grid > *,
+  .home-hero-grid > *,
+  .split-hero > *{
+    grid-column:auto !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+  }
+
+  /* Mobile display headings across editorial / green feature sections. */
+  .selected-future h2,
+  .research-future h2,
+  .future-section h2,
+  .green-panel h2,
+  .case-section h2,
+  .case-artifact-section h2{
+    font-size:clamp(2.4rem,11vw,3.8rem) !important;
+    line-height:1.02 !important;
+    max-width:100% !important;
+    overflow-wrap:anywhere;
+  }
+
+  /* Specifically tame the dark-green "work continues" block. */
+  .selected-future,
+  .research-future,
+  .future-section{
+    padding-top:52px !important;
+    padding-bottom:52px !important;
+  }
+  .selected-future .container,
+  .research-future .container,
+  .future-section .container{
+    display:block !important;
+  }
+  .selected-future h2,
+  .research-future h2,
+  .future-section h2{
+    margin-bottom:24px !important;
+  }
+  .selected-future p,
+  .research-future p,
+  .future-section p{
+    font-size:1rem !important;
+    line-height:1.5 !important;
+  }
+
+  /* Dense visuals: contain horizontal width locally instead of breaking the page. */
+  .scheduler-view,
+  .action-planner-window,
+  .purchase-calendar-demo,
+  .corrected-calendar,
+  .weekly-board,
+  .action-materials,
+  .vertical-calendar,
+  .cap-table-wrap,
+  .cap-transcript-wrap,
+  .table-scroll,
+  .chart-scroll,
+  .demo-scroll{
+    max-width:100% !important;
+    overflow-x:auto !important;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .scheduler-window-body,
+  .action-planner-window,
+  .purchase-calendar-demo{
+    max-width:100% !important;
+    overflow-x:auto !important;
+  }
+
+  /* Keep wide table-like demos wide enough to read inside their scroll area. */
+  .sched-head,
+  .sched-row{
+    min-width:900px !important;
+  }
+  .vertical-calendar{
+    min-width:760px !important;
+  }
+  .action-materials-head,
+  .action-materials > div:not(.action-materials-head){
+    min-width:720px !important;
+  }
+
+  /* Scheduler demo labels */
+  .scheduler-window-bar{
+    min-height:40px !important;
+    height:auto !important;
+    padding:10px 12px !important;
+    align-items:flex-start !important;
+  }
+  .scheduler-window-bar b{
+    font-size:.58rem !important;
+    line-height:1.3 !important;
+    white-space:normal !important;
+  }
+
+  /* Procurement 13-week panel: make summary metrics single-column,
+     then let the decision table scroll within itself. */
+  .action-planner-head{
+    grid-template-columns:1fr !important;
+  }
+  .weekly-board{
+    min-width:680px !important;
+  }
+  .weekly-board-head,
+  .weekly-board > div:not(.weekly-board-head){
+    grid-template-columns:55px 1fr 1fr .8fr 1fr !important;
+  }
+  .weekly-board-head > *:last-child,
+  .weekly-board > div:not(.weekly-board-head) > *:last-child{
+    display:block !important;
+  }
+
+  /* Case-study architecture and callout grids: stack instead of squeeze. */
+  .scheduler-architecture,
+  .horizon-visual-grid,
+  .artifact-head,
+  .current-state-grid,
+  .governance-equal,
+  .cap-demo-lookups{
+    grid-template-columns:1fr !important;
+  }
+
+  .scheduler-architecture > *,
+  .arch-source,
+  .arch-stage,
+  .arch-master,
+  .arch-output{
+    grid-column:1 !important;
+  }
+
+  /* Route/exception flows stack gracefully. */
+  .route-flow,
+  .human-loop{
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+  }
+  .route-flow > b,
+  .human-loop > b{
+    transform:rotate(90deg);
+    justify-self:center;
+  }
+
+  /* Selected Projects hero typography / current exact structure */
+  .selected-hero-final{
+    padding-top:48px !important;
+    padding-bottom:38px !important;
+  }
+  .selected-hero-final > .selected-hero-grid{
+    grid-template-columns:1fr !important;
+    gap:22px !important;
+  }
+  .selected-hero-final .selected-hero-main h1{
+    font-size:clamp(3rem,12vw,4.4rem) !important;
+    line-height:.98 !important;
+  }
+  .selected-hero-final .selected-subhead{
+    font-size:1.1rem !important;
+    line-height:1.5 !important;
+    max-width:100% !important;
+  }
+
+  /* Cards/buttons/tags remain tappable but don't overflow. */
+  a,
+  button{
+    max-width:100%;
+  }
+  .future-tracks,
+  .tag-grid,
+  .tags,
+  .selected-tags{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:8px !important;
+  }
+}
+
+/* Narrow phones */
+@media(max-width:430px){
+  .container{
+    width:calc(100% - 28px) !important;
+  }
+
+  .hero h1,
+  .home-hero h1,
+  .hero-home h1{
+    font-size:clamp(2.8rem,14vw,4rem) !important;
+  }
+
+  .selected-future h2,
+  .research-future h2,
+  .future-section h2,
+  .case-section h2,
+  .case-artifact-section h2{
+    font-size:clamp(2.25rem,11.8vw,3.4rem) !important;
+  }
+}
