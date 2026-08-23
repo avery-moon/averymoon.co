@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout
+  title="Onboarding & Certification System"
+  description="Avery Moon designed a structured onboarding, OJT, assessment, and certification system for a live manufacturing environment."
+>
+<section class="case-hero case-training">
+  <div class="container">
+    <a class="case-back" href={`${base}/built-systems/`}>← Built Systems</a>
+    <div class="case-kicker">06 / Learning Systems</div>
+    <h1>Onboarding &<br/><em>Certification System</em></h1>
+    <p class="case-deck">A structured training system for new and cross-training employees, covering onboarding, supervised practice, assessment, and certification.</p>
+    <div class="case-role-line"><span>Program Design</span><span>Training Architecture</span><span>Standards Design</span><span>Trainer Coordination</span><span>Implementation</span></div>
+  </div>
+</section>
+
+<section class="case-metrics case-metrics-light">
+  <div class="container case-metric-grid">
+    <div class="metric-centered"><strong>8</strong><span>Employees in Initial Cohort</span></div>
+    <div><strong>8 Weeks</strong><span>Core Onboarding Pathway</span></div>
+    <div><strong>6–14 Weeks</strong><span>Certification Range</span></div>
+    <div><strong>160 Hours</strong><span>Required Training Before Final Test</span></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container case-two-col">
+    <div>
+      <div class="case-section-no">01</div>
+      <div class="eyebrow">The Gap</div>
+      <h2>Certification existed, but the training path was inconsistent.</h2>
+    </div>
+    <div class="case-copy">
+      <p>After company onboarding, employees entered the department without a consistent development plan. Training depended on production demand, trainer availability, and local knowledge, so progress was difficult for employees and supervisors to track.</p>
+      <p>I built a structure around the existing certification process with training sequences, assigned trainers, weekly objectives, supervised practice, mock assessments, and target certification dates.</p>
+      <p class="case-emphasis">The plans set clear expectations without locking training into a schedule that could not adjust to production needs.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-section training-evidence-path section-divider">
+  <div class="container">
+    <div class="case-section-no">02</div>
+    <div class="eyebrow">How Development Progresses</div>
+    <h2>A clearer path from onboarding to certification.</h2>
+    <div class="training-simple-path reveal">
+      <div><small>01</small><strong>Onboarding</strong><span>Role context, safety, systems, procedures</span></div>
+      <b>→</b>
+      <div><small>02</small><strong>Structured OJT</strong><span>Assigned trainers, practice, increasing responsibility</span></div>
+      <b>→</b>
+      <div><small>03</small><strong>Assessment</strong><span>Observation, feedback, mock testing, gap closure</span></div>
+      <b>→</b>
+      <div><small>04</small><strong>Certification</strong><span>Required training completed before final testing</span></div>
+    </div>
+    <p class="case-note">Plans could shift around attendance, trainer availability, and production needs without losing track of the employee's overall progress.</p>
+  </div>
+</section>
+
+<section class="case-section case-alt training-document-section">
+  <div class="container">
+    <div class="case-section-no">03</div>
+    <div class="eyebrow">From Plan to Practice</div>
+    <h2>The plans made training easier to coordinate day to day.</h2>
+    <p class="case-intro">A common onboarding plan was paired with individual training schedules showing who each employee would train with, what they would work on, and the next milestone.</p>
+
+    <div class="training-doc-composition">
+      <article class="training-paper training-paper-main">
+        <div class="paper-kicker">Onboarding Plan</div>
+        <h3>Structured foundation</h3>
+        <div class="paper-rule"></div>
+        <div class="paper-row"><span>Week 01</span><strong>Orientation + fundamentals</strong></div>
+        <div class="paper-row"><span>Week 02</span><strong>Role-specific exposure</strong></div>
+        <div class="paper-row"><span>Weeks 03–06</span><strong>Guided practice + broader work</strong></div>
+        <div class="paper-row"><span>Weeks 07–08</span><strong>Readiness + targeted development</strong></div>
+        <p>Shared foundation alongside role-specific training.</p>
+      </article>
+
+      <article class="training-paper training-paper-secondary">
+        <div class="paper-kicker">Progressive Training Plan</div>
+        <h3>Milestones with named support</h3>
+        <div class="paper-rule"></div>
+        <div class="paper-grid-head"><span>Period</span><span>Focus</span><span>Milestone</span></div>
+        <div class="paper-grid-row"><span>Early</span><strong>Foundational work</strong><em>Supervised practice</em></div>
+        <div class="paper-grid-row"><span>Middle</span><strong>Applied inspection / process work</strong><em>Increasing ownership</em></div>
+        <div class="paper-grid-row"><span>Late</span><strong>Mock assessment + review</strong><em>Gap closure</em></div>
+        <div class="paper-grid-row"><span>Target</span><strong>Certification testing</strong><em>Demonstrated readiness</em></div>
+      </article>
+
+      <div class="training-doc-callouts">
+        <div><span>01</span><strong>Assigned trainers</strong><p>Training plans assigned specific trainers instead of relying on ad hoc direction.</p></div>
+        <div><span>02</span><strong>Visible milestones</strong><p>Plans tied practice time to mock tests, required training hours, and target certification dates.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section competency-transform">
+  <div class="container">
+    <div class="case-section-no">04</div>
+    <div class="eyebrow">Defining Capability</div>
+    <h2>Updating inherited standards for the work being performed.</h2>
+    <p class="case-intro">I also revised competency standards used for employee progression. I kept the existing 0–3 rating scale, but updated the criteria to better reflect the work, required qualifications, and expectations in each role.</p>
+
+    <div class="competency-before-after">
+      <article class="competency-sheet competency-before">
+        <div class="competency-label">Before / inherited framework</div>
+        <h3>Generic role template</h3>
+        <div class="competency-row"><span>Systems</span><strong>Basic systems interaction</strong></div>
+        <div class="competency-row"><span>Equipment</span><strong>General equipment knowledge</strong></div>
+        <div class="competency-row"><span>Problem solving</span><strong>Basic troubleshooting</strong></div>
+        <div class="competency-row"><span>Leadership</span><strong>Work prioritization and training others</strong></div>
+      </article>
+
+      <div class="competency-arrow">
+        <span>Same rating scale</span>
+        <b>→</b>
+        <span>Updated for the actual role</span>
+      </div>
+
+      <article class="competency-sheet competency-after">
+        <div class="competency-label">After / redesigned framework</div>
+        <h3>Operationally tailored standard</h3>
+        <div class="competency-row gate"><span>Workflow</span><strong>Site-specific systems and workflow expectations</strong></div>
+        <div class="competency-row gate"><span>Capability</span><strong>Role-specific tools, equipment, and qualification requirements</strong></div>
+        <div class="competency-row gate"><span>Standards</span><strong>Safety, certification, process, and quality knowledge</strong></div>
+        <div class="competency-row"><span>Progression</span><strong>Cross-functional communication and increasing responsibility across levels</strong></div>
+      </article>
+    </div>
+
+    <div class="competency-notes">
+      <div><strong>0–3 mastery scale retained</strong><span>0 = no skill; 3 = high skill with no assistance required.</span></div>
+      <div><strong>Progression gates retained and clarified</strong><span>Designated critical competencies require a rating of 3 before an employee can advance, regardless of total score.</span></div>
+      <div><strong>Supporting roles across the production lifecycle</strong><span>Foundry · Processing · Finishing · Inspection</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt">
+  <div class="container">
+    <div class="case-section-no">05</div>
+    <div class="eyebrow">Built for a Live Operation</div>
+    <h2>Built to work around production.</h2>
+    <div class="decision-grid training-decisions">
+      <article><span>01</span><h3>Plan around real work.</h3><p>Plans could be adjusted when attendance, trainer availability, or production demand changed.</p></article>
+      <article><span>02</span><h3>Use feedback as evidence.</h3><p>Employee check-ins and trainer feedback helped identify where more practice was needed.</p></article>
+      <article><span>03</span><h3>Test before the test.</h3><p>Mock assessments helped identify gaps before final certification testing.</p></article>
+      <article><span>04</span><h3>Make it transferable.</h3><p>Documented plans and standards gave supervisors and leads a shared reference for each employee's training path.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="case-outcomes training-outcomes">
+  <div class="container">
+    <div class="case-section-no light">06</div>
+    <div class="eyebrow light">Early Outcomes</div>
+    <h2>The initial cohort certified faster than the department's reported historical timelines.</h2>
+    <div class="outcome-grid">
+      <div><strong>6–8 weeks</strong><span>Fastest certifications</span></div>
+      <div><strong>12–14 weeks</strong><span>Longest certifications in the cohort</span></div>
+      <div><strong>~6–8+ months</strong><span>Historically reported certification timelines</span></div>
+      <div><strong>Reusable</strong><span>Repeatable across roles and departments</span></div>
+    </div>
+    <p>Historical timelines are based on reported departmental norms rather than a formal longitudinal dataset, so I have not calculated a percentage reduction.</p>
+  </div>
+</section>
+
+<section class="case-section training-related">
+  <div class="container">
+    <div class="case-section-no">07</div>
+    <div class="eyebrow">Related System</div>
+    <h2>Training employees and tracking workforce capability are separate problems.</h2>
+    <p class="case-intro">This system manages individual training through certification. A separate building-wide system tracks existing skills, coverage gaps, and cross-training opportunities across the workforce.</p>
+    <a class="related-system" href={`${base}/built-systems/workforce-capability-planning/`}>
+      <span>Explore the separate system</span>
+      <strong>Cross-Training & Workforce Capability Dashboard</strong>
+      <b>→</b>
+    </a>
+  </div>
+</section>
+
+<section class="case-next">
+  <div class="container">
+    <span class="eyebrow">Next System</span>
+    <a href={`${base}/built-systems/workforce-capability-planning/`}>
+      <strong>Cross-Training & Workforce Capability Dashboard</strong><span>→</span>
+    </a>
+  </div>
+</section>
+</BaseLayout>

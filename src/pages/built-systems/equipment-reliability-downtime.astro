@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout title="Equipment Reliability & Downtime Analysis" description="A reliability system that turns structured frontline downtime observations into recurring failure analysis and maintenance action.">
+<section class="case-hero">
+  <div class="container">
+    <a class="case-back" href={`${base}/built-systems/`}>← Built Systems</a>
+    <div class="case-kicker">05 / Operational Analytics</div>
+    <h1>Equipment Reliability &<br/><em>Downtime Analysis</em></h1>
+    <p class="case-deck">A reliability system that replaced inconsistent downtime inputs with structured operator data, recurring-failure analysis, and a clearer view of where maintenance attention was needed.</p>
+    <div class="case-role-line"><span>Data Design</span><span>Downtime Classification</span><span>Operational Analytics</span><span>Frontline Workflow</span><span>Continuous Improvement</span></div>
+  </div>
+</section>
+
+<section class="case-metrics case-metrics-dark">
+  <div class="container case-metric-grid">
+    <div><strong>4</strong><span>Primary Production Units</span></div>
+    <div><strong>3 Levels</strong><span>Failure Classification</span></div>
+    <div><strong>Weekly</strong><span>Reliability Review</span></div>
+    <div><strong>2</strong><span>Work Areas Using the Model</span></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container case-two-col">
+    <div><div class="case-section-no">01</div><div class="eyebrow">The Data Problem</div>
+      <h2>Existing reports showed downtime, but offered limited insight into recurring causes.</h2>
+    </div>
+    <div class="case-copy">
+      <p>Downtime was already being reported, but the machine-generated logs relied on inaccurate inputs and were condensed into basic daily graphs. With four production units more than 50 years old, equipment issues were common, but it was difficult to separate recurring problems from one-off failures.</p>
+      <p>I started with the input. Operators recorded downtime in a simple weekly tracker using standardized codes, duration, and notes. I then translated those observations into a structured dataset with production impact, failure category, failure mode, root cause, maintenance action, and operator context.</p>
+      <p class="case-emphasis">The dashboard was useful because the collection process underneath it became more consistent.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt section-divider reliability-input-section">
+  <div class="container">
+    <div class="case-section-no">02</div><div class="eyebrow">Frontline Input</div>
+    <h2>Keep data entry simple where the downtime actually happens.</h2>
+    <div class="tracker-demo-wrap">
+      <div class="tracker-paper">
+        <div class="tracker-title"><strong>WEEKLY DOWNTIME TRACKER</strong><span>Unit ____</span></div>
+        <div class="tracker-days">
+          <div><b>MONDAY</b><div class="tracker-head"><span>Time</span><span>Code</span><span>Duration</span><span>Notes</span></div>
+            <div class="tracker-row"><span>08:00</span><span>—</span><span>—</span><span></span></div>
+            <div class="tracker-row"><span>09:00</span><span>—</span><span>—</span><span></span></div>
+            <div class="tracker-row"><span>10:00</span><span>—</span><span>—</span><span></span></div>
+          </div>
+          <div><b>TUESDAY</b><div class="tracker-head"><span>Time</span><span>Code</span><span>Duration</span><span>Notes</span></div>
+            <div class="tracker-row"><span>08:00</span><span>—</span><span>—</span><span></span></div>
+            <div class="tracker-row"><span>09:00</span><span>—</span><span>—</span><span></span></div>
+            <div class="tracker-row"><span>10:00</span><span>—</span><span>—</span><span></span></div>
+          </div>
+        </div>
+        <div class="tracker-code-strip"><strong>CODE REFERENCE</strong><span>Equipment</span><span>Power / Utility</span><span>Material</span><span>Maintenance</span><span>Other</span></div>
+      </div>
+      <div class="tracker-copy">
+        <div><span>01</span><strong>Fast to complete</strong><p>The operator-facing form stays intentionally lightweight: time, code, duration, and notes.</p></div>
+        <div><span>02</span><strong>Standardized categories</strong><p>A shared code reference reduces variation in how common downtime events are described.</p></div>
+        <div><span>03</span><strong>Context is preserved</strong><p>Notes capture what the operator saw so the structured record does not lose the frontline observation.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section reliability-data-section">
+  <div class="container">
+    <div class="case-section-no">03</div><div class="eyebrow">Analysis Dataset</div>
+    <h2>The operator entry becomes a record that can be compared over time.</h2>
+    <div class="reliability-fields reveal">
+      <span>Date</span><span>Unit</span><span>Minutes</span><span>Operational Impact</span><span>Category</span><span>Failure Mode</span><span>Root Cause</span><span>Maintenance Action</span><span>Operator Notes</span>
+    </div>
+    <div class="pareto-stack">
+      <div><small>Level 1</small><strong>Downtime Category</strong></div><b>↓</b>
+      <div><small>Level 2</small><strong>Failure Mode</strong></div><b>↓</b>
+      <div><small>Level 3</small><strong>Root Cause</strong></div>
+    </div>
+    <p class="case-note">The same structure supports an overall Pareto across all units and separate analysis for each primary asset.</p>
+  </div>
+</section>
+
+<section class="case-section case-alt reliability-demo-section">
+  <div class="container">
+    <div class="case-section-no">04</div><div class="eyebrow">Portfolio Demo</div>
+    <h2>One view for scale, frequency, and recurring failure patterns.</h2>
+    <p class="case-intro">This portfolio workbook uses synthetic downtime records and generic equipment names. The layout and analysis model reflect the original system without exposing employer data.</p>
+
+    <div class="reliability-demo-window">
+      <div class="reliability-demo-bar"><span></span><span></span><span></span><b>Machine Downtime Dashboard</b></div>
+      <div class="reliability-demo-body">
+        <div class="reliability-kpis">
+          <div><span>Total Downtime</span><strong>16,450</strong><small>minutes</small></div>
+          <div><span>Downtime Events</span><strong>142</strong><small>events</small></div>
+          <div><span>Avg. Minutes / Event</span><strong>116</strong><small>minutes</small></div>
+          <div><span>Production Stops</span><strong>64</strong><small>events</small></div>
+        </div>
+        <div class="reliability-demo-grid">
+          <div class="machine-panel">
+            <div class="demo-panel-head"><span>Downtime by Unit</span><small>SYNTHETIC DEMO</small></div>
+            <div class="machine-bar"><span>Unit 1</span><i style="--w:22%"></i><b>1,720</b></div>
+            <div class="machine-bar"><span>Unit 2</span><i style="--w:25%"></i><b>1,955</b></div>
+            <div class="machine-bar"><span>Unit 3</span><i style="--w:66%"></i><b>5,105</b></div>
+            <div class="machine-bar"><span>Unit 4</span><i style="--w:100%"></i><b>7,670</b></div>
+          </div>
+          <div class="pareto-panel">
+            <div class="demo-panel-head"><span>Top Failure Modes</span><small>DOWNTIME MINUTES</small></div>
+            <div class="pareto-demo-row"><b>Air Leak</b><i style="--w:100%"></i><span>2,725</span></div>
+            <div class="pareto-demo-row"><b>Bad Pump</b><i style="--w:87%"></i><span>2,365</span></div>
+            <div class="pareto-demo-row"><b>Bad Bushings</b><i style="--w:86%"></i><span>2,335</span></div>
+            <div class="pareto-demo-row"><b>Power Loss</b><i style="--w:83%"></i><span>2,270</span></div>
+            <div class="pareto-demo-row"><b>Bad Motor</b><i style="--w:68%"></i><span>1,855</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pareto-gallery">
+      <div class="pareto-gallery-head">
+        <div><span>Overall Pareto</span><strong>Recurring downtime across all units</strong></div>
+        <p>The dashboard also breaks downtime into Pareto views so the largest recurring contributors are visible at a glance.</p>
+      </div>
+      <div class="pareto-chart-card">
+        <div class="pareto-chart-title"><strong>All Units — Failure Mode Pareto</strong><span>Downtime minutes + cumulative share</span></div>
+        <div class="pareto-chart">
+          <div class="pareto-axis"><span>3,000</span><span>2,000</span><span>1,000</span><span>0</span></div>
+          <div class="pareto-bars">
+            <div><i style="--h:100%"></i><span>Air Leak</span></div>
+            <div><i style="--h:87%"></i><span>Bad Pump</span></div>
+            <div><i style="--h:86%"></i><span>Bushings</span></div>
+            <div><i style="--h:83%"></i><span>Power Loss</span></div>
+            <div><i style="--h:68%"></i><span>Motor</span></div>
+            <div><i style="--h:55%"></i><span>Other</span></div>
+            <svg class="pareto-line" viewBox="0 0 600 180" preserveAspectRatio="none" aria-hidden="true">
+              <polyline points="50,132 150,92 250,63 350,40 450,24 550,12" fill="none" stroke="currentColor" stroke-width="3"/>
+              <circle cx="50" cy="132" r="5"/><circle cx="150" cy="92" r="5"/><circle cx="250" cy="63" r="5"/><circle cx="350" cy="40" r="5"/><circle cx="450" cy="24" r="5"/><circle cx="550" cy="12" r="5"/>
+            </svg>
+          </div>
+          <div class="pareto-percent"><span>100%</span><span>75%</span><span>50%</span><span>25%</span></div>
+        </div>
+      </div>
+      <div class="unit-pareto-strip">
+        <div><strong>Unit 1</strong><span><i style="--w:82%"></i><i style="--w:58%"></i><i style="--w:34%"></i></span></div>
+        <div><strong>Unit 2</strong><span><i style="--w:74%"></i><i style="--w:52%"></i><i style="--w:30%"></i></span></div>
+        <div><strong>Unit 3</strong><span><i style="--w:94%"></i><i style="--w:63%"></i><i style="--w:41%"></i></span></div>
+        <div><strong>Unit 4</strong><span><i style="--w:100%"></i><i style="--w:71%"></i><i style="--w:46%"></i></span></div>
+      </div>
+      <p class="pareto-caption">The live system includes an overall Pareto and separate Pareto analysis for each primary unit. The values above are synthetic portfolio data.</p>
+    </div>
+
+    <p class="case-note">Values shown in this section come from the synthetic portfolio demo, not the live production dataset.</p>
+  </div>
+</section>
+
+<section class="case-section reliability-insight-section">
+  <div class="container insight-shift">
+    <div><div class="case-section-no">05</div><div class="eyebrow">What Changed</div>
+      <h2>The data challenged an assumption about where recurring downtime was coming from.</h2>
+    </div>
+    <div class="insight-card">
+      <div><span>Before</span><strong>One unit was widely viewed as the main reliability problem.</strong></div>
+      <b>→</b>
+      <div><span>Analysis</span><strong>The recurring-event data showed another unit driving more day-to-day downtime.</strong></div>
+      <b>→</b>
+      <div><span>After</span><strong>Maintenance could focus on recurring failure modes instead of reputation alone.</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section case-alt reliability-loop-section">
+  <div class="container">
+    <div class="case-section-no">06</div><div class="eyebrow">From Analysis to Action</div>
+    <h2>Analysis connects directly to corrective action and problem solving.</h2>
+    <div class="reliability-loop">
+      <span>Operator Downtime Tracker</span><b>→</b><span>Structured Downtime Log</span><b>→</b><span>Dashboard + Pareto</span><b>→</b><span>RAIL Action Tracker</span><b>→</b><span>A3 Problem Solving</span>
+    </div>
+    <p class="case-note">The system is used in a weekly review with operations, maintenance, facilities, and site leadership. Findings have supported equipment repairs, longer-term vendor and rebuild discussions, and capital-spending justification.</p>
+  </div>
+</section>
+
+<section class="case-section reliability-adoption-section">
+  <div class="container current-state-grid">
+    <div><div class="case-section-no">07</div><div class="eyebrow">Adoption & Next Step</div><h2>The model expanded beyond the work area where it started.</h2>
+      <p>The original system is updated weekly from operator inputs and can be maintained by a supervisor, lead, or operations/process co-op. A second work area adopted the same approach for its own equipment downtime.</p>
+    </div>
+    <div class="roadmap"><div class="eyebrow">Next Iteration</div><span>Connect to Automated Downtime Data</span><span>Preserve Operator Context</span><span>Reduce Manual Data Entry</span><span>Automate Reports & Alerts</span></div>
+  </div>
+</section>
+
+<section class="case-section reliability-download">
+  <div class="container">
+    <div class="download-card">
+      <div><div class="eyebrow">Explore the Demo</div><h2>Equipment Reliability & Downtime Analysis</h2>
+      <p>Download the working Excel portfolio demo with a synthetic downtime log, dashboard, Pareto analysis, RAIL action tracking, and A3 problem-solving template.</p></div>
+      <a href={`${base}/artifacts/equipment-reliability-downtime-demo.xlsx`} download><span>Download Excel Demo</span><b>↓</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="case-next"><div class="container"><span class="eyebrow">Next System</span>
+  <a href={`${base}/built-systems/production-supplies-replenishment/`}><strong>Production Supplies & Replenishment</strong><span>→</span></a>
+</div></section>
+</BaseLayout>

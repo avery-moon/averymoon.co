@@ -4,7 +4,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <a class="system-card reveal" href={`${base}/built-systems/${system.slug}/`}>
   <div class={`system-diagram system-diagram-${system.slug}`} aria-hidden="true">
-    {system.slug === 'alloy-procurement' && (
+    {system.slug === 'material-procurement-planning' && (
       <svg viewBox="0 0 300 88">
         <g class="diagram-muted">
           <path d="M14 18H68L92 43" /><path d="M14 43H92" /><path d="M14 68H68L92 43" />
@@ -19,7 +19,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </g>
       </svg>
     )}
-    {system.slug === 'onboarding-certification' && (
+    {system.slug === 'training-certification-system' && (
       <svg viewBox="0 0 300 88">
         <!-- abstract 8-week training timeline -->
         <g class="diagram-guide">
@@ -46,7 +46,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <path class="diagram-accent" d="M268 44H283M277 38l6 6-6 6"/>
       </svg>
     )}
-    {system.slug === 'foundry-inventory' && (
+    {system.slug === 'production-supplies-replenishment' && (
       <svg viewBox="0 0 300 88">
         <g class="diagram-muted">
           <path d="M15 17H75L105 43M15 43H105M15 69H75L105 43"/>
@@ -61,7 +61,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </g>
       </svg>
     )}
-    {system.slug === 'cross-training-matrix' && (
+    {system.slug === 'workforce-capability-planning' && (
       <svg viewBox="0 0 300 88">
         <g class="diagram-guide">
           <path d="M38 12V76M70 12V76M102 12V76M134 12V76M166 12V76M198 12V76M230 12V76M262 12V76"/>
@@ -79,7 +79,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <rect class="diagram-accent" x="166" y="25" width="32" height="18"/>
       </svg>
     )}
-    {system.slug === 'equipment-downtime-dashboard' && (
+    {system.slug === 'equipment-reliability-downtime' && (
       <svg viewBox="0 0 300 88">
         <path class="diagram-guide" d="M14 69H286M14 18V69"/>
         <path d="M14 55H52L58 30L65 63L72 55H108L114 29L121 64L128 55H165L171 31L178 62L185 55H222L228 18L235 67L242 55H286"/>
@@ -88,7 +88,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <circle class="diagram-accent-fill" cx="228" cy="18" r="4"/>
       </svg>
     )}
-    {system.slug === 'workforce-scheduling' && (
+    {system.slug === 'production-planning-scheduling' && (
       <svg viewBox="0 0 300 88">
         <g class="diagram-muted">
           <circle cx="18" cy="20" r="4"/><circle cx="18" cy="43" r="4"/><circle cx="18" cy="66" r="4"/>

@@ -25,10 +25,10 @@ export const theories = [
 
 export const systems = [
   {
-    slug: 'alloy-procurement',
+    slug: 'material-procurement-planning',
     number: '01',
     category: 'Materials + Procurement',
-    title: 'Materials Planning & Procurement System',
+    title: 'Material Procurement & Planning',
     metric: '~$3M on hand · up to 18 months',
     summary: 'Turns customer demand, inventory, and purchasing constraints into forward material requirements.',
     problem: 'Alloy planning depended on manually consolidating several exports into a short-horizon view while critical purchasing knowledge remained concentrated in one person.',
@@ -36,7 +36,7 @@ export const systems = [
     outcome: 'Reduced routine refresh time from as much as an hour to about five minutes and expanded planning visibility from roughly six months to as far as eighteen months.'
   },
   {
-    slug: 'onboarding-certification',
+    slug: 'training-certification-system',
     number: '02',
     category: 'Learning + Development',
     title: 'Training & Certification System',
@@ -47,7 +47,7 @@ export const systems = [
     outcome: 'All eight employees in the initial cohort certified faster than historically reported norms, with certification achieved in approximately 6–14 weeks.'
   },
   {
-    slug: 'foundry-inventory',
+    slug: 'production-supplies-replenishment',
     number: '03',
     category: 'Inventory + Control',
     title: 'Production Supplies & Replenishment',
@@ -58,7 +58,7 @@ export const systems = [
     outcome: 'Prevented several shortages, identified and reconciled roughly $40K in excess inventory, and established repeatable replenishment decisions across about $300K in active supplies.'
   },
   {
-    slug: 'cross-training-matrix',
+    slug: 'workforce-capability-planning',
     number: '04',
     category: 'Workforce Capability',
     title: 'Workforce Capability Planning System',
@@ -69,7 +69,7 @@ export const systems = [
     outcome: 'Creates facility-wide visibility into capability gaps, single points of failure, staffing flexibility, and cross-training opportunities while transferring long-term ownership to HR.'
   },
   {
-    slug: 'equipment-downtime-dashboard',
+    slug: 'equipment-reliability-downtime',
     number: '05',
     category: 'Operational Analytics',
     title: 'Equipment Reliability & Downtime Analysis',
@@ -80,7 +80,7 @@ export const systems = [
     outcome: 'Revealed chronic equipment issues that differed from prevailing assumptions, shifted maintenance attention toward recurring failure modes, and supported repair and capital-investment decisions.'
   },
   {
-    slug: 'workforce-scheduling',
+    slug: 'production-planning-scheduling',
     number: '06',
     category: 'Workforce Planning',
     title: 'Production Planning & Scheduling',

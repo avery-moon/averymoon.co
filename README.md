@@ -1,13 +1,22 @@
-# averymoon.co — V6.9.1 Material Procurement Visual Pass
+# averymoon.co — V6.9.2 Material Procurement Action Views + Built Systems Route Audit
 
-Built on V6.9.0.
+Built on V6.9.1.
 
-Changes:
-- Removes the awkward 12M / 18M horizontal comparison bars.
-- Replaces them with an Excel-style 18-month material coverage matrix.
-- Shortens the opening copy and converts Planning Inputs into a compact visual pipeline.
-- Replaces the text-heavy demand explanation with a visual demand-support chart showing historical baseline, visible customer demand, and the resulting planning forecast.
-- Keeps the Planning Hub and 52-week Purchasing Calendar as primary artifact visuals.
-- Compresses Operating Model + Model Boundaries into one closing section.
-- Overall page rhythm is now more artifact-forward and less card/paragraph heavy.
-- All website mock data remains illustrative/synthetic.
+Material Procurement changes:
+- Removes the invented 18-month demand-support line graph.
+- Adds a website-native 13-Week Purchasing Action Planner based directly on the workbook's Planning Hub:
+  suggested orders, scheduled receipts, weekly uncovered quantity/status, and material actions.
+- Corrects the Purchasing Calendar orientation to match the workbook:
+  weeks run vertically; materials run horizontally.
+- Reframes Planning Horizons around the workbook's actual current-quarter, 3-month/3-period, 6-month, 12-month, and 18-month views.
+- Keeps long-range requirement bars only as a compact 12M vs 18M comparison inside the broader multi-horizon section.
+
+Built Systems route audit:
+- alloy-procurement → material-procurement-planning
+- onboarding-certification → training-certification-system
+- foundry-inventory → production-supplies-replenishment
+- cross-training-matrix → workforce-capability-planning
+- equipment-downtime-dashboard → equipment-reliability-downtime
+- workforce-scheduling → production-planning-scheduling
+- Updated site data, SystemCard slug conditionals, related-system links, and internal Built Systems hrefs.
+- Removed the obsolete generic [slug].astro duplicate route now that all six systems have bespoke pages.
