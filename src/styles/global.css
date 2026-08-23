@@ -3416,3 +3416,225 @@ body .scheduler-reconstruction-note{
   }
 }
 \n\n/* ===== V6.12.1 — TECHNICAL BRIEF CTA ===== */\nbody .technical-brief-cta{margin-top:24px;max-width:540px}\nbody .technical-overview-link{display:inline-flex;align-items:center;gap:10px;padding:11px 15px;border:1px solid rgba(255,250,241,.38);color:#fffaf1;font:700 .66rem/1 var(--sans);letter-spacing:.045em;text-transform:uppercase;text-decoration:none;transition:background .2s ease,border-color .2s ease,transform .2s ease}\nbody .technical-overview-link span{color:#e28a6c;font-size:.9rem;line-height:1}\nbody .technical-overview-link:hover{background:rgba(255,250,241,.08);border-color:rgba(255,250,241,.62);transform:translateY(-1px)}\nbody .technical-brief-cta p{margin:10px 0 0;max-width:460px;color:rgba(255,250,241,.72);font:.65rem/1.45 var(--sans)}\n
+
+/* ===== V6.12.2 — PRODUCTION PLANNING SPACING HARD FIX =====
+   Root cause of the earlier pass:
+   - case-study .container has an explicit width capped by --max, so max-width:1500px did not widen it.
+   - Section 03 spacing targeted an obsolete .external-span-flow class; live markup uses .route-flow.
+   This pass uses explicit section hooks and overrides width directly.
+*/
+
+/* Shared scheduler page rhythm */
+body .scheduler-architecture-section,
+body .scheduler-exception-section,
+body .scheduler-human-section,
+body .scheduler-impact-section{
+  padding-top:52px;
+  padding-bottom:52px;
+}
+
+/* 02 — Architecture: actually widen the content and tighten the hierarchy. */
+body .scheduler-architecture-section > .container{
+  width:min(1420px,calc(100% - 64px)) !important;
+  max-width:none !important;
+}
+body .scheduler-architecture-section h2{
+  margin-bottom:0;
+}
+body .scheduler-architecture{
+  margin-top:28px !important;
+  gap:12px !important;
+}
+body .scheduler-architecture > div{
+  min-height:112px !important;
+  padding:18px 16px !important;
+}
+body .scheduler-architecture .arch-master{
+  min-height:116px !important;
+  margin-block:0 !important;
+}
+body .scheduler-architecture .arch-output{
+  min-height:104px !important;
+  padding:16px 10px !important;
+}
+
+/* 03 — Exception logic: use the classes that actually exist. */
+body .scheduler-exception-section > .route-example{
+  width:min(1420px,calc(100% - 64px)) !important;
+  max-width:none !important;
+  grid-template-columns:minmax(390px,.82fr) minmax(700px,1.42fr) !important;
+  gap:64px !important;
+  align-items:center !important;
+}
+body .scheduler-exception-section .route-example > div:first-child{
+  align-self:center;
+}
+body .scheduler-exception-section h2{
+  font-size:clamp(2.7rem,4.25vw,4.8rem) !important;
+  line-height:1.01 !important;
+  max-width:620px !important;
+  margin-bottom:22px !important;
+}
+body .scheduler-exception-section .route-example p{
+  max-width:570px;
+  margin-bottom:0;
+}
+body .scheduler-exception-section .route-flow{
+  margin:0 !important;
+  grid-template-columns:minmax(140px,1fr) 24px minmax(140px,1fr) 24px minmax(140px,1fr) 24px minmax(140px,1fr) !important;
+}
+body .scheduler-exception-section .route-flow > div{
+  min-height:104px !important;
+  padding:16px 14px !important;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* 04 — Human in the Loop: remove the big dead zone around the strip. */
+body .scheduler-human-section > .container{
+  width:min(1420px,calc(100% - 64px)) !important;
+  max-width:none !important;
+}
+body .scheduler-human-section h2{
+  max-width:1050px !important;
+  margin-bottom:24px !important;
+}
+body .scheduler-human-section .human-loop{
+  margin-top:0 !important;
+  grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1.18fr) 18px minmax(0,1fr) !important;
+}
+body .scheduler-human-section .human-loop > div{
+  min-height:96px !important;
+  padding:14px 12px !important;
+}
+body .scheduler-human-section .case-note{
+  max-width:1060px !important;
+  margin-top:20px !important;
+}
+
+/* 05 — Impact / next iteration: make the two halves feel intentionally paired. */
+body .scheduler-impact-section > .current-state-grid{
+  width:min(1420px,calc(100% - 64px)) !important;
+  max-width:none !important;
+  grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr) !important;
+  gap:72px !important;
+  align-items:center !important;
+  margin-top:0 !important;
+}
+body .scheduler-impact-section .current-state-grid h2{
+  font-size:clamp(2.7rem,4.15vw,4.65rem) !important;
+  line-height:1 !important;
+  max-width:650px !important;
+  margin-bottom:20px !important;
+}
+body .scheduler-impact-section .current-state-grid p{
+  max-width:610px;
+  margin-bottom:0;
+}
+body .scheduler-impact-section .roadmap{
+  margin:0 !important;
+  padding:4px 0 4px 42px !important;
+  border-left:1px solid rgba(30,68,56,.14) !important;
+  align-self:center !important;
+}
+body .scheduler-impact-section .roadmap .eyebrow{
+  text-align:left !important;
+  margin-bottom:8px;
+}
+body .scheduler-impact-section .roadmap span{
+  padding:11px 0 !important;
+}
+
+/* 06 — Reconstructed views: the previous max-width change was also capped by .container width. */
+body .scheduler-artifacts > .container{
+  width:min(1380px,calc(100% - 64px)) !important;
+  max-width:none !important;
+}
+body .scheduler-artifacts .artifact-head{
+  grid-template-columns:minmax(0,1fr) minmax(390px,.86fr) !important;
+  gap:64px !important;
+  margin-bottom:32px !important;
+  align-items:center !important;
+}
+body .scheduler-artifacts .artifact-head h2{
+  font-size:clamp(2.75rem,4vw,4.45rem) !important;
+  line-height:1 !important;
+  max-width:630px !important;
+}
+body .scheduler-artifacts .artifact-reconstruction-copy{
+  padding-top:6px;
+}
+body .scheduler-artifacts .scheduler-capabilities{
+  margin-top:18px !important;
+}
+body .scheduler-artifacts .technical-brief-cta{
+  margin-top:20px !important;
+}
+body .scheduler-artifacts .scheduler-view-large{
+  margin-top:0 !important;
+}
+body .scheduler-artifacts .scheduler-view-grid,
+body .scheduler-artifacts .scheduler-view-grid.second{
+  gap:18px !important;
+  margin-top:18px !important;
+}
+body .scheduler-artifacts .scheduler-window-body{
+  padding:18px 20px !important;
+}
+body .scheduler-artifacts .scheduler-reconstruction-note{
+  margin-top:24px !important;
+}
+
+/* Responsive reset */
+@media(max-width:1000px){
+  body .scheduler-architecture-section > .container,
+  body .scheduler-exception-section > .route-example,
+  body .scheduler-human-section > .container,
+  body .scheduler-impact-section > .current-state-grid,
+  body .scheduler-artifacts > .container{
+    width:min(var(--max),calc(100% - 42px)) !important;
+  }
+  body .scheduler-exception-section > .route-example{
+    grid-template-columns:1fr !important;
+    gap:30px !important;
+  }
+  body .scheduler-exception-section .route-flow{
+    grid-template-columns:1fr 24px 1fr 24px 1fr 24px 1fr !important;
+  }
+  body .scheduler-impact-section > .current-state-grid{
+    grid-template-columns:1fr !important;
+    gap:36px !important;
+  }
+  body .scheduler-impact-section .roadmap{
+    padding-left:0 !important;
+    border-left:0 !important;
+  }
+  body .scheduler-artifacts .artifact-head{
+    grid-template-columns:1fr !important;
+    gap:26px !important;
+  }
+}
+@media(max-width:760px){
+  body .scheduler-architecture-section,
+  body .scheduler-exception-section,
+  body .scheduler-human-section,
+  body .scheduler-impact-section{
+    padding-top:44px;
+    padding-bottom:44px;
+  }
+  body .scheduler-human-section .human-loop{
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+  }
+  body .scheduler-human-section .human-loop > b{
+    transform:rotate(90deg);
+  }
+  body .scheduler-exception-section .route-flow{
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+  }
+  body .scheduler-exception-section .route-flow > b{
+    transform:rotate(90deg);
+  }
+}
