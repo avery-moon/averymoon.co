@@ -3234,3 +3234,185 @@ body .scheduler-reconstruction-note{max-width:1000px;margin:24px auto 0;text-ali
   body .arch-master{grid-column:1/3!important}
   body .scheduler-view-grid{grid-template-columns:1fr}
 }
+
+/* ===== V6.11.1 — PRODUCTION PLANNING SPACING PASS ===== */
+
+/* Section 02 — architecture: deliberate vertical rhythm and centered result/output structure. */
+body .scheduler-architecture-section .container{
+  max-width:1500px;
+}
+body .scheduler-architecture{
+  margin-top:34px;
+  gap:12px;
+  align-items:stretch;
+}
+body .scheduler-architecture>div{
+  min-height:138px;
+  padding:22px 18px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+body .scheduler-architecture .arch-master{
+  min-height:138px;
+  margin-top:2px;
+  margin-bottom:2px;
+}
+body .scheduler-architecture .arch-output{
+  min-height:132px;
+  padding:20px 12px;
+}
+body .scheduler-architecture .arch-master + .arch-output{
+  margin-top:2px;
+}
+
+/* Section 03 — prevent the oversized title from crushing the diagram / leaving odd negative space. */
+body .external-span-section .container,
+body .case-section:has(.external-span-flow) .container{
+  display:grid;
+  grid-template-columns:minmax(360px,.82fr) minmax(620px,1.45fr);
+  column-gap:74px;
+  align-items:center;
+}
+body .case-section:has(.external-span-flow) h2{
+  font-size:clamp(3rem,5.25vw,5.9rem);
+  line-height:.96;
+  max-width:650px;
+  margin-bottom:26px;
+}
+body .case-section:has(.external-span-flow) .case-section-no,
+body .case-section:has(.external-span-flow) .eyebrow,
+body .case-section:has(.external-span-flow) h2,
+body .case-section:has(.external-span-flow) .external-span-copy{
+  grid-column:1;
+}
+body .case-section:has(.external-span-flow) .external-span-flow{
+  grid-column:2;
+  grid-row:1/6;
+  align-self:center;
+  margin:0;
+}
+body .case-section:has(.external-span-flow) .external-span-copy{
+  max-width:560px;
+  margin-top:0;
+}
+
+/* Section 04 — tighten excessive white space while preserving breathing room. */
+body .case-section:has(.human-loop) .container{
+  max-width:1500px;
+}
+body .case-section:has(.human-loop) h2{
+  max-width:1180px;
+  margin-bottom:34px;
+}
+body .human-loop{
+  margin-top:0;
+}
+body .human-loop>div{
+  min-height:108px;
+  padding:16px 12px;
+}
+body .case-section:has(.human-loop) .case-note{
+  margin-top:26px;
+  max-width:1150px;
+}
+
+/* Section 05 — rebalance impact and next-iteration columns. */
+body .case-section:has(.current-state-grid) .container{
+  max-width:1500px;
+}
+body .current-state-grid{
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  gap:64px;
+  align-items:center;
+}
+body .current-state-grid h2{
+  max-width:650px;
+  font-size:clamp(3.1rem,5.1vw,5.6rem);
+  line-height:.98;
+}
+body .current-state-grid>.roadmap{
+  padding:8px 30px 8px 44px;
+  border-left:1px solid rgba(30,68,56,.12);
+}
+
+/* Section 06 — cleaner intro balance + capability strip outside the individual chart. */
+body .scheduler-artifacts .container{
+  max-width:1440px;
+}
+body .scheduler-artifacts .artifact-head{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);
+  gap:72px;
+  align-items:center;
+  margin-bottom:38px;
+}
+body .scheduler-artifacts .artifact-head h2{
+  max-width:650px;
+  font-size:clamp(3rem,4.7vw,5rem);
+  line-height:.98;
+}
+body .artifact-reconstruction-copy{
+  align-self:center;
+}
+body .artifact-reconstruction-copy>p{
+  max-width:540px;
+  margin:0;
+}
+body .scheduler-capabilities{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px 18px;
+  margin-top:22px;
+  max-width:540px;
+}
+body .scheduler-capabilities span{
+  padding-top:9px;
+  border-top:1px solid rgba(255,250,241,.22);
+  color:#f6d9cc;
+  font:700 .62rem/1.25 var(--sans);
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+body .scheduler-view-large{
+  margin-top:0;
+}
+body .scheduler-window-body{
+  padding:20px 22px;
+}
+body .scheduler-view-grid{
+  gap:20px;
+  margin-top:20px;
+}
+body .scheduler-view-grid.second{
+  margin-top:20px;
+}
+body .scheduler-reconstruction-note{
+  margin-top:30px;
+}
+
+/* Keep the visual system graceful on narrower layouts. */
+@media(max-width:1000px){
+  body .case-section:has(.external-span-flow) .container{
+    display:block;
+  }
+  body .case-section:has(.external-span-flow) .external-span-flow{
+    margin-top:34px;
+  }
+  body .current-state-grid{
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+  body .current-state-grid>.roadmap{
+    padding-left:0;
+    border-left:0;
+  }
+  body .scheduler-artifacts .artifact-head{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  body .scheduler-capabilities{
+    max-width:none;
+  }
+}
+\n\n/* ===== V6.12.1 — TECHNICAL BRIEF CTA ===== */\nbody .technical-brief-cta{margin-top:24px;max-width:540px}\nbody .technical-overview-link{display:inline-flex;align-items:center;gap:10px;padding:11px 15px;border:1px solid rgba(255,250,241,.38);color:#fffaf1;font:700 .66rem/1 var(--sans);letter-spacing:.045em;text-transform:uppercase;text-decoration:none;transition:background .2s ease,border-color .2s ease,transform .2s ease}\nbody .technical-overview-link span{color:#e28a6c;font-size:.9rem;line-height:1}\nbody .technical-overview-link:hover{background:rgba(255,250,241,.08);border-color:rgba(255,250,241,.62);transform:translateY(-1px)}\nbody .technical-brief-cta p{margin:10px 0 0;max-width:460px;color:rgba(255,250,241,.72);font:.65rem/1.45 var(--sans)}\n

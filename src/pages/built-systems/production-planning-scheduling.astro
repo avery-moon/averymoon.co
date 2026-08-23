@@ -103,7 +103,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <div class="container">
     <div class="artifact-head">
       <div><div class="case-section-no">06</div><div class="eyebrow">Reconstructed Views</div><h2>The original workbook is proprietary. The operating logic is documented.</h2></div>
-      <p>These portfolio views are reconstructed from the scheduler's SOP and technical architecture using synthetic work orders. They show the structure of the system without reproducing production data.</p>
+      <div class="artifact-reconstruction-copy">
+        <p>These portfolio views are reconstructed from the scheduler's documented architecture using synthetic work orders. They show the structure of the system without reproducing production data.</p>
+        <div class="scheduler-capabilities"><span>Sequence-Aware Routing</span><span>Split Operations</span><span>External Spans</span><span>Defined Throughput Credit</span></div>
+        <div class="technical-brief-cta">
+          <a class="technical-overview-link" href="/downloads/production-planning-scheduling-technical-brief.pdf" target="_blank" rel="noopener">Read the Technical Overview <span>→</span></a>
+          <p>Architecture, scheduling logic, exception handling, controls, and implementation details.</p>
+        </div>
+      </div>
     </div>
 
     <div class="scheduler-view scheduler-view-large">
@@ -117,7 +124,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="sched-row"><strong>WO-2602</strong><span>PX-102</span><span>020</span><span>External</span><i></i><i class="span">2-day span</i><i class="span"></i><i></i><i></i><b></b></div>
         <div class="sched-row"><strong>WO-2607</strong><span>PX-107</span><span>010</span><span>Finish A</span><i class="work">7.0h</i><i class="work">1.5h</i><i></i><i></i><i></i><b></b></div>
       </div>
-      <div class="scheduler-caption">Sequence-aware routing · split operations · external spans · one throughput credit point</div>
     </div>
 
     <div class="scheduler-view-grid">
