@@ -2928,3 +2928,41 @@ body .requirement-bars i{height:8px;width:var(--w);background:#7fa08e}.requireme
 @media(max-width:520px){
  body .horizon-tabs{grid-template-columns:1fr}
 }
+
+/* ===== V6.9.3 — LONG-RANGE REQUIREMENT SPACING ===== */
+body .requirement-bars>div{
+  grid-template-columns:90px minmax(150px,1fr) 88px minmax(180px,1.25fr) 92px;
+  column-gap:16px;
+  row-gap:8px;
+  margin:18px 0;
+}
+body .requirement-bars>div>span{
+  white-space:nowrap;
+  line-height:1.15;
+}
+body .requirement-bars>div>b{
+  white-space:nowrap;
+  text-align:left;
+  line-height:1;
+}
+body .requirement-bars>div>i{
+  justify-self:stretch;
+  max-width:100%;
+}
+@media(max-width:900px){
+  body .requirement-bars>div{
+    grid-template-columns:78px minmax(100px,1fr) 78px minmax(120px,1fr) 82px;
+    column-gap:10px;
+  }
+}
+@media(max-width:650px){
+  body .requirement-bars>div{
+    grid-template-columns:70px 1fr 78px;
+  }
+  body .requirement-bars>div>i.long{
+    grid-column:2;
+  }
+  body .requirement-bars>div>i.long + b{
+    grid-column:3;
+  }
+}
