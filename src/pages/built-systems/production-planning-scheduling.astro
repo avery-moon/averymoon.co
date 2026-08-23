@@ -35,18 +35,27 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   </div>
 </section>
 
-<section class="case-section case-alt">
+<section class="case-section case-alt scheduler-architecture-section">
   <div class="container">
-    <div class="case-section-no">02</div><div class="eyebrow">Planning Logic</div>
-    <h2>Convert current WIP into an executable plan.</h2>
-    <div class="planning-engine reveal">
-      <div class="planning-inputs">
-        <span>Current Work Orders</span><span>WO Quantity</span><span>Part Routing</span><span>Operation Span</span><span>Available Headcount</span><span>Throughput Target</span><span>Earned Standard Hours</span>
-      </div>
-      <div class="planning-arrow">→</div>
-      <div class="planning-core"><small>Planning Engine</small><strong>Prioritize work against capacity, routing, timing, and throughput goals.</strong></div>
-      <div class="planning-arrow">→</div>
-      <div class="planning-outputs"><span>Daily Schedule</span><span>Weekly Schedule</span><span>Expected Throughput</span><span>Expected ESH</span><span>Aged WIP</span><span>Late Returns</span></div>
+    <div class="case-section-no">02</div><div class="eyebrow">Planning Architecture</div>
+    <h2>One master schedule, with each layer doing one job.</h2>
+    <div class="scheduler-architecture">
+      <div class="arch-source"><small>INPUT</small><strong>Current WIP</strong><span>WO · Part · Current operation · Qty · TOC</span></div>
+      <div class="arch-source"><small>INPUT</small><strong>Routing</strong><span>Sequence · WC · ESH / Plan hrs · Span</span></div>
+      <div class="arch-source"><small>CONTROL</small><strong>Settings</strong><span>Capacity · Horizon · Throughput target · Buffers</span></div>
+
+      <div class="arch-stage"><small>01</small><strong>Route Interpretation</strong><span>What remains?</span></div>
+      <div class="arch-stage"><small>02</small><strong>Throughput Leveling</strong><span>When do we want the credit?</span></div>
+      <div class="arch-stage"><small>03</small><strong>Capacity Allocation</strong><span>When can the work physically fit?</span></div>
+
+      <div class="arch-master"><small>MASTER RESULT SET</small><strong>Weekly Operations</strong><span>One operation-level schedule consumed by every downstream view</span></div>
+
+      <div class="arch-output"><strong>Weekly Summary</strong><span>Plan + throughput</span></div>
+      <div class="arch-output"><strong>Weekly Load</strong><span>WC/day capacity</span></div>
+      <div class="arch-output"><strong>Pipeline</strong><span>Incoming work</span></div>
+      <div class="arch-output"><strong>External Returns</strong><span>Span-driven timing</span></div>
+      <div class="arch-output"><strong>ESH</strong><span>Plan measurement</span></div>
+      <div class="arch-output"><strong>Daily Dispatcher</strong><span>Separate execution-priority engine</span></div>
     </div>
   </div>
 </section>
@@ -90,16 +99,72 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   </div>
 </section>
 
-<section class="case-artifact-section">
+<section class="case-artifact-section scheduler-artifacts">
   <div class="container">
-    <div class="artifact-head"><div><div class="case-section-no">06</div><div class="eyebrow">Artifacts</div><h2>The plan, the logic, and the exceptions.</h2></div>
-      <p>Final project materials will include the daily/weekly schedule output, planning dashboard, and exception views once the working file is ready for portfolio export.</p>
+    <div class="artifact-head">
+      <div><div class="case-section-no">06</div><div class="eyebrow">Reconstructed Views</div><h2>The original workbook is proprietary. The operating logic is documented.</h2></div>
+      <p>These portfolio views are reconstructed from the scheduler's SOP and technical architecture using synthetic work orders. They show the structure of the system without reproducing production data.</p>
     </div>
-    <div class="artifact-grid">
-      <div class="artifact-mini"><div class="mini-schedule"></div><span>Daily / Weekly Schedule</span><small>Work priorities generated from current WIP</small></div>
-      <div class="artifact-mini"><div class="mini-cap-dashboard"></div><span>Planning Dashboard</span><small>Throughput, ESH, priorities, and capacity</small></div>
-      <div class="artifact-mini"><div class="mini-alerts">!</div><span>Exception View</span><small>Aged WIP and late-return flags</small></div>
+
+    <div class="scheduler-view scheduler-view-large">
+      <div class="scheduler-window-bar"><span></span><span></span><span></span><b>Weekly Operations — Master Schedule</b></div>
+      <div class="scheduler-window-body">
+        <div class="sched-head"><span>WO</span><span>Part</span><span>Operation</span><span>Work Center</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Credit</span></div>
+        <div class="sched-row"><strong>WO-2604</strong><span>PX-104</span><span>010</span><span>Finish A</span><i class="work">3.0h</i><i></i><i></i><i></i><i></i><b></b></div>
+        <div class="sched-row"><strong>WO-2604</strong><span>PX-104</span><span>020</span><span>Prep A</span><i></i><i class="work">2.0h</i><i></i><i></i><i></i><b></b></div>
+        <div class="sched-row"><strong>WO-2604</strong><span>PX-104</span><span>030</span><span>Finish A</span><i></i><i class="work">3.0h</i><i></i><i></i><i></i><b></b></div>
+        <div class="sched-row"><strong>WO-2604</strong><span>PX-104</span><span>040</span><span>Credit</span><i></i><i></i><i class="credit">1.5h</i><i></i><i></i><b>$73K</b></div>
+        <div class="sched-row"><strong>WO-2602</strong><span>PX-102</span><span>020</span><span>External</span><i></i><i class="span">2-day span</i><i class="span"></i><i></i><i></i><b></b></div>
+        <div class="sched-row"><strong>WO-2607</strong><span>PX-107</span><span>010</span><span>Finish A</span><i class="work">7.0h</i><i class="work">1.5h</i><i></i><i></i><i></i><b></b></div>
+      </div>
+      <div class="scheduler-caption">Sequence-aware routing · split operations · external spans · one throughput credit point</div>
     </div>
+
+    <div class="scheduler-view-grid">
+      <div class="scheduler-view">
+        <div class="scheduler-window-bar"><span></span><span></span><span></span><b>Daily Dispatcher</b></div>
+        <div class="scheduler-window-body compact">
+          <div class="dispatcher-head"><span>Priority</span><span>WO</span><span>WC</span><span>Need Today</span></div>
+          <div class="dispatcher-row"><b>01</b><strong>WO-2607</strong><span>Finish A</span><em>Complete split op</em></div>
+          <div class="dispatcher-row"><b>02</b><strong>WO-2604</strong><span>Prep A</span><em>Route progression</em></div>
+          <div class="dispatcher-row"><b>03</b><strong>WO-2614</strong><span>Inspect</span><em>Credit ready</em></div>
+          <div class="dispatcher-row"><b>04</b><strong>WO-2605</strong><span>Prep B</span><em>Capacity fallback</em></div>
+        </div>
+      </div>
+
+      <div class="scheduler-view">
+        <div class="scheduler-window-bar"><span></span><span></span><span></span><b>Weekly Load</b></div>
+        <div class="scheduler-window-body compact">
+          <div class="load-head"><span>WC</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div>
+          <div class="load-row"><strong>Prep A</strong><i class="med">72%</i><i class="high">94%</i><i class="low">43%</i><i class="med">68%</i><i class="low">31%</i></div>
+          <div class="load-row"><strong>Finish A</strong><i class="high">100%</i><i class="high">96%</i><i class="med">74%</i><i class="med">61%</i><i class="low">28%</i></div>
+          <div class="load-row"><strong>Inspect</strong><i class="med">64%</i><i class="low">38%</i><i class="high">91%</i><i class="med">70%</i><i class="low">35%</i></div>
+          <div class="load-row"><strong>Credit</strong><i class="low">32%</i><i class="med">58%</i><i class="med">76%</i><i class="high">88%</i><i class="med">55%</i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scheduler-view-grid second">
+      <div class="scheduler-view">
+        <div class="scheduler-window-bar"><span></span><span></span><span></span><b>Weekly Summary</b></div>
+        <div class="scheduler-window-body compact centered">
+          <div class="summary-kpis"><div><span>MON</span><strong>$286K</strong></div><div><span>TUE</span><strong>$304K</strong></div><div><span>WED</span><strong>$297K</strong></div><div><span>THU</span><strong>$309K</strong></div><div><span>FRI</span><strong>$291K</strong></div></div>
+          <div class="throughput-line"><span>Target band</span><i></i><b>$280K–$310K / day</b></div>
+        </div>
+      </div>
+
+      <div class="scheduler-view">
+        <div class="scheduler-window-bar"><span></span><span></span><span></span><b>Exceptions & Returns</b></div>
+        <div class="scheduler-window-body compact">
+          <div class="exception-row"><b>RETURN</b><span>WO-2602</span><strong>Expected Thu</strong></div>
+          <div class="exception-row"><b>ROUTE</b><span>WO-2620</span><strong>Missing route</strong></div>
+          <div class="exception-row"><b>CAPACITY</b><span>WO-2607</span><strong>Operation split</strong></div>
+          <div class="exception-row"><b>ESH</b><span>WO-2605</span><strong>PLAN hrs fallback</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="case-note scheduler-reconstruction-note"><strong>Reconstruction note:</strong> the original system used modular VBA, including separate routing, leveling, capacity, weekly, daily-dispatch, pipeline, ESH, output, and orchestration modules. The portfolio visuals above reproduce the documented architecture and decision logic, not the original production workbook.</p>
   </div>
 </section>
 
