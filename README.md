@@ -1,18 +1,24 @@
-# averymoon.co — V6.13.2 Built Systems Navigation + Final Mobile Polish
+# averymoon.co — V6.13.2 Navigation Audit + Final Mobile Fixes
 
 Built on V6.13.1.
 
-Site consistency:
-- Renumbers Built Systems case-study headers 01–06 to match the order of cards on the Built Systems landing page.
-- Adds/standardizes a `Next System` link at the bottom of every system page.
-- Navigation sequence follows the landing page order and loops 06 back to 01.
-- Keeps the Training & Certification page's contextual Workforce Capability cross-link once, while its bottom Next System now advances to Production Supplies & Replenishment.
+Built Systems order is now identical to the landing page:
+01 Material Procurement & Planning
+02 Training & Certification System
+03 Production Supplies & Replenishment
+04 Workforce Capability Planning System
+05 Equipment Reliability & Downtime Analysis
+06 Production Planning & Scheduling
 
-Mobile QA fixes:
-- Equipment weekly downtime tracker now scrolls locally instead of clipping the Tuesday panel.
-- Material Procurement planning-horizon headers no longer force the panel wider than the phone viewport.
-- Near-Term Coverage fits inside its card.
-- Long-Range Requirement remains readable inside a contained horizontal-scroll area.
-- Reduces oversized end-of-page spacing around downloadable demo cards and the footer.
-- Normalizes mobile Next System spacing.
-- Desktop layouts remain unchanged.
+Navigation:
+- Every one of the six system pages now has a bottom navigation link.
+- Links follow the same 01 → 06 order; project 06 loops to project 01 as “Explore Another System.”
+- All bottom links and top “Built Systems” backlinks use plain root-relative production URLs.
+- Training & Certification keeps one contextual link to Workforce Capability, while its bottom Next System now correctly points to Production Supplies & Replenishment.
+- All six bottom navigation targets were checked against existing Astro page files.
+
+Remaining mobile QA:
+- Weekly downtime tracker gets a contained horizontal scroll rather than clipping Tuesday.
+- Material planning horizon tables/charts scroll inside their panels instead of creating page-level overflow.
+- Download/footer spacing is tightened on mobile.
+- Bottom system navigation is larger and easier to tap on mobile.

@@ -4502,105 +4502,84 @@ body .selected-hero-final .selected-subhead::after{
 }
 
 
-/* ===== V6.13.2 — BUILT SYSTEMS NAV + FINAL MOBILE VISUAL POLISH ===== */
+/* ===== V6.13.2 — FINAL SYSTEM NAV + REMAINING MOBILE FIXES ===== */
 
+/* All bottom system navigation links get a reliable full-width tap target. */
+.case-next a{
+  position:relative;
+  z-index:2;
+  width:100%;
+}
+.case-next .container{
+  position:relative;
+}
+
+/* Mobile: weekly downtime tracker scrolls locally instead of clipping Tuesday. */
 @media(max-width:768px){
-
-  /* Equipment downtime tracker: keep the paper readable and let the two-day
-     worksheet scroll locally instead of clipping Tuesday off-screen. */
-  body .tracker-paper{
+  .tracker-demo-wrap{
+    display:block !important;
     max-width:100% !important;
     overflow-x:auto !important;
     -webkit-overflow-scrolling:touch;
-    padding:18px !important;
+    margin-top:28px !important;
   }
-  body .tracker-paper .tracker-title,
-  body .tracker-paper .tracker-days,
-  body .tracker-paper .tracker-code-strip{
-    min-width:690px !important;
+  .tracker-paper{
+    min-width:720px !important;
+    width:720px !important;
+    max-width:none !important;
   }
-  body .tracker-days{
-    grid-template-columns:1fr 1fr !important;
-    gap:14px !important;
+  .tracker-copy{
+    margin-top:26px !important;
   }
 
-  /* Procurement planning horizons: stack the header copy instead of allowing
-     its no-wrap label to widen the whole card. */
-  body .material-horizon-section .horizon-panel{
+  /* Material horizon panels stay inside the page; the data itself scrolls. */
+  .material-horizon-section .horizon-visual-grid{
+    display:block !important;
+    width:100% !important;
+  }
+  .material-horizon-section .horizon-panel{
+    width:100% !important;
     max-width:100% !important;
     overflow:hidden !important;
-    padding:18px !important;
+    margin-bottom:16px !important;
   }
-  body .material-horizon-section .horizon-panel-head{
-    display:block !important;
-  }
-  body .material-horizon-section .horizon-panel-head strong{
-    display:block !important;
-  }
-  body .material-horizon-section .horizon-panel-head span{
-    display:block !important;
-    margin-top:6px !important;
-    white-space:normal !important;
-    text-align:left !important;
-    line-height:1.35 !important;
-  }
-  body .material-horizon-section .coverage-mini{
-    grid-template-columns:minmax(0,1fr) minmax(110px,.62fr) !important;
-    width:100% !important;
-  }
-  body .material-horizon-section .coverage-mini>*{
-    min-width:0 !important;
-  }
-
-  /* Long-range comparison remains intentionally wide, but scrolling is
-     contained inside the chart rather than leaking into the page. */
-  body .material-horizon-section .requirement-bars-v2{
-    width:100% !important;
+  .material-horizon-section .coverage-mini,
+  .material-horizon-section .requirement-bars-v2{
     max-width:100% !important;
     overflow-x:auto !important;
     -webkit-overflow-scrolling:touch;
+  }
+  .material-horizon-section .coverage-mini{
+    min-width:560px !important;
+  }
+  .material-horizon-section .requirement-bars-v2{
     padding-bottom:6px;
   }
-  body .material-horizon-section .requirement-bars-v2 .requirement-header,
-  body .material-horizon-section .requirement-bars-v2 .requirement-row{
-    min-width:600px !important;
-  }
 
-  /* Download cards at the end of system pages were leaving a large empty
-     desktop-sized runway before the footer / next-system navigation. */
-  body .inventory-download,
-  body .material-download,
-  body .reliability-download,
-  body .capability-download{
+  /* Reduce excessive space before the footer after downloadable demos. */
+  .inventory-download,
+  .material-download,
+  .reliability-download,
+  .capability-download{
     padding-top:44px !important;
-    padding-bottom:34px !important;
+    padding-bottom:44px !important;
   }
-  body .download-card{
-    padding:26px 22px !important;
-    gap:24px !important;
-  }
-  body .download-card>a{
-    width:100% !important;
-    justify-content:space-between !important;
-    box-sizing:border-box !important;
+  .footer-v55{
+    margin-top:24px !important;
+    padding-top:34px !important;
   }
 
-  /* Consistent next-system navigation on phones. */
-  body .case-next{
-    padding:34px 0 40px !important;
+  /* Bottom nav reads cleanly and remains tappable on phone. */
+  .case-next{
+    padding:30px 0 !important;
   }
-  body .case-next .container{
-    gap:12px !important;
+  .case-next .container{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
   }
-  body .case-next a{
-    font-size:clamp(1.45rem,7vw,2rem) !important;
-    line-height:1.25 !important;
-    gap:18px !important;
-  }
-
-  /* Slightly reduce excess footer runway on mobile after the final system CTA. */
-  body .footer-v55{
-    margin-top:26px !important;
-    padding-top:38px !important;
+  .case-next a{
+    min-height:56px !important;
+    font-size:clamp(1.35rem,7vw,1.9rem) !important;
+    line-height:1.2 !important;
   }
 }

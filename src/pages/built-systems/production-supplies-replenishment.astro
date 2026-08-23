@@ -5,7 +5,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <BaseLayout title="Production Supplies & Replenishment" description="An inventory planning system that turns weekly physical counts into reorder decisions, supply coverage, purchasing visibility, and forward-looking requirements.">
 <section class="case-hero">
   <div class="container">
-    <a class="case-back" href={`${base}/built-systems/`}>← Built Systems</a>
+    <a class="case-back" href="/built-systems/">← Built Systems</a>
     <div class="case-kicker">03 / Inventory Operations</div>
     <h1>Production Supplies &<br/><em>Replenishment</em></h1>
     <p class="case-deck">A working inventory system for managing recurring production supplies: what is on hand, what needs to be ordered, what is already coming, and what future demand is likely to require.</p>
@@ -179,10 +179,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </div>
 </section>
+
 <section class="case-next">
   <div class="container">
     <span class="eyebrow">Next System</span>
-    <a href="${base}/built-systems/workforce-capability-planning/"><strong>Workforce Capability Planning System</strong><span>→</span></a>
+    <a href="/built-systems/workforce-capability-planning/">
+      <strong>Workforce Capability Planning System</strong><span>→</span>
+    </a>
   </div>
 </section>
 </BaseLayout>
