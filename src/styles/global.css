@@ -4099,3 +4099,84 @@ body .selected-hero .selected-discretion{
     margin:0 !important;
   }
 }
+
+
+/* ===== V6.12.9 — SELECTED PROJECTS HERO REBUILD =====
+   Replaces the inherited/absolute-positioned intro layout with one explicit
+   two-column editorial grid. No transforms, no viewport-positioned note. */
+
+body .selected-hero-final{
+  min-height:0 !important;
+  height:auto !important;
+  padding:64px 0 54px !important;
+}
+
+body .selected-hero-final > .selected-hero-grid{
+  width:min(var(--max),calc(100% - 42px)) !important;
+  max-width:none !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr) !important;
+  gap:clamp(54px,7vw,110px) !important;
+  align-items:end !important;
+}
+
+body .selected-hero-final .selected-hero-main{
+  min-width:0;
+}
+
+body .selected-hero-final .selected-hero-main h1{
+  max-width:900px !important;
+  margin:14px 0 24px !important;
+}
+
+body .selected-hero-final .selected-subhead{
+  max-width:690px !important;
+  margin:0 !important;
+  font-family:Georgia,serif;
+  font-size:1.28rem;
+  line-height:1.5;
+  color:var(--forest);
+}
+
+body .selected-hero-final .selected-hero-note{
+  position:static !important;
+  width:auto !important;
+  max-width:390px !important;
+  margin:0 0 8px !important;
+  padding:3px 0 3px 26px !important;
+  transform:none !important;
+  align-self:end !important;
+  justify-self:end !important;
+  border-left:1px solid var(--terracotta);
+  color:var(--muted);
+  font-size:.78rem;
+  line-height:1.6;
+}
+
+/* Pull the next section closer because the hero no longer needs a large
+   invisible positioning canvas for the note. */
+body .selected-hero-final + .selected-index{
+  padding-top:54px !important;
+}
+
+@media(max-width:900px){
+  body .selected-hero-final{
+    padding:50px 0 42px !important;
+  }
+
+  body .selected-hero-final > .selected-hero-grid{
+    grid-template-columns:1fr !important;
+    gap:26px !important;
+    align-items:start !important;
+  }
+
+  body .selected-hero-final .selected-hero-note{
+    justify-self:start !important;
+    max-width:560px !important;
+    margin:0 !important;
+  }
+
+  body .selected-hero-final + .selected-index{
+    padding-top:46px !important;
+  }
+}
