@@ -1,15 +1,13 @@
-# averymoon.co — V6.9.0 Material Procurement & Planning
+# averymoon.co — V6.9.1 Material Procurement Visual Pass
 
-Built on V6.8.0.
+Built on V6.9.0.
 
 Changes:
-- Rebuilds the alloy/material procurement case study around the completed desktop Excel portfolio demo.
-- Uses the desktop Excel workbook as the downloadable artifact; the cross-platform compatible workbook is not duplicated on the site.
-- Frames the system around integrated inventory, open customer demand, scheduled receipts, historical consumption, supplier constraints, and 18-month purchasing visibility.
-- Adds website-native representations of the Planning Hub, demand logic, purchasing calendar, planning horizons, and user/ownership model.
-- Keeps synthetic demo quantities and spend explicitly separate from the original project's real-world scope.
-- Carries forward the agreed site-wide rename:
-  “Consumables Inventory & Replenishment” → “Production Supplies & Replenishment.”
-
-Artifact:
-public/artifacts/material-procurement-planning-demo.xlsx
+- Removes the awkward 12M / 18M horizontal comparison bars.
+- Replaces them with an Excel-style 18-month material coverage matrix.
+- Shortens the opening copy and converts Planning Inputs into a compact visual pipeline.
+- Replaces the text-heavy demand explanation with a visual demand-support chart showing historical baseline, visible customer demand, and the resulting planning forecast.
+- Keeps the Planning Hub and 52-week Purchasing Calendar as primary artifact visuals.
+- Compresses Operating Model + Model Boundaries into one closing section.
+- Overall page rhythm is now more artifact-forward and less card/paragraph heavy.
+- All website mock data remains illustrative/synthetic.

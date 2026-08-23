@@ -30,26 +30,25 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <h2>Long lead times made a current inventory snapshot insufficient.</h2>
     </div>
     <div class="case-copy">
-      <p>Material purchasing required decisions well before the production need was visible on the floor. Inventory, purchase orders, customer demand, and historical consumption existed in separate sources, which made it difficult to see future coverage in one place.</p>
-      <p>I built a planning model that brings those inputs together and translates them into quarterly requirements, longer-range exposure, recommended order quantities, and purchasing dates.</p>
-      <p class="case-emphasis">The question shifted from “how much material do we have?” to “when will supply stop covering expected demand, and what should we do before then?”</p>
+      <p>Material purchasing required decisions months before the need reached production. Inventory, purchase orders, customer demand, and consumption history lived in separate sources.</p>
+      <p class="case-emphasis">The model brings those signals together to show when coverage becomes tight, what needs to be ordered, and when purchasing should act.</p>
     </div>
   </div>
 </section>
 
 <section class="case-section case-alt section-divider material-input-section">
   <div class="container">
-    <div class="case-section-no">02</div><div class="eyebrow">Planning Inputs</div>
-    <h2>Bring separate planning signals into one model.</h2>
-    <div class="material-source-grid">
-      <div><small>Inventory</small><strong>Current usable supply</strong><span>On-hand material and safety-stock assumptions</span></div>
-      <div><small>Customer Demand</small><strong>Open production requirements</strong><span>Visible released and planned demand by need date</span></div>
-      <div><small>Scheduled Receipts</small><strong>Existing purchase orders</strong><span>Quantity, expected receipt date, and order status</span></div>
-      <div><small>Consumption History</small><strong>Historical material use</strong><span>Trend and seasonal baseline for demand not yet visible</span></div>
-      <div><small>Supplier Rules</small><strong>Lead time + buying constraints</strong><span>Timing, minimum buys, shared-source rules, and planner notes</span></div>
+    <div class="case-section-no">02</div><div class="eyebrow">Planning Model</div>
+    <h2>Five inputs become one purchasing view.</h2>
+    <div class="input-pipeline">
+      <div><small>01</small><strong>Inventory</strong><span>On hand</span></div>
+      <div><small>02</small><strong>Customer Demand</strong><span>Need dates</span></div>
+      <div><small>03</small><strong>Open Orders</strong><span>Scheduled receipts</span></div>
+      <div><small>04</small><strong>Consumption</strong><span>Historical baseline</span></div>
+      <div><small>05</small><strong>Supplier Rules</strong><span>Lead time + constraints</span></div>
     </div>
-    <div class="material-model-line">
-      <span>Inputs</span><b>→</b><span>Demand & Coverage Model</span><b>→</b><span>Risk Quarter</span><b>→</b><span>Order Quantity + Timing</span>
+    <div class="pipeline-output">
+      <span>DEMAND + COVERAGE MODEL</span><b>→</b><strong>Risk timing</strong><b>·</b><strong>Order quantity</strong><b>·</b><strong>Purchase date</strong>
     </div>
   </div>
 </section>
@@ -90,28 +89,24 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <section class="case-section case-alt material-demand-section">
   <div class="container">
-    <div class="case-section-no">04</div><div class="eyebrow">Demand Logic</div>
-    <h2>Use visible customer demand without assuming it tells the whole story.</h2>
-    <div class="demand-comparison">
-      <div>
-        <small>Historical Baseline</small>
-        <strong>Consumption trend + seasonality</strong>
-        <p>Historical use provides a baseline for material demand that has not yet appeared in open customer orders.</p>
+    <div class="case-section-no">04</div><div class="eyebrow">Demand Forecast</div>
+    <h2>Compare what history suggests with what customers are already asking for.</h2>
+    <div class="demand-visual">
+      <div class="demand-chart-head"><strong>18-Month Demand Support</strong><span>Illustrative portfolio view</span></div>
+      <div class="demand-chart">
+        <div class="demand-y"><span>30K</span><span>20K</span><span>10K</span><span>0</span></div>
+        <div class="demand-plot">
+          <div class="quarter q1">Q1</div><div class="quarter q2">Q2</div><div class="quarter q3">Q3</div><div class="quarter q4">Q4</div><div class="quarter q5">Q5</div><div class="quarter q6">Q6</div>
+          <svg viewBox="0 0 720 220" preserveAspectRatio="none" aria-hidden="true">
+            <polyline class="hist-line" points="20,145 140,125 260,137 380,102 500,116 700,86"/>
+            <polyline class="open-line" points="20,170 140,108 260,151 380,78 500,142 700,126"/>
+            <polyline class="plan-line" points="20,145 140,108 260,137 380,78 500,116 700,86"/>
+          </svg>
+        </div>
       </div>
-      <b>vs.</b>
-      <div>
-        <small>Visible Customer Demand</small>
-        <strong>Open requirements by material need date</strong>
-        <p>Released and planned demand is translated into material requirements and grouped into the planning horizon.</p>
-      </div>
-      <b>→</b>
-      <div class="demand-result">
-        <small>Planning Forecast</small>
-        <strong>Use the greater demand signal</strong>
-        <p>For each material and quarter, the model uses the greater of the historical baseline or visible open demand to reduce the risk of understating future need.</p>
-      </div>
+      <div class="demand-legend"><span><i class="hist"></i>Historical baseline</span><span><i class="open"></i>Visible customer demand</span><span><i class="plan"></i>Planning forecast</span></div>
+      <div class="demand-rule"><span>For each planning period</span><strong>Use the stronger demand signal</strong><span>Past-due open demand rolls into the first period</span></div>
     </div>
-    <p class="case-note">In the portfolio model, customer material need dates are derived from the customer due date using a planning offset, while past-due open demand rolls into the first planning quarter rather than disappearing from the forecast.</p>
   </div>
 </section>
 
@@ -135,42 +130,33 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <section class="case-section case-alt material-horizon-section">
   <div class="container">
-    <div class="case-section-no">06</div><div class="eyebrow">Planning Horizons</div>
-    <h2>Near-term action and long-range planning use the same underlying model.</h2>
-    <div class="horizon-grid">
-      <div><strong>Current Quarter</strong><span>Immediate demand, inventory coverage, and purchasing action</span></div>
-      <div><strong>12 Months</strong><span>Annual requirement, open-order coverage, and supplier planning</span></div>
-      <div><strong>18 Months</strong><span>Longer-range exposure for materials with extended procurement timelines</span></div>
-    </div>
-    <div class="horizon-bars">
-      <div><span>MTL-004</span><i style="--w:66%"></i><b>12M 229K</b><i class="long" style="--w:100%"></i><b>18M 344K</b></div>
-      <div><span>MTL-016</span><i style="--w:60%"></i><b>12M 105K</b><i class="long" style="--w:100%"></i><b>18M 173K</b></div>
-      <div><span>MTL-011</span><i style="--w:61%"></i><b>12M 39K</b><i class="long" style="--w:100%"></i><b>18M 65K</b></div>
+    <div class="case-section-no">06</div><div class="eyebrow">Long-Range Coverage</div>
+    <h2>See where material coverage begins to tighten across the planning horizon.</h2>
+    <div class="coverage-window">
+      <div class="coverage-head"><strong>18-Month Material Outlook</strong><span>Inventory + receipts against forecast demand</span></div>
+      <div class="coverage-grid">
+        <div class="coverage-row coverage-labels"><span>Material</span><span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span><span>Q5</span><span>Q6</span><span>Action</span></div>
+        <div class="coverage-row"><strong>MTL-004</strong><i class="ok">2.4×</i><i class="ok">1.7×</i><i class="watch">1.2×</i><i class="risk">0.8×</i><i class="risk">0.5×</i><i class="risk">0.3×</i><b>ORDER</b></div>
+        <div class="coverage-row"><strong>MTL-008</strong><i class="watch">1.3×</i><i class="risk">0.9×</i><i class="risk">0.6×</i><i class="risk">0.4×</i><i class="risk">0.2×</i><i class="risk">0.1×</i><b>EXPEDITE</b></div>
+        <div class="coverage-row"><strong>MTL-003</strong><i class="ok">3.1×</i><i class="ok">2.5×</i><i class="ok">1.9×</i><i class="watch">1.3×</i><i class="watch">1.1×</i><i class="risk">0.9×</i><em>MONITOR</em></div>
+        <div class="coverage-row"><strong>MTL-010</strong><i class="ok">4.0×</i><i class="ok">3.5×</i><i class="ok">2.8×</i><i class="ok">2.2×</i><i class="ok">1.8×</i><i class="ok">1.5×</i><span>COVERED</span></div>
+      </div>
+      <div class="coverage-legend"><span><i class="ok"></i>Covered</span><span><i class="watch"></i>Watch</span><span><i class="risk"></i>Risk</span></div>
     </div>
   </div>
 </section>
 
 <section class="case-section material-ownership-section">
   <div class="container">
-    <div class="case-section-no">07</div><div class="eyebrow">Operating Model</div>
-    <h2>Different users update the inputs and consume the same planning view.</h2>
-    <div class="material-user-grid">
-      <div><strong>Procurement</strong><span>Updates scheduled receipts and uses recommended quantities and timing to support purchasing decisions.</span></div>
-      <div><strong>Operations</strong><span>Maintains planning assumptions and reviews demand, coverage, and operational risk.</span></div>
-      <div><strong>Leadership</strong><span>Uses the consolidated outlook to understand purchasing exposure, forecast growth, and longer-range material risk.</span></div>
+    <div class="case-section-no">07</div><div class="eyebrow">Use & Handoff</div>
+    <h2>A planning tool with visible assumptions and a clear review point.</h2>
+    <div class="compact-governance">
+      <div><strong>Procurement</strong><span>Updates receipts and reviews recommended orders.</span></div>
+      <div><strong>Operations</strong><span>Maintains assumptions and reviews coverage risk.</span></div>
+      <div><strong>Leadership</strong><span>Uses the outlook for spend and long-range exposure.</span></div>
     </div>
-    <p class="case-note">The demo workbook includes a Start Here guide, methodology notes, color conventions, update cadence, model limits, and troubleshooting instructions so the planning logic can be maintained and reviewed by other users.</p>
-  </div>
-</section>
-
-<section class="case-section case-alt material-next-section">
-  <div class="container">
-    <div class="case-section-no">08</div><div class="eyebrow">Model Boundaries</div>
-    <h2>The system supports a purchasing decision; it does not make one blindly.</h2>
-    <div class="boundary-grid">
-      <span>Safety Stock</span><span>Supplier Lead Time</span><span>Minimum Buys</span><span>Yield Loss</span><span>Shared Supply Rules</span><span>Planner Notes</span><span>Forecast Confidence</span>
-    </div>
-    <p class="case-note">Recommended orders remain planning outputs. Buyers and operations still review supplier constraints, changing production conditions, and assumptions before committing spend.</p>
+    <div class="boundary-strip"><span>Safety stock</span><span>Lead time</span><span>Minimum buys</span><span>Yield loss</span><span>Shared supply</span><span>Forecast confidence</span></div>
+    <p class="case-note">Recommendations remain planning outputs. Purchasing decisions still account for supplier constraints, changing production conditions, and planner judgment.</p>
   </div>
 </section>
 
