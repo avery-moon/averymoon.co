@@ -12,9 +12,9 @@
 <line x1="55" y1="524" x2="1145" y2="524" stroke="#B8BD9C" opacity=".75"/>
 <text x="55" y="577" font-family="Arial, 'DejaVu Sans', sans-serif" font-size="17" letter-spacing="4" fill="#F1E8DD">INSIDE →</text>
 <line x1="195" y1="546" x2="195" y2="593" stroke="#819889" opacity=".65"/>
-<text x="230" y="575" font-family="Georgia, 'DejaVu Serif', serif" font-size="22" fill="#F7F0E7">Things I’ve built</text>
+<text x="230" y="575" font-family="Georgia, 'DejaVu Serif', serif" font-size="25" fill="#F7F0E7">Things I’ve built</text>
 <line x1="445" y1="546" x2="445" y2="593" stroke="#819889" opacity=".65"/>
-<text x="480" y="575" font-family="Georgia, 'DejaVu Serif', serif" font-size="22" fill="#F7F0E7">Ideas worth exploring</text>
+<text x="480" y="575" font-family="Georgia, 'DejaVu Serif', serif" font-size="25" fill="#F7F0E7">Ideas worth exploring</text>
 <line x1="790" y1="546" x2="790" y2="593" stroke="#819889" opacity=".65"/>
-<text x="825" y="575" font-family="Georgia, 'DejaVu Serif', serif" font-size="22" fill="#F7F0E7">How I think</text>
+<text x="825" y="575" font-family="Georgia, 'DejaVu Serif', serif" font-size="25" fill="#F7F0E7">How I think</text>
 </svg>
