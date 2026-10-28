@@ -8,7 +8,16 @@ const {
   description='Avery Moon designs practical systems for growing organizations, small and mid-sized businesses, and nonprofits—improving operations, workflows, knowledge, workforce capability, and decision-making.'
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const socialImage = new URL('/og-complexity.png', Astro.site);
+const previewSlugs = new Set([
+  'material-procurement-planning',
+  'training-certification-system',
+  'production-supplies-replenishment',
+  'workforce-capability-planning',
+  'equipment-reliability-downtime',
+  'production-planning-scheduling'
+]);
+const slug = Astro.url.pathname.match(/^\/built-systems\/([^/]+)\/?$/)?.[1];
+const socialImage = new URL(slug && previewSlugs.has(slug) ? `/social/${slug}.png` : '/og-complexity.png', Astro.site);
 // Use a plain-text social title for preview parsers that display HTML entities literally.
 const socialTitle = `${title.replaceAll('&', 'and')} | Avery Moon`;
 ---
