@@ -18,9 +18,15 @@ const previewSlugs = new Set([
 ]);
 const slug = Astro.url.pathname.match(/^\/built-systems\/([^/]+)\/?$/)?.[1];
 const isEducationalAccess = /^\/research-writing\/mapping-educational-access\/?$/.test(Astro.url.pathname);
-const socialImage = new URL(isEducationalAccess ? '/social/mapping-educational-access.png' : slug && previewSlugs.has(slug) ? `/social/${slug}.png` : '/og-complexity.png', Astro.site);
+const pagePreviews = {
+  '/selected-projects/latino-family-center': ['latino-family-center', 'Learning resources for the Latino Family Center'],
+  '/research-writing/women-climate-change-egypt': ['women-climate-change-egypt', 'Women and Climate Change: Egypt'],
+  '/research-writing/environmental-justice-nc-hog-farms': ['environmental-justice-nc-hog-farms', 'Environmental Justice in Eastern North Carolina']
+};
+const pagePreview = pagePreviews[Astro.url.pathname.replace(/\/+$/, '')];
+const socialImage = new URL(pagePreview ? `/social/${pagePreview[0]}.png` : isEducationalAccess ? '/social/mapping-educational-access.png' : slug && previewSlugs.has(slug) ? `/social/${slug}.png` : '/og-complexity.png', Astro.site);
 // Use a plain-text social title for preview parsers that display HTML entities literally.
-const socialImageAlt = isEducationalAccess ? 'Mapping Educational Access — High Point transportation and school-reassignment research' : 'Avery Moon — Systems, Strategy & Organizational Design';
+const socialImageAlt = pagePreview ? pagePreview[1] : isEducationalAccess ? 'Mapping Educational Access — High Point transportation and school-reassignment research' : 'Avery Moon — Systems, Strategy & Organizational Design';
 const socialTitle = `${title.replaceAll('&', 'and')} | Avery Moon`;
 ---
 <!doctype html>
